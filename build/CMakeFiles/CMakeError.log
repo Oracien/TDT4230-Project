@@ -1,0 +1,810 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/amundbk/Documents/School/Graphics/Coursework/TDT4230-Assignment-1/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_7bf73/fast"
+/usr/bin/make -f CMakeFiles/cmTC_7bf73.dir/build.make CMakeFiles/cmTC_7bf73.dir/build
+make[1]: Entering directory '/home/amundbk/Documents/School/Graphics/Coursework/TDT4230-Assignment-1/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_7bf73.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_7bf73.dir/CheckSymbolExists.c.o   -c /home/amundbk/Documents/School/Graphics/Coursework/TDT4230-Assignment-1/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_7bf73
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7bf73.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_7bf73.dir/CheckSymbolExists.c.o  -o cmTC_7bf73 
+CMakeFiles/cmTC_7bf73.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_7bf73.dir/build.make:97: recipe for target 'cmTC_7bf73' failed
+make[1]: *** [cmTC_7bf73] Error 1
+make[1]: Leaving directory '/home/amundbk/Documents/School/Graphics/Coursework/TDT4230-Assignment-1/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_7bf73/fast' failed
+make: *** [cmTC_7bf73/fast] Error 2
+
+File /home/amundbk/Documents/School/Graphics/Coursework/TDT4230-Assignment-1/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/amundbk/Documents/School/Graphics/Coursework/TDT4230-Assignment-1/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_64f43/fast"
+/usr/bin/make -f CMakeFiles/cmTC_64f43.dir/build.make CMakeFiles/cmTC_64f43.dir/build
+make[1]: Entering directory '/home/amundbk/Documents/School/Graphics/Coursework/TDT4230-Assignment-1/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_64f43.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_64f43.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_64f43
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_64f43.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_64f43.dir/CheckFunctionExists.c.o  -o cmTC_64f43 -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_64f43.dir/build.make:97: recipe for target 'cmTC_64f43' failed
+make[1]: *** [cmTC_64f43] Error 1
+make[1]: Leaving directory '/home/amundbk/Documents/School/Graphics/Coursework/TDT4230-Assignment-1/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_64f43/fast' failed
+make: *** [cmTC_64f43/fast] Error 2
+
+
+Determining if the strtod_l exist failed with the following output:
+Change Dir: /home/amundbk/Documents/School/Graphics/Coursework/TDT4230-Assignment-1/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_bc87c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_bc87c.dir/build.make CMakeFiles/cmTC_bc87c.dir/build
+make[1]: Entering directory '/home/amundbk/Documents/School/Graphics/Coursework/TDT4230-Assignment-1/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_bc87c.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_bc87c.dir/CheckSymbolExists.c.o   -c /home/amundbk/Documents/School/Graphics/Coursework/TDT4230-Assignment-1/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/amundbk/Documents/School/Graphics/Coursework/TDT4230-Assignment-1/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/amundbk/Documents/School/Graphics/Coursework/TDT4230-Assignment-1/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: ‘strtod_l’ undeclared (first use in this function); did you mean ‘strtoull’?
+   return ((int*)(&strtod_l))[argc];
+                   ^~~~~~~~
+                   strtoull
+/home/amundbk/Documents/School/Graphics/Coursework/TDT4230-Assignment-1/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: note: each undeclared identifier is reported only once for each function it appears in
+CMakeFiles/cmTC_bc87c.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_bc87c.dir/CheckSymbolExists.c.o' failed
+make[1]: *** [CMakeFiles/cmTC_bc87c.dir/CheckSymbolExists.c.o] Error 1
+make[1]: Leaving directory '/home/amundbk/Documents/School/Graphics/Coursework/TDT4230-Assignment-1/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_bc87c/fast' failed
+make: *** [cmTC_bc87c/fast] Error 2
+
+File /home/amundbk/Documents/School/Graphics/Coursework/TDT4230-Assignment-1/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdlib.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strtod_l
+  return ((int*)(&strtod_l))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/amundbk/Documents/School/Graphics/Coursework/TDT4230-Assignment-1/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_3cb6f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_3cb6f.dir/build.make CMakeFiles/cmTC_3cb6f.dir/build
+make[1]: Entering directory '/home/amundbk/Documents/School/Graphics/Coursework/TDT4230-Assignment-1/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3cb6f.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_3cb6f.dir/CheckSymbolExists.c.o   -c /home/amundbk/Documents/School/Graphics/Coursework/TDT4230-Assignment-1/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_3cb6f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3cb6f.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_3cb6f.dir/CheckSymbolExists.c.o  -o cmTC_3cb6f 
+CMakeFiles/cmTC_3cb6f.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_3cb6f.dir/build.make:97: recipe for target 'cmTC_3cb6f' failed
+make[1]: *** [cmTC_3cb6f] Error 1
+make[1]: Leaving directory '/home/amundbk/Documents/School/Graphics/Coursework/TDT4230-Assignment-1/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_3cb6f/fast' failed
+make: *** [cmTC_3cb6f/fast] Error 2
+
+File /home/amundbk/Documents/School/Graphics/Coursework/TDT4230-Assignment-1/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/amundbk/Documents/School/Graphics/Coursework/TDT4230-Assignment-1/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_df025/fast"
+/usr/bin/make -f CMakeFiles/cmTC_df025.dir/build.make CMakeFiles/cmTC_df025.dir/build
+make[1]: Entering directory '/home/amundbk/Documents/School/Graphics/Coursework/TDT4230-Assignment-1/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_df025.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_df025.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_df025
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_df025.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_df025.dir/CheckFunctionExists.c.o  -o cmTC_df025 -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_df025.dir/build.make:97: recipe for target 'cmTC_df025' failed
+make[1]: *** [cmTC_df025] Error 1
+make[1]: Leaving directory '/home/amundbk/Documents/School/Graphics/Coursework/TDT4230-Assignment-1/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_df025/fast' failed
+make: *** [cmTC_df025/fast] Error 2
+
+
+Determining if the strtod_l exist failed with the following output:
+Change Dir: /home/amundbk/Documents/School/Graphics/Coursework/TDT4230-Assignment-1/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_bc4cb/fast"
+/usr/bin/make -f CMakeFiles/cmTC_bc4cb.dir/build.make CMakeFiles/cmTC_bc4cb.dir/build
+make[1]: Entering directory '/home/amundbk/Documents/School/Graphics/Coursework/TDT4230-Assignment-1/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_bc4cb.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_bc4cb.dir/CheckSymbolExists.c.o   -c /home/amundbk/Documents/School/Graphics/Coursework/TDT4230-Assignment-1/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/amundbk/Documents/School/Graphics/Coursework/TDT4230-Assignment-1/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/amundbk/Documents/School/Graphics/Coursework/TDT4230-Assignment-1/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: ‘strtod_l’ undeclared (first use in this function); did you mean ‘strtoull’?
+   return ((int*)(&strtod_l))[argc];
+                   ^~~~~~~~
+                   strtoull
+/home/amundbk/Documents/School/Graphics/Coursework/TDT4230-Assignment-1/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: note: each undeclared identifier is reported only once for each function it appears in
+CMakeFiles/cmTC_bc4cb.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_bc4cb.dir/CheckSymbolExists.c.o' failed
+make[1]: *** [CMakeFiles/cmTC_bc4cb.dir/CheckSymbolExists.c.o] Error 1
+make[1]: Leaving directory '/home/amundbk/Documents/School/Graphics/Coursework/TDT4230-Assignment-1/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_bc4cb/fast' failed
+make: *** [cmTC_bc4cb/fast] Error 2
+
+File /home/amundbk/Documents/School/Graphics/Coursework/TDT4230-Assignment-1/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdlib.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strtod_l
+  return ((int*)(&strtod_l))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_b7a3f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b7a3f.dir/build.make CMakeFiles/cmTC_b7a3f.dir/build
+make[1]: Entering directory '/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b7a3f.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_b7a3f.dir/CheckSymbolExists.c.o   -c /home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_b7a3f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b7a3f.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_b7a3f.dir/CheckSymbolExists.c.o  -o cmTC_b7a3f 
+CMakeFiles/cmTC_b7a3f.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_b7a3f.dir/build.make:97: recipe for target 'cmTC_b7a3f' failed
+make[1]: *** [cmTC_b7a3f] Error 1
+make[1]: Leaving directory '/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_b7a3f/fast' failed
+make: *** [cmTC_b7a3f/fast] Error 2
+
+File /home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_bd72b/fast"
+/usr/bin/make -f CMakeFiles/cmTC_bd72b.dir/build.make CMakeFiles/cmTC_bd72b.dir/build
+make[1]: Entering directory '/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_bd72b.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_bd72b.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_bd72b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bd72b.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_bd72b.dir/CheckFunctionExists.c.o  -o cmTC_bd72b -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_bd72b.dir/build.make:97: recipe for target 'cmTC_bd72b' failed
+make[1]: *** [cmTC_bd72b] Error 1
+make[1]: Leaving directory '/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_bd72b/fast' failed
+make: *** [cmTC_bd72b/fast] Error 2
+
+
+Determining if the strtod_l exist failed with the following output:
+Change Dir: /home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_32302/fast"
+/usr/bin/make -f CMakeFiles/cmTC_32302.dir/build.make CMakeFiles/cmTC_32302.dir/build
+make[1]: Entering directory '/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_32302.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_32302.dir/CheckSymbolExists.c.o   -c /home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: ‘strtod_l’ undeclared (first use in this function); did you mean ‘strtoull’?
+   return ((int*)(&strtod_l))[argc];
+                   ^~~~~~~~
+                   strtoull
+/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: note: each undeclared identifier is reported only once for each function it appears in
+CMakeFiles/cmTC_32302.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_32302.dir/CheckSymbolExists.c.o' failed
+make[1]: *** [CMakeFiles/cmTC_32302.dir/CheckSymbolExists.c.o] Error 1
+make[1]: Leaving directory '/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_32302/fast' failed
+make: *** [cmTC_32302/fast] Error 2
+
+File /home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdlib.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strtod_l
+  return ((int*)(&strtod_l))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_7e823/fast"
+/usr/bin/make -f CMakeFiles/cmTC_7e823.dir/build.make CMakeFiles/cmTC_7e823.dir/build
+make[1]: Entering directory '/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_7e823.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_7e823.dir/CheckSymbolExists.c.o   -c /home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_7e823
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7e823.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_7e823.dir/CheckSymbolExists.c.o  -o cmTC_7e823 
+CMakeFiles/cmTC_7e823.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_7e823.dir/build.make:97: recipe for target 'cmTC_7e823' failed
+make[1]: *** [cmTC_7e823] Error 1
+make[1]: Leaving directory '/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_7e823/fast' failed
+make: *** [cmTC_7e823/fast] Error 2
+
+File /home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_1e44d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_1e44d.dir/build.make CMakeFiles/cmTC_1e44d.dir/build
+make[1]: Entering directory '/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1e44d.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_1e44d.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_1e44d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1e44d.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_1e44d.dir/CheckFunctionExists.c.o  -o cmTC_1e44d -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_1e44d.dir/build.make:97: recipe for target 'cmTC_1e44d' failed
+make[1]: *** [cmTC_1e44d] Error 1
+make[1]: Leaving directory '/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_1e44d/fast' failed
+make: *** [cmTC_1e44d/fast] Error 2
+
+
+Determining if the strtod_l exist failed with the following output:
+Change Dir: /home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_65181/fast"
+/usr/bin/make -f CMakeFiles/cmTC_65181.dir/build.make CMakeFiles/cmTC_65181.dir/build
+make[1]: Entering directory '/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_65181.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_65181.dir/CheckSymbolExists.c.o   -c /home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: ‘strtod_l’ undeclared (first use in this function); did you mean ‘strtoull’?
+   return ((int*)(&strtod_l))[argc];
+                   ^~~~~~~~
+                   strtoull
+/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: note: each undeclared identifier is reported only once for each function it appears in
+CMakeFiles/cmTC_65181.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_65181.dir/CheckSymbolExists.c.o' failed
+make[1]: *** [CMakeFiles/cmTC_65181.dir/CheckSymbolExists.c.o] Error 1
+make[1]: Leaving directory '/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_65181/fast' failed
+make: *** [cmTC_65181/fast] Error 2
+
+File /home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdlib.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strtod_l
+  return ((int*)(&strtod_l))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_adec3/fast"
+/usr/bin/make -f CMakeFiles/cmTC_adec3.dir/build.make CMakeFiles/cmTC_adec3.dir/build
+make[1]: Entering directory '/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_adec3.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_adec3.dir/CheckSymbolExists.c.o   -c /home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_adec3
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_adec3.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_adec3.dir/CheckSymbolExists.c.o  -o cmTC_adec3 
+CMakeFiles/cmTC_adec3.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_adec3.dir/build.make:97: recipe for target 'cmTC_adec3' failed
+make[1]: *** [cmTC_adec3] Error 1
+make[1]: Leaving directory '/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_adec3/fast' failed
+make: *** [cmTC_adec3/fast] Error 2
+
+File /home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_7d4b2/fast"
+/usr/bin/make -f CMakeFiles/cmTC_7d4b2.dir/build.make CMakeFiles/cmTC_7d4b2.dir/build
+make[1]: Entering directory '/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_7d4b2.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_7d4b2.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_7d4b2
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7d4b2.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_7d4b2.dir/CheckFunctionExists.c.o  -o cmTC_7d4b2 -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_7d4b2.dir/build.make:97: recipe for target 'cmTC_7d4b2' failed
+make[1]: *** [cmTC_7d4b2] Error 1
+make[1]: Leaving directory '/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_7d4b2/fast' failed
+make: *** [cmTC_7d4b2/fast] Error 2
+
+
+Determining if the strtod_l exist failed with the following output:
+Change Dir: /home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_1413e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_1413e.dir/build.make CMakeFiles/cmTC_1413e.dir/build
+make[1]: Entering directory '/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1413e.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_1413e.dir/CheckSymbolExists.c.o   -c /home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: ‘strtod_l’ undeclared (first use in this function); did you mean ‘strtoull’?
+   return ((int*)(&strtod_l))[argc];
+                   ^~~~~~~~
+                   strtoull
+/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: note: each undeclared identifier is reported only once for each function it appears in
+CMakeFiles/cmTC_1413e.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_1413e.dir/CheckSymbolExists.c.o' failed
+make[1]: *** [CMakeFiles/cmTC_1413e.dir/CheckSymbolExists.c.o] Error 1
+make[1]: Leaving directory '/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_1413e/fast' failed
+make: *** [cmTC_1413e/fast] Error 2
+
+File /home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdlib.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strtod_l
+  return ((int*)(&strtod_l))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_1d9a2/fast"
+/usr/bin/make -f CMakeFiles/cmTC_1d9a2.dir/build.make CMakeFiles/cmTC_1d9a2.dir/build
+make[1]: Entering directory '/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1d9a2.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_1d9a2.dir/CheckSymbolExists.c.o   -c /home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_1d9a2
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1d9a2.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_1d9a2.dir/CheckSymbolExists.c.o  -o cmTC_1d9a2 
+CMakeFiles/cmTC_1d9a2.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_1d9a2.dir/build.make:97: recipe for target 'cmTC_1d9a2' failed
+make[1]: *** [cmTC_1d9a2] Error 1
+make[1]: Leaving directory '/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_1d9a2/fast' failed
+make: *** [cmTC_1d9a2/fast] Error 2
+
+File /home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_0aba2/fast"
+/usr/bin/make -f CMakeFiles/cmTC_0aba2.dir/build.make CMakeFiles/cmTC_0aba2.dir/build
+make[1]: Entering directory '/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0aba2.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_0aba2.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_0aba2
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0aba2.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_0aba2.dir/CheckFunctionExists.c.o  -o cmTC_0aba2 -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_0aba2.dir/build.make:97: recipe for target 'cmTC_0aba2' failed
+make[1]: *** [cmTC_0aba2] Error 1
+make[1]: Leaving directory '/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_0aba2/fast' failed
+make: *** [cmTC_0aba2/fast] Error 2
+
+
+Determining if the strtod_l exist failed with the following output:
+Change Dir: /home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_c3381/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c3381.dir/build.make CMakeFiles/cmTC_c3381.dir/build
+make[1]: Entering directory '/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c3381.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_c3381.dir/CheckSymbolExists.c.o   -c /home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: ‘strtod_l’ undeclared (first use in this function); did you mean ‘strtoull’?
+   return ((int*)(&strtod_l))[argc];
+                   ^~~~~~~~
+                   strtoull
+/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: note: each undeclared identifier is reported only once for each function it appears in
+CMakeFiles/cmTC_c3381.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_c3381.dir/CheckSymbolExists.c.o' failed
+make[1]: *** [CMakeFiles/cmTC_c3381.dir/CheckSymbolExists.c.o] Error 1
+make[1]: Leaving directory '/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_c3381/fast' failed
+make: *** [cmTC_c3381/fast] Error 2
+
+File /home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdlib.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strtod_l
+  return ((int*)(&strtod_l))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_3f957/fast"
+/usr/bin/make -f CMakeFiles/cmTC_3f957.dir/build.make CMakeFiles/cmTC_3f957.dir/build
+make[1]: Entering directory '/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3f957.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_3f957.dir/CheckSymbolExists.c.o   -c /home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_3f957
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3f957.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_3f957.dir/CheckSymbolExists.c.o  -o cmTC_3f957 
+CMakeFiles/cmTC_3f957.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_3f957.dir/build.make:97: recipe for target 'cmTC_3f957' failed
+make[1]: *** [cmTC_3f957] Error 1
+make[1]: Leaving directory '/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_3f957/fast' failed
+make: *** [cmTC_3f957/fast] Error 2
+
+File /home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_20105/fast"
+/usr/bin/make -f CMakeFiles/cmTC_20105.dir/build.make CMakeFiles/cmTC_20105.dir/build
+make[1]: Entering directory '/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_20105.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_20105.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_20105
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_20105.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_20105.dir/CheckFunctionExists.c.o  -o cmTC_20105 -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_20105.dir/build.make:97: recipe for target 'cmTC_20105' failed
+make[1]: *** [cmTC_20105] Error 1
+make[1]: Leaving directory '/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_20105/fast' failed
+make: *** [cmTC_20105/fast] Error 2
+
+
+Determining if the strtod_l exist failed with the following output:
+Change Dir: /home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_ce716/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ce716.dir/build.make CMakeFiles/cmTC_ce716.dir/build
+make[1]: Entering directory '/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ce716.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_ce716.dir/CheckSymbolExists.c.o   -c /home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: ‘strtod_l’ undeclared (first use in this function); did you mean ‘strtoull’?
+   return ((int*)(&strtod_l))[argc];
+                   ^~~~~~~~
+                   strtoull
+/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: note: each undeclared identifier is reported only once for each function it appears in
+CMakeFiles/cmTC_ce716.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_ce716.dir/CheckSymbolExists.c.o' failed
+make[1]: *** [CMakeFiles/cmTC_ce716.dir/CheckSymbolExists.c.o] Error 1
+make[1]: Leaving directory '/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_ce716/fast' failed
+make: *** [cmTC_ce716/fast] Error 2
+
+File /home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdlib.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strtod_l
+  return ((int*)(&strtod_l))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_a9db2/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a9db2.dir/build.make CMakeFiles/cmTC_a9db2.dir/build
+make[1]: Entering directory '/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a9db2.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_a9db2.dir/CheckSymbolExists.c.o   -c /home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_a9db2
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a9db2.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_a9db2.dir/CheckSymbolExists.c.o  -o cmTC_a9db2 
+CMakeFiles/cmTC_a9db2.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_a9db2.dir/build.make:97: recipe for target 'cmTC_a9db2' failed
+make[1]: *** [cmTC_a9db2] Error 1
+make[1]: Leaving directory '/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_a9db2/fast' failed
+make: *** [cmTC_a9db2/fast] Error 2
+
+File /home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_77def/fast"
+/usr/bin/make -f CMakeFiles/cmTC_77def.dir/build.make CMakeFiles/cmTC_77def.dir/build
+make[1]: Entering directory '/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_77def.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_77def.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_77def
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_77def.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_77def.dir/CheckFunctionExists.c.o  -o cmTC_77def -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_77def.dir/build.make:97: recipe for target 'cmTC_77def' failed
+make[1]: *** [cmTC_77def] Error 1
+make[1]: Leaving directory '/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_77def/fast' failed
+make: *** [cmTC_77def/fast] Error 2
+
+
+Determining if the strtod_l exist failed with the following output:
+Change Dir: /home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_69a38/fast"
+/usr/bin/make -f CMakeFiles/cmTC_69a38.dir/build.make CMakeFiles/cmTC_69a38.dir/build
+make[1]: Entering directory '/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_69a38.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_69a38.dir/CheckSymbolExists.c.o   -c /home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: ‘strtod_l’ undeclared (first use in this function); did you mean ‘strtoull’?
+   return ((int*)(&strtod_l))[argc];
+                   ^~~~~~~~
+                   strtoull
+/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: note: each undeclared identifier is reported only once for each function it appears in
+CMakeFiles/cmTC_69a38.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_69a38.dir/CheckSymbolExists.c.o' failed
+make[1]: *** [CMakeFiles/cmTC_69a38.dir/CheckSymbolExists.c.o] Error 1
+make[1]: Leaving directory '/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_69a38/fast' failed
+make: *** [cmTC_69a38/fast] Error 2
+
+File /home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdlib.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strtod_l
+  return ((int*)(&strtod_l))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_8364d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_8364d.dir/build.make CMakeFiles/cmTC_8364d.dir/build
+make[1]: Entering directory '/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8364d.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_8364d.dir/CheckSymbolExists.c.o   -c /home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_8364d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8364d.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_8364d.dir/CheckSymbolExists.c.o  -o cmTC_8364d 
+CMakeFiles/cmTC_8364d.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_8364d.dir/build.make:97: recipe for target 'cmTC_8364d' failed
+make[1]: *** [cmTC_8364d] Error 1
+make[1]: Leaving directory '/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_8364d/fast' failed
+make: *** [cmTC_8364d/fast] Error 2
+
+File /home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_c57ad/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c57ad.dir/build.make CMakeFiles/cmTC_c57ad.dir/build
+make[1]: Entering directory '/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c57ad.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_c57ad.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_c57ad
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c57ad.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_c57ad.dir/CheckFunctionExists.c.o  -o cmTC_c57ad -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_c57ad.dir/build.make:97: recipe for target 'cmTC_c57ad' failed
+make[1]: *** [cmTC_c57ad] Error 1
+make[1]: Leaving directory '/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_c57ad/fast' failed
+make: *** [cmTC_c57ad/fast] Error 2
+
+
+Determining if the strtod_l exist failed with the following output:
+Change Dir: /home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_b6289/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b6289.dir/build.make CMakeFiles/cmTC_b6289.dir/build
+make[1]: Entering directory '/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b6289.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_b6289.dir/CheckSymbolExists.c.o   -c /home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: ‘strtod_l’ undeclared (first use in this function); did you mean ‘strtoull’?
+   return ((int*)(&strtod_l))[argc];
+                   ^~~~~~~~
+                   strtoull
+/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: note: each undeclared identifier is reported only once for each function it appears in
+CMakeFiles/cmTC_b6289.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_b6289.dir/CheckSymbolExists.c.o' failed
+make[1]: *** [CMakeFiles/cmTC_b6289.dir/CheckSymbolExists.c.o] Error 1
+make[1]: Leaving directory '/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_b6289/fast' failed
+make: *** [cmTC_b6289/fast] Error 2
+
+File /home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdlib.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strtod_l
+  return ((int*)(&strtod_l))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
