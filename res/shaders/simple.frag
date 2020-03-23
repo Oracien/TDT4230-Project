@@ -9,6 +9,9 @@ in layout(location = 0) vec3 normal;
 in layout(location = 1) vec2 textureCoordinates;
 in layout(location = 2) vec4 modelPosition;
 in layout(location = 3) vec3 colour_in;
+in layout(location = 4) mat3 tangentMatrix;
+in layout(location = 7) vec3 tangent;
+in layout(location = 8) vec3 biTangent;
 
 layout(binding = 1) uniform sampler2D textureSampler;
 layout(binding = 2) uniform sampler2D normalSampler;
@@ -46,7 +49,7 @@ void main()
     float atten3 = 0.001;
 
     float ambientStrength = 0.1;
-    float diffuseStrength = 0.5;
+    float diffuseStrength = 1.0;
 
     normal_view_vector = normalize(cameraPos - modelPosition.xyz);
     
@@ -68,7 +71,7 @@ void main()
     
     vec3 lighting = vec3(ambientStrength + specular + diffuse + dither_result);
 
-    //color = vec4(lighting, 1.0);
+    color = vec4(lighting, 1.0);
     //color = vec4(colour_in, 1.0);
-    color = vec4(new_normal, 1.0);
+    //color = vec4(new_normal, 1.0);
 }

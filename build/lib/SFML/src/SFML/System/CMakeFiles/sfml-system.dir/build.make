@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/amundbk/Documents/School/Graphics/Project
+CMAKE_SOURCE_DIR = /home/darkstar/Documents/School/Graphics/TDT4230-Project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/amundbk/Documents/School/Graphics/Project/build
+CMAKE_BINARY_DIR = /home/darkstar/Documents/School/Graphics/TDT4230-Project/build
 
 # Include any dependencies generated for this target.
 include lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/depend.make
@@ -59,16 +59,16 @@ include lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/flags.make
 
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Clock.cpp.o: lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/flags.make
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Clock.cpp.o: ../lib/SFML/src/SFML/System/Clock.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Clock.cpp.o"
-	cd /home/amundbk/Documents/School/Graphics/Project/build/lib/SFML/src/SFML/System && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sfml-system.dir/Clock.cpp.o -c /home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/Clock.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/darkstar/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Clock.cpp.o"
+	cd /home/darkstar/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/src/SFML/System && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sfml-system.dir/Clock.cpp.o -c /home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/Clock.cpp
 
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Clock.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sfml-system.dir/Clock.cpp.i"
-	cd /home/amundbk/Documents/School/Graphics/Project/build/lib/SFML/src/SFML/System && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/Clock.cpp > CMakeFiles/sfml-system.dir/Clock.cpp.i
+	cd /home/darkstar/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/src/SFML/System && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/Clock.cpp > CMakeFiles/sfml-system.dir/Clock.cpp.i
 
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Clock.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sfml-system.dir/Clock.cpp.s"
-	cd /home/amundbk/Documents/School/Graphics/Project/build/lib/SFML/src/SFML/System && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/Clock.cpp -o CMakeFiles/sfml-system.dir/Clock.cpp.s
+	cd /home/darkstar/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/src/SFML/System && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/Clock.cpp -o CMakeFiles/sfml-system.dir/Clock.cpp.s
 
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Clock.cpp.o.requires:
 
@@ -83,16 +83,16 @@ lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Clock.cpp.o.provides.build: 
 
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Err.cpp.o: lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/flags.make
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Err.cpp.o: ../lib/SFML/src/SFML/System/Err.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Err.cpp.o"
-	cd /home/amundbk/Documents/School/Graphics/Project/build/lib/SFML/src/SFML/System && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sfml-system.dir/Err.cpp.o -c /home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/Err.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/darkstar/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Err.cpp.o"
+	cd /home/darkstar/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/src/SFML/System && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sfml-system.dir/Err.cpp.o -c /home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/Err.cpp
 
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Err.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sfml-system.dir/Err.cpp.i"
-	cd /home/amundbk/Documents/School/Graphics/Project/build/lib/SFML/src/SFML/System && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/Err.cpp > CMakeFiles/sfml-system.dir/Err.cpp.i
+	cd /home/darkstar/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/src/SFML/System && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/Err.cpp > CMakeFiles/sfml-system.dir/Err.cpp.i
 
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Err.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sfml-system.dir/Err.cpp.s"
-	cd /home/amundbk/Documents/School/Graphics/Project/build/lib/SFML/src/SFML/System && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/Err.cpp -o CMakeFiles/sfml-system.dir/Err.cpp.s
+	cd /home/darkstar/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/src/SFML/System && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/Err.cpp -o CMakeFiles/sfml-system.dir/Err.cpp.s
 
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Err.cpp.o.requires:
 
@@ -107,16 +107,16 @@ lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Err.cpp.o.provides.build: li
 
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Lock.cpp.o: lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/flags.make
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Lock.cpp.o: ../lib/SFML/src/SFML/System/Lock.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Lock.cpp.o"
-	cd /home/amundbk/Documents/School/Graphics/Project/build/lib/SFML/src/SFML/System && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sfml-system.dir/Lock.cpp.o -c /home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/Lock.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/darkstar/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Lock.cpp.o"
+	cd /home/darkstar/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/src/SFML/System && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sfml-system.dir/Lock.cpp.o -c /home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/Lock.cpp
 
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Lock.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sfml-system.dir/Lock.cpp.i"
-	cd /home/amundbk/Documents/School/Graphics/Project/build/lib/SFML/src/SFML/System && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/Lock.cpp > CMakeFiles/sfml-system.dir/Lock.cpp.i
+	cd /home/darkstar/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/src/SFML/System && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/Lock.cpp > CMakeFiles/sfml-system.dir/Lock.cpp.i
 
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Lock.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sfml-system.dir/Lock.cpp.s"
-	cd /home/amundbk/Documents/School/Graphics/Project/build/lib/SFML/src/SFML/System && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/Lock.cpp -o CMakeFiles/sfml-system.dir/Lock.cpp.s
+	cd /home/darkstar/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/src/SFML/System && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/Lock.cpp -o CMakeFiles/sfml-system.dir/Lock.cpp.s
 
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Lock.cpp.o.requires:
 
@@ -131,16 +131,16 @@ lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Lock.cpp.o.provides.build: l
 
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Mutex.cpp.o: lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/flags.make
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Mutex.cpp.o: ../lib/SFML/src/SFML/System/Mutex.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Mutex.cpp.o"
-	cd /home/amundbk/Documents/School/Graphics/Project/build/lib/SFML/src/SFML/System && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sfml-system.dir/Mutex.cpp.o -c /home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/Mutex.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/darkstar/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Mutex.cpp.o"
+	cd /home/darkstar/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/src/SFML/System && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sfml-system.dir/Mutex.cpp.o -c /home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/Mutex.cpp
 
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Mutex.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sfml-system.dir/Mutex.cpp.i"
-	cd /home/amundbk/Documents/School/Graphics/Project/build/lib/SFML/src/SFML/System && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/Mutex.cpp > CMakeFiles/sfml-system.dir/Mutex.cpp.i
+	cd /home/darkstar/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/src/SFML/System && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/Mutex.cpp > CMakeFiles/sfml-system.dir/Mutex.cpp.i
 
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Mutex.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sfml-system.dir/Mutex.cpp.s"
-	cd /home/amundbk/Documents/School/Graphics/Project/build/lib/SFML/src/SFML/System && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/Mutex.cpp -o CMakeFiles/sfml-system.dir/Mutex.cpp.s
+	cd /home/darkstar/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/src/SFML/System && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/Mutex.cpp -o CMakeFiles/sfml-system.dir/Mutex.cpp.s
 
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Mutex.cpp.o.requires:
 
@@ -155,16 +155,16 @@ lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Mutex.cpp.o.provides.build: 
 
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Sleep.cpp.o: lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/flags.make
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Sleep.cpp.o: ../lib/SFML/src/SFML/System/Sleep.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Sleep.cpp.o"
-	cd /home/amundbk/Documents/School/Graphics/Project/build/lib/SFML/src/SFML/System && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sfml-system.dir/Sleep.cpp.o -c /home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/Sleep.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/darkstar/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Sleep.cpp.o"
+	cd /home/darkstar/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/src/SFML/System && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sfml-system.dir/Sleep.cpp.o -c /home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/Sleep.cpp
 
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Sleep.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sfml-system.dir/Sleep.cpp.i"
-	cd /home/amundbk/Documents/School/Graphics/Project/build/lib/SFML/src/SFML/System && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/Sleep.cpp > CMakeFiles/sfml-system.dir/Sleep.cpp.i
+	cd /home/darkstar/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/src/SFML/System && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/Sleep.cpp > CMakeFiles/sfml-system.dir/Sleep.cpp.i
 
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Sleep.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sfml-system.dir/Sleep.cpp.s"
-	cd /home/amundbk/Documents/School/Graphics/Project/build/lib/SFML/src/SFML/System && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/Sleep.cpp -o CMakeFiles/sfml-system.dir/Sleep.cpp.s
+	cd /home/darkstar/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/src/SFML/System && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/Sleep.cpp -o CMakeFiles/sfml-system.dir/Sleep.cpp.s
 
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Sleep.cpp.o.requires:
 
@@ -179,16 +179,16 @@ lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Sleep.cpp.o.provides.build: 
 
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/String.cpp.o: lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/flags.make
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/String.cpp.o: ../lib/SFML/src/SFML/System/String.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/String.cpp.o"
-	cd /home/amundbk/Documents/School/Graphics/Project/build/lib/SFML/src/SFML/System && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sfml-system.dir/String.cpp.o -c /home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/String.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/darkstar/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/String.cpp.o"
+	cd /home/darkstar/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/src/SFML/System && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sfml-system.dir/String.cpp.o -c /home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/String.cpp
 
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/String.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sfml-system.dir/String.cpp.i"
-	cd /home/amundbk/Documents/School/Graphics/Project/build/lib/SFML/src/SFML/System && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/String.cpp > CMakeFiles/sfml-system.dir/String.cpp.i
+	cd /home/darkstar/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/src/SFML/System && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/String.cpp > CMakeFiles/sfml-system.dir/String.cpp.i
 
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/String.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sfml-system.dir/String.cpp.s"
-	cd /home/amundbk/Documents/School/Graphics/Project/build/lib/SFML/src/SFML/System && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/String.cpp -o CMakeFiles/sfml-system.dir/String.cpp.s
+	cd /home/darkstar/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/src/SFML/System && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/String.cpp -o CMakeFiles/sfml-system.dir/String.cpp.s
 
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/String.cpp.o.requires:
 
@@ -203,16 +203,16 @@ lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/String.cpp.o.provides.build:
 
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Thread.cpp.o: lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/flags.make
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Thread.cpp.o: ../lib/SFML/src/SFML/System/Thread.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Thread.cpp.o"
-	cd /home/amundbk/Documents/School/Graphics/Project/build/lib/SFML/src/SFML/System && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sfml-system.dir/Thread.cpp.o -c /home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/Thread.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/darkstar/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Thread.cpp.o"
+	cd /home/darkstar/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/src/SFML/System && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sfml-system.dir/Thread.cpp.o -c /home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/Thread.cpp
 
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Thread.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sfml-system.dir/Thread.cpp.i"
-	cd /home/amundbk/Documents/School/Graphics/Project/build/lib/SFML/src/SFML/System && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/Thread.cpp > CMakeFiles/sfml-system.dir/Thread.cpp.i
+	cd /home/darkstar/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/src/SFML/System && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/Thread.cpp > CMakeFiles/sfml-system.dir/Thread.cpp.i
 
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Thread.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sfml-system.dir/Thread.cpp.s"
-	cd /home/amundbk/Documents/School/Graphics/Project/build/lib/SFML/src/SFML/System && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/Thread.cpp -o CMakeFiles/sfml-system.dir/Thread.cpp.s
+	cd /home/darkstar/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/src/SFML/System && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/Thread.cpp -o CMakeFiles/sfml-system.dir/Thread.cpp.s
 
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Thread.cpp.o.requires:
 
@@ -227,16 +227,16 @@ lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Thread.cpp.o.provides.build:
 
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/ThreadLocal.cpp.o: lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/flags.make
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/ThreadLocal.cpp.o: ../lib/SFML/src/SFML/System/ThreadLocal.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/ThreadLocal.cpp.o"
-	cd /home/amundbk/Documents/School/Graphics/Project/build/lib/SFML/src/SFML/System && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sfml-system.dir/ThreadLocal.cpp.o -c /home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/ThreadLocal.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/darkstar/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/ThreadLocal.cpp.o"
+	cd /home/darkstar/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/src/SFML/System && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sfml-system.dir/ThreadLocal.cpp.o -c /home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/ThreadLocal.cpp
 
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/ThreadLocal.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sfml-system.dir/ThreadLocal.cpp.i"
-	cd /home/amundbk/Documents/School/Graphics/Project/build/lib/SFML/src/SFML/System && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/ThreadLocal.cpp > CMakeFiles/sfml-system.dir/ThreadLocal.cpp.i
+	cd /home/darkstar/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/src/SFML/System && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/ThreadLocal.cpp > CMakeFiles/sfml-system.dir/ThreadLocal.cpp.i
 
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/ThreadLocal.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sfml-system.dir/ThreadLocal.cpp.s"
-	cd /home/amundbk/Documents/School/Graphics/Project/build/lib/SFML/src/SFML/System && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/ThreadLocal.cpp -o CMakeFiles/sfml-system.dir/ThreadLocal.cpp.s
+	cd /home/darkstar/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/src/SFML/System && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/ThreadLocal.cpp -o CMakeFiles/sfml-system.dir/ThreadLocal.cpp.s
 
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/ThreadLocal.cpp.o.requires:
 
@@ -251,16 +251,16 @@ lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/ThreadLocal.cpp.o.provides.b
 
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Time.cpp.o: lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/flags.make
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Time.cpp.o: ../lib/SFML/src/SFML/System/Time.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Time.cpp.o"
-	cd /home/amundbk/Documents/School/Graphics/Project/build/lib/SFML/src/SFML/System && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sfml-system.dir/Time.cpp.o -c /home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/Time.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/darkstar/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Time.cpp.o"
+	cd /home/darkstar/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/src/SFML/System && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sfml-system.dir/Time.cpp.o -c /home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/Time.cpp
 
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Time.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sfml-system.dir/Time.cpp.i"
-	cd /home/amundbk/Documents/School/Graphics/Project/build/lib/SFML/src/SFML/System && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/Time.cpp > CMakeFiles/sfml-system.dir/Time.cpp.i
+	cd /home/darkstar/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/src/SFML/System && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/Time.cpp > CMakeFiles/sfml-system.dir/Time.cpp.i
 
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Time.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sfml-system.dir/Time.cpp.s"
-	cd /home/amundbk/Documents/School/Graphics/Project/build/lib/SFML/src/SFML/System && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/Time.cpp -o CMakeFiles/sfml-system.dir/Time.cpp.s
+	cd /home/darkstar/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/src/SFML/System && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/Time.cpp -o CMakeFiles/sfml-system.dir/Time.cpp.s
 
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Time.cpp.o.requires:
 
@@ -275,16 +275,16 @@ lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Time.cpp.o.provides.build: l
 
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/FileInputStream.cpp.o: lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/flags.make
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/FileInputStream.cpp.o: ../lib/SFML/src/SFML/System/FileInputStream.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/FileInputStream.cpp.o"
-	cd /home/amundbk/Documents/School/Graphics/Project/build/lib/SFML/src/SFML/System && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sfml-system.dir/FileInputStream.cpp.o -c /home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/FileInputStream.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/darkstar/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/FileInputStream.cpp.o"
+	cd /home/darkstar/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/src/SFML/System && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sfml-system.dir/FileInputStream.cpp.o -c /home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/FileInputStream.cpp
 
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/FileInputStream.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sfml-system.dir/FileInputStream.cpp.i"
-	cd /home/amundbk/Documents/School/Graphics/Project/build/lib/SFML/src/SFML/System && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/FileInputStream.cpp > CMakeFiles/sfml-system.dir/FileInputStream.cpp.i
+	cd /home/darkstar/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/src/SFML/System && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/FileInputStream.cpp > CMakeFiles/sfml-system.dir/FileInputStream.cpp.i
 
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/FileInputStream.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sfml-system.dir/FileInputStream.cpp.s"
-	cd /home/amundbk/Documents/School/Graphics/Project/build/lib/SFML/src/SFML/System && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/FileInputStream.cpp -o CMakeFiles/sfml-system.dir/FileInputStream.cpp.s
+	cd /home/darkstar/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/src/SFML/System && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/FileInputStream.cpp -o CMakeFiles/sfml-system.dir/FileInputStream.cpp.s
 
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/FileInputStream.cpp.o.requires:
 
@@ -299,16 +299,16 @@ lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/FileInputStream.cpp.o.provid
 
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/MemoryInputStream.cpp.o: lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/flags.make
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/MemoryInputStream.cpp.o: ../lib/SFML/src/SFML/System/MemoryInputStream.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/MemoryInputStream.cpp.o"
-	cd /home/amundbk/Documents/School/Graphics/Project/build/lib/SFML/src/SFML/System && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sfml-system.dir/MemoryInputStream.cpp.o -c /home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/MemoryInputStream.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/darkstar/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/MemoryInputStream.cpp.o"
+	cd /home/darkstar/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/src/SFML/System && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sfml-system.dir/MemoryInputStream.cpp.o -c /home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/MemoryInputStream.cpp
 
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/MemoryInputStream.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sfml-system.dir/MemoryInputStream.cpp.i"
-	cd /home/amundbk/Documents/School/Graphics/Project/build/lib/SFML/src/SFML/System && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/MemoryInputStream.cpp > CMakeFiles/sfml-system.dir/MemoryInputStream.cpp.i
+	cd /home/darkstar/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/src/SFML/System && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/MemoryInputStream.cpp > CMakeFiles/sfml-system.dir/MemoryInputStream.cpp.i
 
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/MemoryInputStream.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sfml-system.dir/MemoryInputStream.cpp.s"
-	cd /home/amundbk/Documents/School/Graphics/Project/build/lib/SFML/src/SFML/System && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/MemoryInputStream.cpp -o CMakeFiles/sfml-system.dir/MemoryInputStream.cpp.s
+	cd /home/darkstar/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/src/SFML/System && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/MemoryInputStream.cpp -o CMakeFiles/sfml-system.dir/MemoryInputStream.cpp.s
 
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/MemoryInputStream.cpp.o.requires:
 
@@ -323,16 +323,16 @@ lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/MemoryInputStream.cpp.o.prov
 
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/ClockImpl.cpp.o: lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/flags.make
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/ClockImpl.cpp.o: ../lib/SFML/src/SFML/System/Unix/ClockImpl.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/ClockImpl.cpp.o"
-	cd /home/amundbk/Documents/School/Graphics/Project/build/lib/SFML/src/SFML/System && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sfml-system.dir/Unix/ClockImpl.cpp.o -c /home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/Unix/ClockImpl.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/darkstar/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/ClockImpl.cpp.o"
+	cd /home/darkstar/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/src/SFML/System && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sfml-system.dir/Unix/ClockImpl.cpp.o -c /home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/Unix/ClockImpl.cpp
 
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/ClockImpl.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sfml-system.dir/Unix/ClockImpl.cpp.i"
-	cd /home/amundbk/Documents/School/Graphics/Project/build/lib/SFML/src/SFML/System && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/Unix/ClockImpl.cpp > CMakeFiles/sfml-system.dir/Unix/ClockImpl.cpp.i
+	cd /home/darkstar/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/src/SFML/System && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/Unix/ClockImpl.cpp > CMakeFiles/sfml-system.dir/Unix/ClockImpl.cpp.i
 
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/ClockImpl.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sfml-system.dir/Unix/ClockImpl.cpp.s"
-	cd /home/amundbk/Documents/School/Graphics/Project/build/lib/SFML/src/SFML/System && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/Unix/ClockImpl.cpp -o CMakeFiles/sfml-system.dir/Unix/ClockImpl.cpp.s
+	cd /home/darkstar/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/src/SFML/System && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/Unix/ClockImpl.cpp -o CMakeFiles/sfml-system.dir/Unix/ClockImpl.cpp.s
 
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/ClockImpl.cpp.o.requires:
 
@@ -347,16 +347,16 @@ lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/ClockImpl.cpp.o.provide
 
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/MutexImpl.cpp.o: lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/flags.make
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/MutexImpl.cpp.o: ../lib/SFML/src/SFML/System/Unix/MutexImpl.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/MutexImpl.cpp.o"
-	cd /home/amundbk/Documents/School/Graphics/Project/build/lib/SFML/src/SFML/System && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sfml-system.dir/Unix/MutexImpl.cpp.o -c /home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/Unix/MutexImpl.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/darkstar/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/MutexImpl.cpp.o"
+	cd /home/darkstar/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/src/SFML/System && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sfml-system.dir/Unix/MutexImpl.cpp.o -c /home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/Unix/MutexImpl.cpp
 
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/MutexImpl.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sfml-system.dir/Unix/MutexImpl.cpp.i"
-	cd /home/amundbk/Documents/School/Graphics/Project/build/lib/SFML/src/SFML/System && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/Unix/MutexImpl.cpp > CMakeFiles/sfml-system.dir/Unix/MutexImpl.cpp.i
+	cd /home/darkstar/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/src/SFML/System && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/Unix/MutexImpl.cpp > CMakeFiles/sfml-system.dir/Unix/MutexImpl.cpp.i
 
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/MutexImpl.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sfml-system.dir/Unix/MutexImpl.cpp.s"
-	cd /home/amundbk/Documents/School/Graphics/Project/build/lib/SFML/src/SFML/System && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/Unix/MutexImpl.cpp -o CMakeFiles/sfml-system.dir/Unix/MutexImpl.cpp.s
+	cd /home/darkstar/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/src/SFML/System && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/Unix/MutexImpl.cpp -o CMakeFiles/sfml-system.dir/Unix/MutexImpl.cpp.s
 
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/MutexImpl.cpp.o.requires:
 
@@ -371,16 +371,16 @@ lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/MutexImpl.cpp.o.provide
 
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/SleepImpl.cpp.o: lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/flags.make
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/SleepImpl.cpp.o: ../lib/SFML/src/SFML/System/Unix/SleepImpl.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/SleepImpl.cpp.o"
-	cd /home/amundbk/Documents/School/Graphics/Project/build/lib/SFML/src/SFML/System && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sfml-system.dir/Unix/SleepImpl.cpp.o -c /home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/Unix/SleepImpl.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/darkstar/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/SleepImpl.cpp.o"
+	cd /home/darkstar/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/src/SFML/System && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sfml-system.dir/Unix/SleepImpl.cpp.o -c /home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/Unix/SleepImpl.cpp
 
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/SleepImpl.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sfml-system.dir/Unix/SleepImpl.cpp.i"
-	cd /home/amundbk/Documents/School/Graphics/Project/build/lib/SFML/src/SFML/System && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/Unix/SleepImpl.cpp > CMakeFiles/sfml-system.dir/Unix/SleepImpl.cpp.i
+	cd /home/darkstar/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/src/SFML/System && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/Unix/SleepImpl.cpp > CMakeFiles/sfml-system.dir/Unix/SleepImpl.cpp.i
 
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/SleepImpl.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sfml-system.dir/Unix/SleepImpl.cpp.s"
-	cd /home/amundbk/Documents/School/Graphics/Project/build/lib/SFML/src/SFML/System && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/Unix/SleepImpl.cpp -o CMakeFiles/sfml-system.dir/Unix/SleepImpl.cpp.s
+	cd /home/darkstar/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/src/SFML/System && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/Unix/SleepImpl.cpp -o CMakeFiles/sfml-system.dir/Unix/SleepImpl.cpp.s
 
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/SleepImpl.cpp.o.requires:
 
@@ -395,16 +395,16 @@ lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/SleepImpl.cpp.o.provide
 
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/ThreadImpl.cpp.o: lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/flags.make
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/ThreadImpl.cpp.o: ../lib/SFML/src/SFML/System/Unix/ThreadImpl.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/ThreadImpl.cpp.o"
-	cd /home/amundbk/Documents/School/Graphics/Project/build/lib/SFML/src/SFML/System && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sfml-system.dir/Unix/ThreadImpl.cpp.o -c /home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/Unix/ThreadImpl.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/darkstar/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/ThreadImpl.cpp.o"
+	cd /home/darkstar/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/src/SFML/System && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sfml-system.dir/Unix/ThreadImpl.cpp.o -c /home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/Unix/ThreadImpl.cpp
 
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/ThreadImpl.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sfml-system.dir/Unix/ThreadImpl.cpp.i"
-	cd /home/amundbk/Documents/School/Graphics/Project/build/lib/SFML/src/SFML/System && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/Unix/ThreadImpl.cpp > CMakeFiles/sfml-system.dir/Unix/ThreadImpl.cpp.i
+	cd /home/darkstar/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/src/SFML/System && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/Unix/ThreadImpl.cpp > CMakeFiles/sfml-system.dir/Unix/ThreadImpl.cpp.i
 
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/ThreadImpl.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sfml-system.dir/Unix/ThreadImpl.cpp.s"
-	cd /home/amundbk/Documents/School/Graphics/Project/build/lib/SFML/src/SFML/System && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/Unix/ThreadImpl.cpp -o CMakeFiles/sfml-system.dir/Unix/ThreadImpl.cpp.s
+	cd /home/darkstar/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/src/SFML/System && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/Unix/ThreadImpl.cpp -o CMakeFiles/sfml-system.dir/Unix/ThreadImpl.cpp.s
 
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/ThreadImpl.cpp.o.requires:
 
@@ -419,16 +419,16 @@ lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/ThreadImpl.cpp.o.provid
 
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/ThreadLocalImpl.cpp.o: lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/flags.make
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/ThreadLocalImpl.cpp.o: ../lib/SFML/src/SFML/System/Unix/ThreadLocalImpl.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/ThreadLocalImpl.cpp.o"
-	cd /home/amundbk/Documents/School/Graphics/Project/build/lib/SFML/src/SFML/System && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sfml-system.dir/Unix/ThreadLocalImpl.cpp.o -c /home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/Unix/ThreadLocalImpl.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/darkstar/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/ThreadLocalImpl.cpp.o"
+	cd /home/darkstar/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/src/SFML/System && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sfml-system.dir/Unix/ThreadLocalImpl.cpp.o -c /home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/Unix/ThreadLocalImpl.cpp
 
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/ThreadLocalImpl.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sfml-system.dir/Unix/ThreadLocalImpl.cpp.i"
-	cd /home/amundbk/Documents/School/Graphics/Project/build/lib/SFML/src/SFML/System && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/Unix/ThreadLocalImpl.cpp > CMakeFiles/sfml-system.dir/Unix/ThreadLocalImpl.cpp.i
+	cd /home/darkstar/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/src/SFML/System && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/Unix/ThreadLocalImpl.cpp > CMakeFiles/sfml-system.dir/Unix/ThreadLocalImpl.cpp.i
 
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/ThreadLocalImpl.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sfml-system.dir/Unix/ThreadLocalImpl.cpp.s"
-	cd /home/amundbk/Documents/School/Graphics/Project/build/lib/SFML/src/SFML/System && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/Unix/ThreadLocalImpl.cpp -o CMakeFiles/sfml-system.dir/Unix/ThreadLocalImpl.cpp.s
+	cd /home/darkstar/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/src/SFML/System && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/Unix/ThreadLocalImpl.cpp -o CMakeFiles/sfml-system.dir/Unix/ThreadLocalImpl.cpp.s
 
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/ThreadLocalImpl.cpp.o.requires:
 
@@ -481,9 +481,9 @@ lib/SFML/lib/libsfml-system.a: lib/SFML/src/SFML/System/CMakeFiles/sfml-system.d
 lib/SFML/lib/libsfml-system.a: lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/ThreadLocalImpl.cpp.o
 lib/SFML/lib/libsfml-system.a: lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/build.make
 lib/SFML/lib/libsfml-system.a: lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX static library ../../../lib/libsfml-system.a"
-	cd /home/amundbk/Documents/School/Graphics/Project/build/lib/SFML/src/SFML/System && $(CMAKE_COMMAND) -P CMakeFiles/sfml-system.dir/cmake_clean_target.cmake
-	cd /home/amundbk/Documents/School/Graphics/Project/build/lib/SFML/src/SFML/System && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/sfml-system.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/darkstar/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX static library ../../../lib/libsfml-system.a"
+	cd /home/darkstar/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/src/SFML/System && $(CMAKE_COMMAND) -P CMakeFiles/sfml-system.dir/cmake_clean_target.cmake
+	cd /home/darkstar/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/src/SFML/System && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/sfml-system.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/build: lib/SFML/lib/libsfml-system.a
@@ -510,10 +510,10 @@ lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/requires: lib/SFML/src/SFML/
 .PHONY : lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/requires
 
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/clean:
-	cd /home/amundbk/Documents/School/Graphics/Project/build/lib/SFML/src/SFML/System && $(CMAKE_COMMAND) -P CMakeFiles/sfml-system.dir/cmake_clean.cmake
+	cd /home/darkstar/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/src/SFML/System && $(CMAKE_COMMAND) -P CMakeFiles/sfml-system.dir/cmake_clean.cmake
 .PHONY : lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/clean
 
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/depend:
-	cd /home/amundbk/Documents/School/Graphics/Project/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/amundbk/Documents/School/Graphics/Project /home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System /home/amundbk/Documents/School/Graphics/Project/build /home/amundbk/Documents/School/Graphics/Project/build/lib/SFML/src/SFML/System /home/amundbk/Documents/School/Graphics/Project/build/lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/darkstar/Documents/School/Graphics/TDT4230-Project/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/darkstar/Documents/School/Graphics/TDT4230-Project /home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System /home/darkstar/Documents/School/Graphics/TDT4230-Project/build /home/darkstar/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/src/SFML/System /home/darkstar/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/depend
 

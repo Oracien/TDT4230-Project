@@ -58,7 +58,7 @@ add_library(sfml-system STATIC IMPORTED)
 
 set_target_properties(sfml-system PROPERTIES
   INTERFACE_COMPILE_DEFINITIONS "SFML_STATIC"
-  INTERFACE_INCLUDE_DIRECTORIES "/home/amundbk/Documents/School/Graphics/Project/lib/SFML/include"
+  INTERFACE_INCLUDE_DIRECTORIES "/home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/SFML/include"
   INTERFACE_LINK_LIBRARIES "\$<LINK_ONLY:pthread>;\$<LINK_ONLY:rt>"
 )
 
@@ -93,7 +93,7 @@ add_library(sfml-audio STATIC IMPORTED)
 
 set_target_properties(sfml-audio PROPERTIES
   INTERFACE_COMPILE_DEFINITIONS "SFML_STATIC"
-  INTERFACE_INCLUDE_DIRECTORIES "/home/amundbk/Documents/School/Graphics/Project/lib/SFML/include"
+  INTERFACE_INCLUDE_DIRECTORIES "/home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/SFML/include"
   INTERFACE_LINK_LIBRARIES "\$<LINK_ONLY:OpenAL>;sfml-system;\$<LINK_ONLY:Vorbis>;\$<LINK_ONLY:FLAC>"
 )
 
@@ -101,14 +101,14 @@ set_target_properties(sfml-audio PROPERTIES
 set_property(TARGET sfml-system APPEND PROPERTY IMPORTED_CONFIGURATIONS NOCONFIG)
 set_target_properties(sfml-system PROPERTIES
   IMPORTED_LINK_INTERFACE_LANGUAGES_NOCONFIG "CXX"
-  IMPORTED_LOCATION_NOCONFIG "/home/amundbk/Documents/School/Graphics/Project/build/lib/SFML/lib/libsfml-system.a"
+  IMPORTED_LOCATION_NOCONFIG "/home/darkstar/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/lib/libsfml-system.a"
   )
 
 # Import target "sfml-audio" for configuration ""
 set_property(TARGET sfml-audio APPEND PROPERTY IMPORTED_CONFIGURATIONS NOCONFIG)
 set_target_properties(sfml-audio PROPERTIES
   IMPORTED_LINK_INTERFACE_LANGUAGES_NOCONFIG "CXX"
-  IMPORTED_LOCATION_NOCONFIG "/home/amundbk/Documents/School/Graphics/Project/build/lib/SFML/lib/libsfml-audio.a"
+  IMPORTED_LOCATION_NOCONFIG "/home/darkstar/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/lib/libsfml-audio.a"
   )
 
 # This file does not depend on other imported targets which have

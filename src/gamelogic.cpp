@@ -39,6 +39,7 @@ SceneNode* tower1Node;
 SceneNode* light1Node;
 SceneNode* light2Node;
 SceneNode* light3Node;
+SceneNode* ballNode;
 
 const glm::vec2 floor_span = glm::vec2(400.0f, 400.0f);
 const glm::vec3 floor_position = glm::vec3(-200.0f, -50.0f, 0.0f);
@@ -46,9 +47,12 @@ const glm::vec3 floor_position = glm::vec3(-200.0f, -50.0f, 0.0f);
 const glm::vec3 tower_dimensions = glm::vec3(10.0f, 25.0f, 10.0f);
 const glm::vec3 tower_position = glm::vec3(-25.0f, -50.0f, -50.0f);
 
+const glm::vec3 ball_position = glm::vec3(0.0f, 27.5f, 0.0f);
+const float ball_radius = 1.5f;
+
 const glm::vec3 light1_position = glm::vec3(0.0f, 35.0f, 0.0f);
-const glm::vec3 light2_position = glm::vec3(0.0f, 28.0f, -100.0f);
-const glm::vec3 light3_position = glm::vec3(0.0f, 28.0f, -200.0f);
+const glm::vec3 light2_position = glm::vec3(0.0f, -22.0f, -150.0f);
+const glm::vec3 light3_position = glm::vec3(0.0f, -22.0f, -300.0f);
 
 glm::vec4 lightArray[NO_OF_LIGHT_SOURCES];
 
@@ -142,6 +146,7 @@ void initGame(GLFWwindow* window, CommandLineOptions gameOptions) {
     rootNode = createSceneNode();
     floorNode = createSceneNode();
     tower1Node = createSceneNode();
+    ballNode = createSceneNode();
     light1Node = new SceneNode(1);
     light2Node = new SceneNode(2);
     light3Node = new SceneNode(3);
@@ -152,10 +157,11 @@ void initGame(GLFWwindow* window, CommandLineOptions gameOptions) {
 
     Mesh floorMesh = generateFloor(floor_span);
     Mesh towerMesh = generateTower(tower_dimensions);
-    //Mesh floorMesh = cube(floorDimensions);
+    Mesh ballMesh = generateSphere(ball_radius, 1024, 1024);
 
     unsigned int floorVAO = generateBuffer(floorMesh);
     unsigned int towerVAO = generateBuffer(towerMesh);
+    unsigned int ballVAO = generateBuffer(ballMesh);
 
     floorNode->vertexArrayObjectID = floorVAO;
     floorNode->VAOIndexCount = floorMesh.indices.size();
@@ -164,13 +170,19 @@ void initGame(GLFWwindow* window, CommandLineOptions gameOptions) {
     tower1Node->vertexArrayObjectID = towerVAO;
     tower1Node->VAOIndexCount = towerMesh.indices.size();
     tower1Node->position = tower_position;
+    tower1Node->nodeID = 12;
+
+    ballNode->vertexArrayObjectID = ballVAO;
+    ballNode->VAOIndexCount = ballMesh.indices.size();
+    ballNode->position = ball_position;
 
     rootNode->children.push_back(floorNode);
     rootNode->children.push_back(tower1Node);
 
     tower1Node->children.push_back(light1Node);
-    tower1Node->children.push_back(light2Node);
-    tower1Node->children.push_back(light3Node);
+    tower1Node->children.push_back(ballNode);
+    rootNode->children.push_back(light2Node);
+    rootNode->children.push_back(light3Node);
 
 
     getTimeDeltaSeconds();
@@ -226,7 +238,6 @@ void updateFrame(GLFWwindow* window) {
 
 
     glUniformMatrix4fv(1, 1, GL_FALSE, glm::value_ptr(VP));
-    printf("Start node transformation update \n\n");
     updateNodeTransformations(rootNode, glm::mat4(1.0f));
 
 }
@@ -244,6 +255,7 @@ void updateNodeTransformations(SceneNode* node, glm::mat4 transformationThusFar)
     node->currentTransformationMatrix = transformationThusFar * transformationMatrix;
     
     glm::mat4 mat = transformationMatrix;
+    printf("Node id: %d\n", node->nodeID);
     printf("Transformation matrix: \n %f %f %f %f \n %f %f %f %f\n %f %f %f %f\n %f %f %f %f\n",
         mat[0][0], mat[1][0], mat[2][0], mat[3][0],
         mat[0][1], mat[1][1], mat[2][1], mat[3][1],
@@ -297,9 +309,9 @@ void renderNode(SceneNode* node) {
     glUniformMatrix4fv(0, 1, GL_FALSE, glm::value_ptr(node->currentTransformationMatrix)); //* glm::vec4(0.0f, 0.0f, 0.0f, 1.0f)));
     
     glm::mat4 mat = node->currentTransformationMatrix;
-    mat = glm::transpose(glm::inverse(mat));
-    glUniformMatrix3fv(2, 1, GL_FALSE, glm::value_ptr(glm::mat3(mat)));
-    printf("Normal matrix: \n %f %f %f \n %f %f %f \n %f %f %f \n ",
+    mat = glm::mat3(glm::transpose(glm::inverse(mat)));
+    glUniformMatrix3fv(2, 1, GL_FALSE, glm::value_ptr(mat));
+    printf("Node Id: %d \n Normal matrix: \n %f %f %f \n %f %f %f \n %f %f %f \n ", node->nodeID,
         mat[0][0], mat[1][0], mat[2][0],
         mat[0][1], mat[1][1], mat[2][1],
         mat[0][2], mat[1][2], mat[2][2]

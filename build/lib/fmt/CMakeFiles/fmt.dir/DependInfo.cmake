@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/amundbk/Documents/School/Graphics/Project/lib/fmt/src/format.cc" "/home/amundbk/Documents/School/Graphics/Project/build/lib/fmt/CMakeFiles/fmt.dir/src/format.cc.o"
-  "/home/amundbk/Documents/School/Graphics/Project/lib/fmt/src/os.cc" "/home/amundbk/Documents/School/Graphics/Project/build/lib/fmt/CMakeFiles/fmt.dir/src/os.cc.o"
+  "/home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/fmt/src/format.cc" "/home/darkstar/Documents/School/Graphics/TDT4230-Project/build/lib/fmt/CMakeFiles/fmt.dir/src/format.cc.o"
+  "/home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/fmt/src/os.cc" "/home/darkstar/Documents/School/Graphics/TDT4230-Project/build/lib/fmt/CMakeFiles/fmt.dir/src/os.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

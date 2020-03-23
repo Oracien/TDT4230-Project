@@ -81,7 +81,6 @@ unsigned int generateBuffer(Mesh &mesh) {
         generateAttribute(4, 3, biTangents, true);
     }
     if(mesh.colours.size() > 0) {
-        printf("Generating colours\n");
         generateAttribute(5, 3, mesh.colours, false);
     }
 

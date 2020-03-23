@@ -1,4 +1,4 @@
-# Install script for directory: /home/amundbk/Documents/School/Graphics/Project/lib/fmt
+# Install script for directory: /home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/fmt
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

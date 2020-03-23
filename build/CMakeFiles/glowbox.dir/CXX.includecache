@@ -2066,7 +2066,7 @@ glad/glad.h
 string
 -
 
-/home/amundbk/Documents/School/Graphics/Project/src/gamelogic.cpp
+/home/darkstar/Documents/School/Graphics/TDT4230-Project/src/gamelogic.cpp
 chrono
 -
 GLFW/glfw3.h
@@ -2098,31 +2098,31 @@ glm/gtc/type_ptr.hpp
 fmt/format.h
 -
 gamelogic.h
-/home/amundbk/Documents/School/Graphics/Project/src/gamelogic.h
+/home/darkstar/Documents/School/Graphics/TDT4230-Project/src/gamelogic.h
 sceneGraph.hpp
-/home/amundbk/Documents/School/Graphics/Project/src/sceneGraph.hpp
+/home/darkstar/Documents/School/Graphics/TDT4230-Project/src/sceneGraph.hpp
 glm/gtx/transform.hpp
 -
 textures.hpp
-/home/amundbk/Documents/School/Graphics/Project/src/textures.hpp
+/home/darkstar/Documents/School/Graphics/TDT4230-Project/src/textures.hpp
 utilities/imageLoader.hpp
-/home/amundbk/Documents/School/Graphics/Project/src/utilities/imageLoader.hpp
+/home/darkstar/Documents/School/Graphics/TDT4230-Project/src/utilities/imageLoader.hpp
 utilities/glfont.h
-/home/amundbk/Documents/School/Graphics/Project/src/utilities/glfont.h
+/home/darkstar/Documents/School/Graphics/TDT4230-Project/src/utilities/glfont.h
 timestamps.h
 -
 
-/home/amundbk/Documents/School/Graphics/Project/src/gamelogic.h
+/home/darkstar/Documents/School/Graphics/TDT4230-Project/src/gamelogic.h
 utilities/window.hpp
 -
 sceneGraph.hpp
-/home/amundbk/Documents/School/Graphics/Project/src/sceneGraph.hpp
+/home/darkstar/Documents/School/Graphics/TDT4230-Project/src/sceneGraph.hpp
 
-/home/amundbk/Documents/School/Graphics/Project/src/main.cpp
+/home/darkstar/Documents/School/Graphics/TDT4230-Project/src/main.cpp
 utilities/window.hpp
-/home/amundbk/Documents/School/Graphics/Project/src/utilities/window.hpp
+/home/darkstar/Documents/School/Graphics/TDT4230-Project/src/utilities/window.hpp
 program.hpp
-/home/amundbk/Documents/School/Graphics/Project/src/program.hpp
+/home/darkstar/Documents/School/Graphics/TDT4230-Project/src/program.hpp
 glad/glad.h
 -
 GLFW/glfw3.h
@@ -2132,13 +2132,13 @@ cstdlib
 arrrgh.hpp
 -
 
-/home/amundbk/Documents/School/Graphics/Project/src/program.cpp
+/home/darkstar/Documents/School/Graphics/TDT4230-Project/src/program.cpp
 program.hpp
-/home/amundbk/Documents/School/Graphics/Project/src/program.hpp
+/home/darkstar/Documents/School/Graphics/TDT4230-Project/src/program.hpp
 utilities/window.hpp
-/home/amundbk/Documents/School/Graphics/Project/src/utilities/window.hpp
+/home/darkstar/Documents/School/Graphics/TDT4230-Project/src/utilities/window.hpp
 gamelogic.h
-/home/amundbk/Documents/School/Graphics/Project/src/gamelogic.h
+/home/darkstar/Documents/School/Graphics/TDT4230-Project/src/gamelogic.h
 glm/glm.hpp
 -
 glm/gtc/matrix_transform.hpp
@@ -2160,7 +2160,7 @@ glm/gtc/type_ptr.hpp
 utilities/timeutils.h
 -
 
-/home/amundbk/Documents/School/Graphics/Project/src/program.hpp
+/home/darkstar/Documents/School/Graphics/TDT4230-Project/src/program.hpp
 GLFW/glfw3.h
 -
 glad/glad.h
@@ -2170,13 +2170,13 @@ string
 utilities/window.hpp
 -
 
-/home/amundbk/Documents/School/Graphics/Project/src/sceneGraph.cpp
+/home/darkstar/Documents/School/Graphics/TDT4230-Project/src/sceneGraph.cpp
 sceneGraph.hpp
-/home/amundbk/Documents/School/Graphics/Project/src/sceneGraph.hpp
+/home/darkstar/Documents/School/Graphics/TDT4230-Project/src/sceneGraph.hpp
 iostream
 -
 
-/home/amundbk/Documents/School/Graphics/Project/src/sceneGraph.hpp
+/home/darkstar/Documents/School/Graphics/TDT4230-Project/src/sceneGraph.hpp
 glm/glm.hpp
 -
 glm/mat4x4.hpp
@@ -2200,7 +2200,7 @@ chrono
 fstream
 -
 
-/home/amundbk/Documents/School/Graphics/Project/src/textures.cpp
+/home/darkstar/Documents/School/Graphics/TDT4230-Project/src/textures.cpp
 chrono
 -
 GLFW/glfw3.h
@@ -2232,75 +2232,75 @@ glm/gtc/type_ptr.hpp
 fmt/format.h
 -
 gamelogic.h
-/home/amundbk/Documents/School/Graphics/Project/src/gamelogic.h
+/home/darkstar/Documents/School/Graphics/TDT4230-Project/src/gamelogic.h
 sceneGraph.hpp
-/home/amundbk/Documents/School/Graphics/Project/src/sceneGraph.hpp
+/home/darkstar/Documents/School/Graphics/TDT4230-Project/src/sceneGraph.hpp
 glm/gtx/transform.hpp
 -
 textures.hpp
-/home/amundbk/Documents/School/Graphics/Project/src/textures.hpp
+/home/darkstar/Documents/School/Graphics/TDT4230-Project/src/textures.hpp
 utilities/imageLoader.hpp
-/home/amundbk/Documents/School/Graphics/Project/src/utilities/imageLoader.hpp
+/home/darkstar/Documents/School/Graphics/TDT4230-Project/src/utilities/imageLoader.hpp
 utilities/glfont.h
-/home/amundbk/Documents/School/Graphics/Project/src/utilities/glfont.h
+/home/darkstar/Documents/School/Graphics/TDT4230-Project/src/utilities/glfont.h
 
-/home/amundbk/Documents/School/Graphics/Project/src/textures.hpp
+/home/darkstar/Documents/School/Graphics/TDT4230-Project/src/textures.hpp
 utilities/imageLoader.hpp
-/home/amundbk/Documents/School/Graphics/Project/src/utilities/imageLoader.hpp
+/home/darkstar/Documents/School/Graphics/TDT4230-Project/src/utilities/imageLoader.hpp
 
-/home/amundbk/Documents/School/Graphics/Project/src/utilities/SimplexNoise.cpp
+/home/darkstar/Documents/School/Graphics/TDT4230-Project/src/utilities/SimplexNoise.cpp
 SimplexNoise.h
-/home/amundbk/Documents/School/Graphics/Project/src/utilities/SimplexNoise.h
+/home/darkstar/Documents/School/Graphics/TDT4230-Project/src/utilities/SimplexNoise.h
 cstdint
 -
 
-/home/amundbk/Documents/School/Graphics/Project/src/utilities/SimplexNoise.h
+/home/darkstar/Documents/School/Graphics/TDT4230-Project/src/utilities/SimplexNoise.h
 cstddef
 -
 
-/home/amundbk/Documents/School/Graphics/Project/src/utilities/glfont.cpp
+/home/darkstar/Documents/School/Graphics/TDT4230-Project/src/utilities/glfont.cpp
 iostream
 -
 glfont.h
-/home/amundbk/Documents/School/Graphics/Project/src/utilities/glfont.h
+/home/darkstar/Documents/School/Graphics/TDT4230-Project/src/utilities/glfont.h
 
-/home/amundbk/Documents/School/Graphics/Project/src/utilities/glfont.h
+/home/darkstar/Documents/School/Graphics/TDT4230-Project/src/utilities/glfont.h
 string
 -
 mesh.h
-/home/amundbk/Documents/School/Graphics/Project/src/utilities/mesh.h
+/home/darkstar/Documents/School/Graphics/TDT4230-Project/src/utilities/mesh.h
 
-/home/amundbk/Documents/School/Graphics/Project/src/utilities/glutils.cpp
+/home/darkstar/Documents/School/Graphics/TDT4230-Project/src/utilities/glutils.cpp
 glad/glad.h
 -
 program.hpp
 -
 glutils.h
-/home/amundbk/Documents/School/Graphics/Project/src/utilities/glutils.h
+/home/darkstar/Documents/School/Graphics/TDT4230-Project/src/utilities/glutils.h
 vector
 -
 
-/home/amundbk/Documents/School/Graphics/Project/src/utilities/glutils.h
+/home/darkstar/Documents/School/Graphics/TDT4230-Project/src/utilities/glutils.h
 mesh.h
-/home/amundbk/Documents/School/Graphics/Project/src/utilities/mesh.h
+/home/darkstar/Documents/School/Graphics/TDT4230-Project/src/utilities/mesh.h
 
-/home/amundbk/Documents/School/Graphics/Project/src/utilities/imageLoader.cpp
+/home/darkstar/Documents/School/Graphics/TDT4230-Project/src/utilities/imageLoader.cpp
 imageLoader.hpp
-/home/amundbk/Documents/School/Graphics/Project/src/utilities/imageLoader.hpp
+/home/darkstar/Documents/School/Graphics/TDT4230-Project/src/utilities/imageLoader.hpp
 iostream
 -
 
-/home/amundbk/Documents/School/Graphics/Project/src/utilities/imageLoader.hpp
+/home/darkstar/Documents/School/Graphics/TDT4230-Project/src/utilities/imageLoader.hpp
 lodepng.h
-/home/amundbk/Documents/School/Graphics/Project/src/utilities/lodepng.h
+/home/darkstar/Documents/School/Graphics/TDT4230-Project/src/utilities/lodepng.h
 vector
 -
 string
 -
 
-/home/amundbk/Documents/School/Graphics/Project/src/utilities/lodepng.cpp
+/home/darkstar/Documents/School/Graphics/TDT4230-Project/src/utilities/lodepng.cpp
 lodepng.h
-/home/amundbk/Documents/School/Graphics/Project/src/utilities/lodepng.h
+/home/darkstar/Documents/School/Graphics/TDT4230-Project/src/utilities/lodepng.h
 limits.h
 -
 stdio.h
@@ -2308,7 +2308,7 @@ stdio.h
 stdlib.h
 -
 
-/home/amundbk/Documents/School/Graphics/Project/src/utilities/lodepng.h
+/home/darkstar/Documents/School/Graphics/TDT4230-Project/src/utilities/lodepng.h
 string.h
 -
 vector
@@ -2316,39 +2316,39 @@ vector
 string
 -
 lodepng.h
-/home/amundbk/Documents/School/Graphics/Project/src/utilities/lodepng.h
+/home/darkstar/Documents/School/Graphics/TDT4230-Project/src/utilities/lodepng.h
 iostream
 -
 lodepng.h
-/home/amundbk/Documents/School/Graphics/Project/src/utilities/lodepng.h
+/home/darkstar/Documents/School/Graphics/TDT4230-Project/src/utilities/lodepng.h
 
-/home/amundbk/Documents/School/Graphics/Project/src/utilities/mesh.h
+/home/darkstar/Documents/School/Graphics/TDT4230-Project/src/utilities/mesh.h
 vector
 -
 glm/glm.hpp
 -
 
-/home/amundbk/Documents/School/Graphics/Project/src/utilities/shapes.cpp
+/home/darkstar/Documents/School/Graphics/TDT4230-Project/src/utilities/shapes.cpp
 iostream
 -
 shapes.h
-/home/amundbk/Documents/School/Graphics/Project/src/utilities/shapes.h
+/home/darkstar/Documents/School/Graphics/TDT4230-Project/src/utilities/shapes.h
 SimplexNoise.h
-/home/amundbk/Documents/School/Graphics/Project/src/utilities/SimplexNoise.h
+/home/darkstar/Documents/School/Graphics/TDT4230-Project/src/utilities/SimplexNoise.h
 
-/home/amundbk/Documents/School/Graphics/Project/src/utilities/shapes.h
+/home/darkstar/Documents/School/Graphics/TDT4230-Project/src/utilities/shapes.h
 mesh.h
-/home/amundbk/Documents/School/Graphics/Project/src/utilities/mesh.h
+/home/darkstar/Documents/School/Graphics/TDT4230-Project/src/utilities/mesh.h
 
-/home/amundbk/Documents/School/Graphics/Project/src/utilities/timeutils.cpp
+/home/darkstar/Documents/School/Graphics/TDT4230-Project/src/utilities/timeutils.cpp
 chrono
 -
 timeutils.h
-/home/amundbk/Documents/School/Graphics/Project/src/utilities/timeutils.h
+/home/darkstar/Documents/School/Graphics/TDT4230-Project/src/utilities/timeutils.h
 
-/home/amundbk/Documents/School/Graphics/Project/src/utilities/timeutils.h
+/home/darkstar/Documents/School/Graphics/TDT4230-Project/src/utilities/timeutils.h
 
-/home/amundbk/Documents/School/Graphics/Project/src/utilities/window.hpp
+/home/darkstar/Documents/School/Graphics/TDT4230-Project/src/utilities/window.hpp
 glad/glad.h
 -
 string

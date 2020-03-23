@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/amundbk/Documents/School/Graphics/Project
+CMAKE_SOURCE_DIR = /home/darkstar/Documents/School/Graphics/TDT4230-Project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/amundbk/Documents/School/Graphics/Project/build
+CMAKE_BINARY_DIR = /home/darkstar/Documents/School/Graphics/TDT4230-Project/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -126,14 +126,14 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/amundbk/Documents/School/Graphics/Project/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles /home/amundbk/Documents/School/Graphics/Project/build/lib/fmt/CMakeFiles/progress.marks
-	cd /home/amundbk/Documents/School/Graphics/Project/build && $(MAKE) -f CMakeFiles/Makefile2 lib/fmt/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles 0
+	cd /home/darkstar/Documents/School/Graphics/TDT4230-Project/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/darkstar/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles /home/darkstar/Documents/School/Graphics/TDT4230-Project/build/lib/fmt/CMakeFiles/progress.marks
+	cd /home/darkstar/Documents/School/Graphics/TDT4230-Project/build && $(MAKE) -f CMakeFiles/Makefile2 lib/fmt/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/darkstar/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/amundbk/Documents/School/Graphics/Project/build && $(MAKE) -f CMakeFiles/Makefile2 lib/fmt/clean
+	cd /home/darkstar/Documents/School/Graphics/TDT4230-Project/build && $(MAKE) -f CMakeFiles/Makefile2 lib/fmt/clean
 .PHONY : clean
 
 # The main clean target
@@ -143,22 +143,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/amundbk/Documents/School/Graphics/Project/build && $(MAKE) -f CMakeFiles/Makefile2 lib/fmt/preinstall
+	cd /home/darkstar/Documents/School/Graphics/TDT4230-Project/build && $(MAKE) -f CMakeFiles/Makefile2 lib/fmt/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/amundbk/Documents/School/Graphics/Project/build && $(MAKE) -f CMakeFiles/Makefile2 lib/fmt/preinstall
+	cd /home/darkstar/Documents/School/Graphics/TDT4230-Project/build && $(MAKE) -f CMakeFiles/Makefile2 lib/fmt/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/amundbk/Documents/School/Graphics/Project/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/darkstar/Documents/School/Graphics/TDT4230-Project/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 lib/fmt/CMakeFiles/fmt.dir/rule:
-	cd /home/amundbk/Documents/School/Graphics/Project/build && $(MAKE) -f CMakeFiles/Makefile2 lib/fmt/CMakeFiles/fmt.dir/rule
+	cd /home/darkstar/Documents/School/Graphics/TDT4230-Project/build && $(MAKE) -f CMakeFiles/Makefile2 lib/fmt/CMakeFiles/fmt.dir/rule
 .PHONY : lib/fmt/CMakeFiles/fmt.dir/rule
 
 # Convenience name for target.
@@ -168,7 +168,7 @@ fmt: lib/fmt/CMakeFiles/fmt.dir/rule
 
 # fast build rule for target.
 fmt/fast:
-	cd /home/amundbk/Documents/School/Graphics/Project/build && $(MAKE) -f lib/fmt/CMakeFiles/fmt.dir/build.make lib/fmt/CMakeFiles/fmt.dir/build
+	cd /home/darkstar/Documents/School/Graphics/TDT4230-Project/build && $(MAKE) -f lib/fmt/CMakeFiles/fmt.dir/build.make lib/fmt/CMakeFiles/fmt.dir/build
 .PHONY : fmt/fast
 
 src/format.o: src/format.cc.o
@@ -177,7 +177,7 @@ src/format.o: src/format.cc.o
 
 # target to build an object file
 src/format.cc.o:
-	cd /home/amundbk/Documents/School/Graphics/Project/build && $(MAKE) -f lib/fmt/CMakeFiles/fmt.dir/build.make lib/fmt/CMakeFiles/fmt.dir/src/format.cc.o
+	cd /home/darkstar/Documents/School/Graphics/TDT4230-Project/build && $(MAKE) -f lib/fmt/CMakeFiles/fmt.dir/build.make lib/fmt/CMakeFiles/fmt.dir/src/format.cc.o
 .PHONY : src/format.cc.o
 
 src/format.i: src/format.cc.i
@@ -186,7 +186,7 @@ src/format.i: src/format.cc.i
 
 # target to preprocess a source file
 src/format.cc.i:
-	cd /home/amundbk/Documents/School/Graphics/Project/build && $(MAKE) -f lib/fmt/CMakeFiles/fmt.dir/build.make lib/fmt/CMakeFiles/fmt.dir/src/format.cc.i
+	cd /home/darkstar/Documents/School/Graphics/TDT4230-Project/build && $(MAKE) -f lib/fmt/CMakeFiles/fmt.dir/build.make lib/fmt/CMakeFiles/fmt.dir/src/format.cc.i
 .PHONY : src/format.cc.i
 
 src/format.s: src/format.cc.s
@@ -195,7 +195,7 @@ src/format.s: src/format.cc.s
 
 # target to generate assembly for a file
 src/format.cc.s:
-	cd /home/amundbk/Documents/School/Graphics/Project/build && $(MAKE) -f lib/fmt/CMakeFiles/fmt.dir/build.make lib/fmt/CMakeFiles/fmt.dir/src/format.cc.s
+	cd /home/darkstar/Documents/School/Graphics/TDT4230-Project/build && $(MAKE) -f lib/fmt/CMakeFiles/fmt.dir/build.make lib/fmt/CMakeFiles/fmt.dir/src/format.cc.s
 .PHONY : src/format.cc.s
 
 src/os.o: src/os.cc.o
@@ -204,7 +204,7 @@ src/os.o: src/os.cc.o
 
 # target to build an object file
 src/os.cc.o:
-	cd /home/amundbk/Documents/School/Graphics/Project/build && $(MAKE) -f lib/fmt/CMakeFiles/fmt.dir/build.make lib/fmt/CMakeFiles/fmt.dir/src/os.cc.o
+	cd /home/darkstar/Documents/School/Graphics/TDT4230-Project/build && $(MAKE) -f lib/fmt/CMakeFiles/fmt.dir/build.make lib/fmt/CMakeFiles/fmt.dir/src/os.cc.o
 .PHONY : src/os.cc.o
 
 src/os.i: src/os.cc.i
@@ -213,7 +213,7 @@ src/os.i: src/os.cc.i
 
 # target to preprocess a source file
 src/os.cc.i:
-	cd /home/amundbk/Documents/School/Graphics/Project/build && $(MAKE) -f lib/fmt/CMakeFiles/fmt.dir/build.make lib/fmt/CMakeFiles/fmt.dir/src/os.cc.i
+	cd /home/darkstar/Documents/School/Graphics/TDT4230-Project/build && $(MAKE) -f lib/fmt/CMakeFiles/fmt.dir/build.make lib/fmt/CMakeFiles/fmt.dir/src/os.cc.i
 .PHONY : src/os.cc.i
 
 src/os.s: src/os.cc.s
@@ -222,7 +222,7 @@ src/os.s: src/os.cc.s
 
 # target to generate assembly for a file
 src/os.cc.s:
-	cd /home/amundbk/Documents/School/Graphics/Project/build && $(MAKE) -f lib/fmt/CMakeFiles/fmt.dir/build.make lib/fmt/CMakeFiles/fmt.dir/src/os.cc.s
+	cd /home/darkstar/Documents/School/Graphics/TDT4230-Project/build && $(MAKE) -f lib/fmt/CMakeFiles/fmt.dir/build.make lib/fmt/CMakeFiles/fmt.dir/src/os.cc.s
 .PHONY : src/os.cc.s
 
 # Help Target
@@ -255,6 +255,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/amundbk/Documents/School/Graphics/Project/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/darkstar/Documents/School/Graphics/TDT4230-Project/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
