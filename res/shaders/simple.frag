@@ -9,15 +9,17 @@ in layout(location = 0) vec3 normal;
 in layout(location = 1) vec2 textureCoordinates;
 in layout(location = 2) vec4 modelPosition;
 in layout(location = 3) vec3 colour_in;
-in layout(location = 4) mat3 tangentMatrix;
-in layout(location = 7) vec3 tangent;
-in layout(location = 8) vec3 biTangent;
+flat in layout(location = 4) int NormalMapToggle;
+in layout(location = 5) mat3 tangentMatrix;
+in layout(location = 8) vec3 tangent;
+in layout(location = 9) vec3 biTangent;
 
 layout(binding = 1) uniform sampler2D textureSampler;
 layout(binding = 2) uniform sampler2D normalSampler;
 
-uniform layout(location = 9) vec3 cameraPos;
-uniform layout(location = 10) vec3 colourBuffer;
+uniform layout(location = 20) int LightOrb;
+uniform layout(location = 21) vec3 cameraPos;
+uniform layout(location = 22) vec3 colourBuffer;
 
 uniform LightSource lightSources[3];
 
@@ -38,7 +40,11 @@ float dither(vec2 uv) { return (rand(uv)*2.0-1.0) / 256.0; }
 
 void main()
 {
-    new_normal = normalize(normal);
+    if(NormalMapToggle == 1) {
+        new_normal = normalize(tangentMatrix * ((texture(normalSampler, textureCoordinates).xyz * 2.0f) - 1.0f));
+    } else {
+        new_normal = normalize(normal);
+    }
     vec3 light_vector;
 
     vec3 diffuse = vec3(0.0);
@@ -71,7 +77,12 @@ void main()
     
     vec3 lighting = vec3(ambientStrength + specular + diffuse + dither_result);
 
-    color = vec4(lighting, 1.0);
-    //color = vec4(colour_in, 1.0);
-    //color = vec4(new_normal, 1.0);
+    if(LightOrb == 1) {
+        color = vec4(1.0);
+    } else if(NormalMapToggle == 1) {
+        color = vec4(texture(textureSampler, textureCoordinates).xyz * lighting, 1.0f);
+    } else {
+        color = vec4(lighting, 1.0);
+    }
+
 }

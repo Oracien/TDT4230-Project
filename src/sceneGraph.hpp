@@ -30,6 +30,9 @@ struct SceneNode {
         nodeType = GEOMETRY;
 		nodeID = 0;
 		textureID = 0;
+		normalID = 0;
+
+		isLightSource = false;
 
 	}
 	SceneNode(int ID) {
@@ -60,6 +63,9 @@ struct SceneNode {
 
 	//A unique identifier for normal maps
 	unsigned int normalID;
+
+	//A unique identifier for light related objects
+	bool isLightSource;
 
 	// A transformation matrix representing the transformation of the node's location relative to its parent. This matrix is updated every frame.
 	glm::mat4 currentTransformationMatrix;

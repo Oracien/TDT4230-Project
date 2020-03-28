@@ -18,7 +18,7 @@
 #define GLM_ENABLE_EXPERIMENTAL
 #include <glm/gtx/transform.hpp>
 #include "textures.hpp"
-
+#include "glm/ext.hpp"
 #include "utilities/imageLoader.hpp"
 #include "utilities/glfont.h"
 
@@ -50,7 +50,7 @@ const glm::vec3 tower_position = glm::vec3(-25.0f, -50.0f, -50.0f);
 const glm::vec3 ball_position = glm::vec3(0.0f, 27.5f, 0.0f);
 const float ball_radius = 1.5f;
 
-const glm::vec3 light1_position = glm::vec3(0.0f, 35.0f, 0.0f);
+const glm::vec3 light1_position = glm::vec3(0.0f, 27.5f, 0.0f);
 const glm::vec3 light2_position = glm::vec3(0.0f, -22.0f, -150.0f);
 const glm::vec3 light3_position = glm::vec3(0.0f, -22.0f, -300.0f);
 
@@ -175,6 +175,7 @@ void initGame(GLFWwindow* window, CommandLineOptions gameOptions) {
     ballNode->vertexArrayObjectID = ballVAO;
     ballNode->VAOIndexCount = ballMesh.indices.size();
     ballNode->position = ball_position;
+    ballNode->isLightSource = true;
 
     rootNode->children.push_back(floorNode);
     rootNode->children.push_back(tower1Node);
@@ -225,7 +226,7 @@ void updateFrame(GLFWwindow* window) {
     glm::mat4 projection = glm::perspective(glm::radians(80.0f), float(windowWidth) / float(windowHeight), 0.1f, 350.f);
 
 
-    glUniform3fv(9, 1, glm::value_ptr(cameraPosition));
+    glUniform3fv(21, 1, glm::value_ptr(cameraPosition));
 
     glm::mat4 view = 
                     glm::lookAt(
@@ -237,7 +238,7 @@ void updateFrame(GLFWwindow* window) {
     glm::mat4 VP = projection * view;
 
 
-    glUniformMatrix4fv(1, 1, GL_FALSE, glm::value_ptr(VP));
+    glUniformMatrix4fv(4, 1, GL_FALSE, glm::value_ptr(VP));
     updateNodeTransformations(rootNode, glm::mat4(1.0f));
 
 }
@@ -255,13 +256,8 @@ void updateNodeTransformations(SceneNode* node, glm::mat4 transformationThusFar)
     node->currentTransformationMatrix = transformationThusFar * transformationMatrix;
     
     glm::mat4 mat = transformationMatrix;
-    printf("Node id: %d\n", node->nodeID);
-    printf("Transformation matrix: \n %f %f %f %f \n %f %f %f %f\n %f %f %f %f\n %f %f %f %f\n",
-        mat[0][0], mat[1][0], mat[2][0], mat[3][0],
-        mat[0][1], mat[1][1], mat[2][1], mat[3][1],
-        mat[0][2], mat[1][2], mat[2][2], mat[3][2],
-        mat[0][3], mat[1][3], mat[2][3], mat[3][3]
-    );
+    //printf("Node id: %d\n", node->nodeID);
+    //std::cout<<glm::to_string(mat)<<std::endl;
     
     GLint lightLocation;
     GLint colourLocation;
@@ -305,18 +301,16 @@ void updateNodeTransformations(SceneNode* node, glm::mat4 transformationThusFar)
 }
 
 void renderNode(SceneNode* node) {
-    //glm::mat4 m = node->currentTransformationMatrix;
-    glUniformMatrix4fv(0, 1, GL_FALSE, glm::value_ptr(node->currentTransformationMatrix)); //* glm::vec4(0.0f, 0.0f, 0.0f, 1.0f)));
+    glUniformMatrix4fv(0, 1, GL_FALSE, glm::value_ptr(node->currentTransformationMatrix));
+    glm::mat3 mat = glm::mat3(glm::transpose(glm::inverse(node->currentTransformationMatrix)));
+    glUniformMatrix3fv(8, 1, GL_FALSE, glm::value_ptr(mat));
     
-    glm::mat4 mat = node->currentTransformationMatrix;
-    mat = glm::mat3(glm::transpose(glm::inverse(mat)));
-    glUniformMatrix3fv(2, 1, GL_FALSE, glm::value_ptr(mat));
-    printf("Node Id: %d \n Normal matrix: \n %f %f %f \n %f %f %f \n %f %f %f \n ", node->nodeID,
-        mat[0][0], mat[1][0], mat[2][0],
-        mat[0][1], mat[1][1], mat[2][1],
-        mat[0][2], mat[1][2], mat[2][2]
-    );
-    glUniform1i(3, 0);
+    glUniform1i(20, node->isLightSource ? 1 : 0);
+
+    //std::cout<<glm::to_string(mat)<<std::endl;
+
+    glUniform1i(11, 0);
+
     switch(node->nodeType) {
         case GEOMETRY:
             if(node->vertexArrayObjectID != -1) {
@@ -325,10 +319,10 @@ void renderNode(SceneNode* node) {
             }
             break;
         case NORMAL_MAPPED:
-            glUniform1i(3, 1);
             //printf("Normal Mapped baby. TextureID: %d, normalID: %d\n", node->textureID, node->normalID);
+            glUniform1i(11, 1);
             glBindVertexArray(node->vertexArrayObjectID);
-            glActiveTexture(GL_TEXTURE1);    
+            glActiveTexture(GL_TEXTURE1);
             glBindTexture(GL_TEXTURE_2D, node->textureID);
             
             glActiveTexture(GL_TEXTURE2);
