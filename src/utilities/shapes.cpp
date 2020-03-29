@@ -23,7 +23,7 @@ const std::vector<glm::vec3> colors = {
 };
 
 Mesh cube_with_offset(glm::vec3 scale, glm::vec3 offset) {
-    Mesh qube = cube(scale);
+    Mesh qube = cube(scale, glm::vec2(1.0), true, false, glm::vec3(1.0, 1.0, 1.0));
 
     for (int i = 0; i < qube.vertices.size(); i++) {
         qube.vertices.at(i) = qube.vertices[i] + offset;
@@ -107,7 +107,7 @@ Mesh cube(glm::vec3 scale, glm::vec2 textureScale, bool tilingTextures, bool inv
             m.vertices.push_back(points[indices[offset + i]]);
             m.indices.push_back(offset + i);
             m.normals.push_back(normals[face] * (inverted ? -1.f : 1.f));
-            m.colours.push_back(colors[face]);
+            m.colours.push_back(glm::vec3(0.3));
         }
 
         glm::vec2 textureScaleFactor = tilingTextures ? (faceScale[face] / textureScale) : glm::vec2(1);
@@ -174,10 +174,10 @@ Mesh generateTower(glm::vec3 dimensions) {
     glm::vec3 centering = glm::vec3(-dimensions.x / 2.0, 0, -dimensions.z /2.0);
 
     meshes.push_back(cube_with_offset(dimensions, centering));
-    meshes.push_back(cube_with_offset(glm::vec3(1, 5, 1), centering + glm::vec3(0, dimensions.y, 0)));
-    meshes.push_back(cube_with_offset(glm::vec3(1, 5, 1), centering + glm::vec3(dimensions.x - 1, dimensions.y, 0)));
-    meshes.push_back(cube_with_offset(glm::vec3(1, 5, 1), centering + glm::vec3(0, dimensions.y, dimensions.z - 1)));
-    meshes.push_back(cube_with_offset(glm::vec3(1, 5, 1), centering + glm::vec3(dimensions.x - 1, dimensions.y, dimensions.z - 1)));
+    meshes.push_back(cube_with_offset(glm::vec3(1.0f, 5.0f, 1.0f), centering + glm::vec3(0, dimensions.y, 0)));
+    meshes.push_back(cube_with_offset(glm::vec3(1.0f, 5.0f, 1.0f), centering + glm::vec3(dimensions.x - 1, dimensions.y, 0)));
+    meshes.push_back(cube_with_offset(glm::vec3(1.0f, 5.0f, 1.0f), centering + glm::vec3(0, dimensions.y, dimensions.z - 1)));
+    meshes.push_back(cube_with_offset(glm::vec3(1.0f, 5.0f, 1.0f), centering + glm::vec3(dimensions.x - 1, dimensions.y, dimensions.z - 1)));
     meshes.push_back(cube_with_offset(glm::vec3(dimensions.x, 2, dimensions.z), centering + glm::vec3(0, dimensions.y + 5, 0)));
     Mesh final_mesh = combineMeshes(meshes);
 
@@ -198,7 +198,7 @@ glm::vec3 getColourFromNoise( float noise) {
 Mesh generateFloor( glm::vec2 scale) {
     Mesh m;
 
-    float height_scale = 20.0f;
+    float height_scale = 30.0f;
 
     SimplexNoise simplex = SimplexNoise();
 

@@ -41,16 +41,16 @@ SceneNode* light2Node;
 SceneNode* light3Node;
 SceneNode* ballNode;
 
-const glm::vec2 floor_span = glm::vec2(400.0f, 400.0f);
-const glm::vec3 floor_position = glm::vec3(-200.0f, -50.0f, 0.0f);
+const glm::vec2 floor_span = glm::vec2(2000.0f, 2000.0f);
+const glm::vec3 floor_position = glm::vec3(-1000.0f, -50.0f, 1000.0f);
 
-const glm::vec3 tower_dimensions = glm::vec3(10.0f, 25.0f, 10.0f);
-const glm::vec3 tower_position = glm::vec3(-25.0f, -50.0f, -50.0f);
+const glm::vec3 tower_dimensions = glm::vec3(5.0f, 75.0f, 5.0f);
+const glm::vec3 tower_position = glm::vec3(-25.0f, -100.0f, -50.0f);
 
-const glm::vec3 ball_position = glm::vec3(0.0f, 27.5f, 0.0f);
+const glm::vec3 ball_position = glm::vec3(0.0f, 77.5f, 0.0f);
 const float ball_radius = 1.5f;
 
-const glm::vec3 light1_position = glm::vec3(0.0f, 27.5f, 0.0f);
+const glm::vec3 light1_position = glm::vec3(0.0f, 77.5f, 0.0f);
 const glm::vec3 light2_position = glm::vec3(0.0f, -22.0f, -150.0f);
 const glm::vec3 light3_position = glm::vec3(0.0f, -22.0f, -300.0f);
 
@@ -128,12 +128,9 @@ void mouseCallback(GLFWwindow* window, double x, double y) {
 }
 
 void initGame(GLFWwindow* window, CommandLineOptions gameOptions) {
-    buffer = new sf::SoundBuffer();
-    if (!buffer->loadFromFile("../res/Hall of the Mountain King.ogg")) {
-        return;
-    }
 
     options = gameOptions;
+
 
     glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_HIDDEN);
     glfwSetCursorPosCallback(window, mouseCallback);
@@ -141,18 +138,26 @@ void initGame(GLFWwindow* window, CommandLineOptions gameOptions) {
     worldShader = new Gloom::Shader();
     worldShader->makeBasicShader("../res/shaders/simple.vert", "../res/shaders/simple.frag");
     worldShader->activate();
-
+    
     // Construct scene
     rootNode = createSceneNode();
     floorNode = createSceneNode();
     tower1Node = createSceneNode();
     ballNode = createSceneNode();
-    light1Node = new SceneNode(1);
-    light2Node = new SceneNode(2);
-    light3Node = new SceneNode(3);
+    light1Node = createSceneNode();
+    light2Node = createSceneNode();
+    light3Node = createSceneNode();
 
+    light1Node->nodeID = 1;
+    light1Node->nodeType = POINT_LIGHT;
     light1Node->position = light1_position;
+
+    light2Node->nodeID = 2;
+    light2Node->nodeType = POINT_LIGHT;
     light2Node->position = light2_position;
+
+    light3Node->nodeID = 3;
+    light3Node->nodeType = POINT_LIGHT;
     light3Node->position = light3_position;
 
     Mesh floorMesh = generateFloor(floor_span);
@@ -172,19 +177,41 @@ void initGame(GLFWwindow* window, CommandLineOptions gameOptions) {
     tower1Node->position = tower_position;
     tower1Node->nodeID = 12;
 
+    //construct normal mapped
+    PNGImage brickImage = loadPNGFile("../res/textures/Brick03_col.png");
+    if(brickImage.width == 0) {
+        return ;
+    }
+    unsigned int brickTextureID = getTexture(brickImage);
+
+    tower1Node->textureID = brickTextureID;
+    
+    PNGImage brickNormal = loadPNGFile("../res/textures/Brick03_nrm.png");
+    if(brickNormal.width == 0) {
+        return ;
+    }
+    unsigned int brickNormalID = getTexture(brickNormal);
+    
+    tower1Node->normalID = brickNormalID;
+    
+    tower1Node->nodeType = NORMAL_MAPPED;
+
     ballNode->vertexArrayObjectID = ballVAO;
     ballNode->VAOIndexCount = ballMesh.indices.size();
     ballNode->position = ball_position;
     ballNode->isLightSource = true;
 
+
+
+
     rootNode->children.push_back(floorNode);
     rootNode->children.push_back(tower1Node);
+    //rootNode->children.push_back(light2Node);
+    //rootNode->children.push_back(light3Node);
 
     tower1Node->children.push_back(light1Node);
     tower1Node->children.push_back(ballNode);
-    rootNode->children.push_back(light2Node);
-    rootNode->children.push_back(light3Node);
-
+    
 
     getTimeDeltaSeconds();
 
@@ -257,6 +284,7 @@ void updateNodeTransformations(SceneNode* node, glm::mat4 transformationThusFar)
     
     glm::mat4 mat = transformationMatrix;
     //printf("Node id: %d\n", node->nodeID);
+    //std::cout<<node->nodeID<<std::endl;
     //std::cout<<glm::to_string(mat)<<std::endl;
     
     GLint lightLocation;
@@ -273,7 +301,7 @@ void updateNodeTransformations(SceneNode* node, glm::mat4 transformationThusFar)
             lightLocation = worldShader->getUniformFromName(lightBuffer);
             glUniform3fv(lightLocation, 1, glm::value_ptr(light_pos));
 
-            printf("light position id: %d %g %g %g\n", node->nodeID, light_pos.x, light_pos.y, light_pos.z);
+            //printf("light position id: %d %g %g %g\n", node->nodeID, light_pos.x, light_pos.y, light_pos.z);
             sprintf(colourBuffer, "lightSources[%d].colour", node->nodeID - 1);
             colourLocation = worldShader->getUniformFromName(colourBuffer);
             switch(node->nodeID) {
@@ -312,7 +340,7 @@ void renderNode(SceneNode* node) {
     glUniform1i(11, 0);
 
     switch(node->nodeType) {
-        case GEOMETRY:
+        case GEOMETRY:  
             if(node->vertexArrayObjectID != -1) {
                 glBindVertexArray(node->vertexArrayObjectID);
                 glDrawElements(GL_TRIANGLES, node->VAOIndexCount, GL_UNSIGNED_INT, nullptr);

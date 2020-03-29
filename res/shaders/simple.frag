@@ -50,12 +50,12 @@ void main()
     vec3 diffuse = vec3(0.0);
     vec3 specular = vec3(0.0);
 
-    float atten1 = 0.005;
-    float atten2 = 0.003;
-    float atten3 = 0.001;
+    float atten1 = 0.0005;
+    float atten2 = 0.0003;
+    float atten3 = 0.0001;
 
-    float ambientStrength = 0.1;
-    float diffuseStrength = 1.0;
+    float ambientStrength = 0.0;
+    float diffuseStrength = 0.5;
 
     normal_view_vector = normalize(cameraPos - modelPosition.xyz);
     
@@ -84,5 +84,6 @@ void main()
     } else {
         color = vec4(lighting, 1.0);
     }
+    color = vec4(new_normal, 1.0);
 
 }

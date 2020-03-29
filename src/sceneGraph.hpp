@@ -33,17 +33,6 @@ struct SceneNode {
 		normalID = 0;
 
 		isLightSource = false;
-
-	}
-	SceneNode(int ID) {
-		SceneNode();
-		nodeID = ID;
-		nodeType = POINT_LIGHT;
-	}
-	SceneNode(int otherID, unsigned int inputTextureID) {
-		SceneNode();
-		nodeID = otherID;
-		textureID = inputTextureID;
 	}
 
 	// A list of all children that belong to this node.
