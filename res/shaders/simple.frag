@@ -2,7 +2,7 @@
 
 struct LightSource {
     vec3 position;
-    vec3 colour;
+    vec3 pointed_normal;
 };
 
 in layout(location = 0) vec3 normal;
@@ -50,32 +50,40 @@ void main()
     vec3 diffuse = vec3(0.0);
     vec3 specular = vec3(0.0);
 
-    float atten1 = 0.0005;
-    float atten2 = 0.0003;
-    float atten3 = 0.0001;
+    float atten1 = 0.005;
+    float atten2 = 0.003;
+    float atten3 = 0.001;
 
-    float ambientStrength = 0.0;
-    float diffuseStrength = 0.5;
+    float ambientStrength = 0.05;
+    float diffuseStrength = 1.8;
+    float specularStrength = 1.0;
+    float specularPower = 32;
 
     normal_view_vector = normalize(cameraPos - modelPosition.xyz);
     
-    for (int i = 0; i < 3; i++) {
+    for (int i = 0; i < 1; i++) {
         position = lightSources[i].position;
         colour = colour_in;
 
+        light_vector = (position - modelPosition.xyz);
+
+        if ((dot(normalize(light_vector), normalize(lightSources[i].pointed_normal))) < (3.14/4.0)) {
+            continue;
+        }
         dist = distance(position, modelPosition.xyz);
         attenuation = 1 / (atten1 + dist * atten2 + dist * dist * atten3); 
-        light_vector = (position - modelPosition.xyz);
 
         normal_light_vector = normalize(position - modelPosition.xyz);
         diffuse += colour * diffuseStrength * attenuation * max(dot(new_normal, normal_light_vector), 0);
 
         reflected_normal = reflect(-normal_light_vector, new_normal);
-        specular += colour * attenuation * pow(max(dot(normal_view_vector, reflected_normal), 0.0), 32);
+        specular += colour * specularStrength * attenuation * pow(max(dot(normal_view_vector, reflected_normal), 0.0), specularPower);
     }
     float dither_result = dither(textureCoordinates) / 1;
+
+    vec3 ambient =  ambientStrength * colour_in;
     
-    vec3 lighting = vec3(ambientStrength + specular + diffuse + dither_result);
+    vec3 lighting = vec3(ambient + specular + diffuse + dither_result);
 
     if(LightOrb == 1) {
         color = vec4(1.0);
@@ -84,6 +92,4 @@ void main()
     } else {
         color = vec4(lighting, 1.0);
     }
-    color = vec4(new_normal, 1.0);
-
 }

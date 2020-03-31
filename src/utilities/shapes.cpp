@@ -3,8 +3,8 @@
 #include "SimplexNoise.h"
 #define M_PI 3.14159265359f
 
-const int floor_horizontal_section = 2;
-const int floor_depth_section = 2;
+const int floor_horizontal_section = 1;
+const int floor_depth_section = 1;
 const glm::vec3 origin = glm::vec3(0.0f, 0.0f, 0.0f);
 
 enum Direction {
@@ -12,14 +12,22 @@ enum Direction {
 };
 
 const std::vector<glm::vec3> colors = {
-    glm::vec3(0.1, 0.2, 0.1), 
-    glm::vec3(0.3, 0.2, 0.1), 
-    glm::vec3(0.5, 0.2, 0.1), 
-    glm::vec3(0.6, 0.4, 0.1), 
-    glm::vec3(0.3, 0.5, 0.7), 
-    glm::vec3(0.3, 0.5, 0.9), 
-    glm::vec3(0.5, 0.7, 1.0), 
-    glm::vec3(0.7, 0.9, 1.0)
+    glm::vec3(0.24, 0.36, 0.51), //water dark blue
+    glm::vec3(0.4, 0.6, 0.85), //water light blue
+    glm::vec3(0.89, 0.77, 0.65), //sand
+    glm::vec3(0.22, 0.41, 0.14), //grass light green
+    glm::vec3(0.01, 0.26, 0.0), //grass dark green
+    glm::vec3(0.14, 0.2, 0.08), //grass darker green
+    glm::vec3(0.24, 0.2, 0.14), //dirt dark brown
+    glm::vec3(0.42, 0.35, 0.24), //dirt brown
+    glm::vec3(0.20, 0.20, 0.20), //mountain darkerer grey
+    glm::vec3(0.25, 0.26, 0.26), //moutain darker grey
+    glm::vec3(0.39, 0.41, 0.41), //mountain dark grey
+    glm::vec3(0.47, 0.55, 0.67), //mountain blue grey
+    glm::vec3(0.76, 0.8, 0.8), //mountain light grey
+    glm::vec3(0.73, 0.87, 1.0), //snow light blue
+    glm::vec3(0.97, 1.0, 1.0), //snow less white
+    glm::vec3(1.0, 1.0, 1.0) //snow white
 };
 
 Mesh cube_with_offset(glm::vec3 scale, glm::vec3 offset) {
@@ -195,20 +203,77 @@ glm::vec3 getColourFromNoise( float noise) {
     return colors[0];
 }
 
-Mesh generateFloor( glm::vec2 scale) {
+Mesh generateFloor(glm::vec2 scale) {
     Mesh m;
 
     float height_scale = 30.0f;
 
     SimplexNoise simplex = SimplexNoise();
 
-    int no_horizontal_sections = (int) (((int) scale.x) / floor_horizontal_section);
-    int no_depth_sections = (int) (((int) scale.y) / floor_depth_section);
-    printf("Horizontal sets: %d, Dept sets: %d\n", no_horizontal_sections, no_depth_sections);
+    int no_horizontal_sections = (int) ((scale.x) / floor_horizontal_section);
+    int no_depth_sections = (int) ((scale.y) / floor_depth_section);
+
+    std::vector<glm::vec2> offset_inator = {glm::vec2(0, 0),glm::vec2(1, 1),glm::vec2(-1, 0),glm::vec2(0, -1),glm::vec2(1, 0),glm::vec2(0, 1)};
+    std::vector<glm::vec2> texture_coordinates = {glm::vec2(0, 0), glm::vec2(1, 1), glm::vec2(1, 0), glm::vec2(0, 0), glm::vec2(0, 1), glm::vec2(1, 1)};
+    int order[6] = {-6, -4, -5, -3, -1, -2};
+
+    //One Vertex per normal you dunce
+
+    long int offset = 0;
+    for (int a = 0; a < no_depth_sections; a++) {
+        for (int b = 0; b < no_horizontal_sections; b++) {
+            glm::vec2 positions = glm::vec2(a, b);
+            for (int i = 0; i<6; i++) {
+                positions += offset_inator[i];
+                float noise = simplex.fractal(4, -1*positions.x*0.005, positions.y*0.005);
+                m.vertices.push_back(glm::vec3(positions.y*floor_horizontal_section, height_scale*noise, -1*positions.x*floor_depth_section));
+                glm::vec3 color = getColourFromNoise(noise);
+                
+                m.colours.push_back(color);
+                m.textureCoordinates.push_back(texture_coordinates[i]);
+                offset++;
+            }
+            for (int i = 0; i < 6; i++) {
+                m.indices.push_back(offset + order[i]);
+            }
+
+            glm::vec3 first_normal = glm::normalize(glm::cross
+            ((m.vertices[offset-4] - m.vertices[offset-6]),
+            (m.vertices[offset-5] - m.vertices[offset-6])));
+
+            glm::vec3 second_normal = glm::normalize(glm::cross
+            ((m.vertices[offset-2] - m.vertices[offset-1]),
+            (m.vertices[offset-3] - m.vertices[offset-1])));
+
+            for (int i = 0; i < 3; i++) {
+                m.normals.push_back(first_normal);
+            }
+            for (int i = 0; i < 3; i++) {
+                m.normals.push_back(second_normal);
+            }
+        }
+    }
+    printf("Offset: %ld ", offset);
+    printf("Floor finished. Vertices: %ld, Indices: %ld, Texture: %ld, normals: %ld\n", m.vertices.size(), m.indices.size(), m.textureCoordinates.size(), m.normals.size());
+
+
+    return m;
+}
+
+Mesh oldGenerateFloor( glm::vec2 scale) {
+    Mesh m;
+
+    float height_scale = 30.0f;
+
+    SimplexNoise simplex = SimplexNoise();
+
+    int no_horizontal_sections = (int) ((scale.x) / floor_horizontal_section);
+    int no_depth_sections = (int) ((scale.y) / floor_depth_section);
+    printf("Horizontal sets: %d, Depth sets: %d\n", no_horizontal_sections, no_depth_sections);
 
     for(int a = 0; a < no_depth_sections; a++) {
         for(int b = 0; b < no_horizontal_sections; b++) {
-            float noise = simplex.fractal(8, -1*a*0.01, b*0.01);
+            float noise = simplex.fractal(4, -1*a*0.005, b*0.005);
             m.vertices.push_back(glm::vec3(b*floor_horizontal_section, noise*height_scale, -1*a*floor_depth_section));
             glm::vec3 color = getColourFromNoise(noise);
             m.colours.push_back(color);
@@ -230,7 +295,7 @@ Mesh generateFloor( glm::vec2 scale) {
             m.indices.push_back(top_left);
             //Bottom Left
             m.indices.push_back(bottom_left);
-            //Bottom Right
+            //Bottom RightS
             m.indices.push_back(bottom_right);
             //Top Right
             m.indices.push_back(top_right);
@@ -248,8 +313,12 @@ Mesh generateFloor( glm::vec2 scale) {
             (m.vertices[top_left] - m.vertices[bottom_left])));
 
             glm::vec3 second_normal = glm::normalize(glm::cross
+            ((m.vertices[bottom_left] - m.vertices[top_right]),
+            (m.vertices[bottom_right] - m.vertices[top_right])));
+
+            /* glm::vec3 second_normal = glm::normalize(glm::cross
             ((m.vertices[top_right] - m.vertices[bottom_right]),
-            (m.vertices[bottom_left] - m.vertices[bottom_right])));
+            (m.vertices[bottom_left] - m.vertices[bottom_right]))); */
 
             //printf("Normals:\n first : %f %f %f\n 2nd: %f %f %f\n", first_normal.x, first_normal.y, first_normal.z, second_normal.x, second_normal.y, second_normal.z);
 

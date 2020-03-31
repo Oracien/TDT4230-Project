@@ -12,6 +12,7 @@ uniform layout(location = 4) mat4 ViewProjectionMatrix;
 uniform layout(location = 8) mat3 NormalMatrix;
 uniform layout(location = 11) int NormalMapToggle;
 
+
 out layout(location = 0) vec3 normal_out;
 out layout(location = 1) vec2 textureCoordinates_out;
 out layout(location = 2) vec4 model_pos_out;

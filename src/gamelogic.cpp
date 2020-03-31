@@ -48,11 +48,13 @@ const glm::vec3 tower_dimensions = glm::vec3(5.0f, 75.0f, 5.0f);
 const glm::vec3 tower_position = glm::vec3(-25.0f, -100.0f, -50.0f);
 
 const glm::vec3 ball_position = glm::vec3(0.0f, 77.5f, 0.0f);
-const float ball_radius = 1.5f;
+const float ball_radius = 1.0f;
 
 const glm::vec3 light1_position = glm::vec3(0.0f, 77.5f, 0.0f);
-const glm::vec3 light2_position = glm::vec3(0.0f, -22.0f, -150.0f);
-const glm::vec3 light3_position = glm::vec3(0.0f, -22.0f, -300.0f);
+
+const glm::vec3 light1_pointed_angle = glm::vec3(1.0f, 0.0f, 0.0f);
+
+double pi_value = 0.0;
 
 glm::vec4 lightArray[NO_OF_LIGHT_SOURCES];
 
@@ -145,20 +147,13 @@ void initGame(GLFWwindow* window, CommandLineOptions gameOptions) {
     tower1Node = createSceneNode();
     ballNode = createSceneNode();
     light1Node = createSceneNode();
-    light2Node = createSceneNode();
-    light3Node = createSceneNode();
 
     light1Node->nodeID = 1;
-    light1Node->nodeType = POINT_LIGHT;
+    light1Node->nodeType = SPOT_LIGHT;
     light1Node->position = light1_position;
 
-    light2Node->nodeID = 2;
-    light2Node->nodeType = POINT_LIGHT;
-    light2Node->position = light2_position;
 
-    light3Node->nodeID = 3;
-    light3Node->nodeType = POINT_LIGHT;
-    light3Node->position = light3_position;
+    light1Node->normal = light1_pointed_angle;
 
     Mesh floorMesh = generateFloor(floor_span);
     Mesh towerMesh = generateTower(tower_dimensions);
@@ -177,7 +172,7 @@ void initGame(GLFWwindow* window, CommandLineOptions gameOptions) {
     tower1Node->position = tower_position;
     tower1Node->nodeID = 12;
 
-    //construct normal mapped
+    /* //construct normal mapped
     PNGImage brickImage = loadPNGFile("../res/textures/Brick03_col.png");
     if(brickImage.width == 0) {
         return ;
@@ -195,7 +190,8 @@ void initGame(GLFWwindow* window, CommandLineOptions gameOptions) {
     tower1Node->normalID = brickNormalID;
     
     tower1Node->nodeType = NORMAL_MAPPED;
-
+    */
+    
     ballNode->vertexArrayObjectID = ballVAO;
     ballNode->VAOIndexCount = ballMesh.indices.size();
     ballNode->position = ball_position;
@@ -264,6 +260,8 @@ void updateFrame(GLFWwindow* window) {
 
     glm::mat4 VP = projection * view;
 
+    pi_value = pi_value >= 1.96 ? 0.0 : pi_value + 0.01;
+
 
     glUniformMatrix4fv(4, 1, GL_FALSE, glm::value_ptr(VP));
     updateNodeTransformations(rootNode, glm::mat4(1.0f));
@@ -288,11 +286,10 @@ void updateNodeTransformations(SceneNode* node, glm::mat4 transformationThusFar)
     //std::cout<<glm::to_string(mat)<<std::endl;
     
     GLint lightLocation;
-    GLint colourLocation;
+    GLint normalLocation;
     glm::vec3 light_pos;
-    glm::vec3 colour;
     char lightBuffer[128];
-    char colourBuffer[128];
+    char normalBuffer[128];
     switch(node->nodeType) {
         case GEOMETRY: break;
         case POINT_LIGHT: 
@@ -300,26 +297,18 @@ void updateNodeTransformations(SceneNode* node, glm::mat4 transformationThusFar)
             sprintf(lightBuffer, "lightSources[%d].position", node->nodeID - 1);
             lightLocation = worldShader->getUniformFromName(lightBuffer);
             glUniform3fv(lightLocation, 1, glm::value_ptr(light_pos));
+            break;  
+        case SPOT_LIGHT:
+            node->normal = glm::vec3(cos(pi_value*3.14), 0, sin(pi_value*3.14));
+            light_pos= glm::vec3(node->currentTransformationMatrix * glm::vec4(0.0f, 0.0f, 0.0f, 1.0f) );
+            sprintf(lightBuffer, "lightSources[%d].position", node->nodeID - 1);
+            lightLocation = worldShader->getUniformFromName(lightBuffer);
+            glUniform3fv(lightLocation, 1, glm::value_ptr(light_pos));
 
             //printf("light position id: %d %g %g %g\n", node->nodeID, light_pos.x, light_pos.y, light_pos.z);
-            sprintf(colourBuffer, "lightSources[%d].colour", node->nodeID - 1);
-            colourLocation = worldShader->getUniformFromName(colourBuffer);
-            switch(node->nodeID) {
-                case 1:
-                    colour = glm::vec3(1.0f, 0.0f, 0.0f);
-                    break;
-                case 2:
-                    colour = glm::vec3(0.0f, 1.0f, 0.0f);
-                    break; 
-                case 3:
-                    colour = glm::vec3(0.0f, 0.0f, 1.0f);
-                    break;
-                default:
-                    colour = glm::vec3(1.0f, 1.0f, 1.0f);
-                    break;
-            }
-            glUniform3fv(colourLocation, 1, glm::value_ptr(colour));
-            break;  
+            sprintf(normalBuffer, "lightSources[%d].pointed_normal", node->nodeID - 1);
+            normalLocation = worldShader->getUniformFromName(normalBuffer);
+            glUniform3fv(normalLocation, 1, glm::value_ptr(node->normal));
         default: break;
     }
 
