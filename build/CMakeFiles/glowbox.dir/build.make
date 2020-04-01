@@ -153,9 +153,33 @@ CMakeFiles/glowbox.dir/src/sceneGraph.cpp.o.provides: CMakeFiles/glowbox.dir/src
 CMakeFiles/glowbox.dir/src/sceneGraph.cpp.o.provides.build: CMakeFiles/glowbox.dir/src/sceneGraph.cpp.o
 
 
+CMakeFiles/glowbox.dir/src/shadows.cpp.o: CMakeFiles/glowbox.dir/flags.make
+CMakeFiles/glowbox.dir/src/shadows.cpp.o: ../src/shadows.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/darkstar/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/glowbox.dir/src/shadows.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/glowbox.dir/src/shadows.cpp.o -c /home/darkstar/Documents/School/Graphics/TDT4230-Project/src/shadows.cpp
+
+CMakeFiles/glowbox.dir/src/shadows.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/glowbox.dir/src/shadows.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/darkstar/Documents/School/Graphics/TDT4230-Project/src/shadows.cpp > CMakeFiles/glowbox.dir/src/shadows.cpp.i
+
+CMakeFiles/glowbox.dir/src/shadows.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/glowbox.dir/src/shadows.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/darkstar/Documents/School/Graphics/TDT4230-Project/src/shadows.cpp -o CMakeFiles/glowbox.dir/src/shadows.cpp.s
+
+CMakeFiles/glowbox.dir/src/shadows.cpp.o.requires:
+
+.PHONY : CMakeFiles/glowbox.dir/src/shadows.cpp.o.requires
+
+CMakeFiles/glowbox.dir/src/shadows.cpp.o.provides: CMakeFiles/glowbox.dir/src/shadows.cpp.o.requires
+	$(MAKE) -f CMakeFiles/glowbox.dir/build.make CMakeFiles/glowbox.dir/src/shadows.cpp.o.provides.build
+.PHONY : CMakeFiles/glowbox.dir/src/shadows.cpp.o.provides
+
+CMakeFiles/glowbox.dir/src/shadows.cpp.o.provides.build: CMakeFiles/glowbox.dir/src/shadows.cpp.o
+
+
 CMakeFiles/glowbox.dir/src/textures.cpp.o: CMakeFiles/glowbox.dir/flags.make
 CMakeFiles/glowbox.dir/src/textures.cpp.o: ../src/textures.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/darkstar/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/glowbox.dir/src/textures.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/darkstar/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/glowbox.dir/src/textures.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/glowbox.dir/src/textures.cpp.o -c /home/darkstar/Documents/School/Graphics/TDT4230-Project/src/textures.cpp
 
 CMakeFiles/glowbox.dir/src/textures.cpp.i: cmake_force
@@ -179,7 +203,7 @@ CMakeFiles/glowbox.dir/src/textures.cpp.o.provides.build: CMakeFiles/glowbox.dir
 
 CMakeFiles/glowbox.dir/src/utilities/SimplexNoise.cpp.o: CMakeFiles/glowbox.dir/flags.make
 CMakeFiles/glowbox.dir/src/utilities/SimplexNoise.cpp.o: ../src/utilities/SimplexNoise.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/darkstar/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/glowbox.dir/src/utilities/SimplexNoise.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/darkstar/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/glowbox.dir/src/utilities/SimplexNoise.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/glowbox.dir/src/utilities/SimplexNoise.cpp.o -c /home/darkstar/Documents/School/Graphics/TDT4230-Project/src/utilities/SimplexNoise.cpp
 
 CMakeFiles/glowbox.dir/src/utilities/SimplexNoise.cpp.i: cmake_force
@@ -203,7 +227,7 @@ CMakeFiles/glowbox.dir/src/utilities/SimplexNoise.cpp.o.provides.build: CMakeFil
 
 CMakeFiles/glowbox.dir/src/utilities/glfont.cpp.o: CMakeFiles/glowbox.dir/flags.make
 CMakeFiles/glowbox.dir/src/utilities/glfont.cpp.o: ../src/utilities/glfont.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/darkstar/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/glowbox.dir/src/utilities/glfont.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/darkstar/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/glowbox.dir/src/utilities/glfont.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/glowbox.dir/src/utilities/glfont.cpp.o -c /home/darkstar/Documents/School/Graphics/TDT4230-Project/src/utilities/glfont.cpp
 
 CMakeFiles/glowbox.dir/src/utilities/glfont.cpp.i: cmake_force
@@ -227,7 +251,7 @@ CMakeFiles/glowbox.dir/src/utilities/glfont.cpp.o.provides.build: CMakeFiles/glo
 
 CMakeFiles/glowbox.dir/src/utilities/glutils.cpp.o: CMakeFiles/glowbox.dir/flags.make
 CMakeFiles/glowbox.dir/src/utilities/glutils.cpp.o: ../src/utilities/glutils.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/darkstar/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/glowbox.dir/src/utilities/glutils.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/darkstar/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/glowbox.dir/src/utilities/glutils.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/glowbox.dir/src/utilities/glutils.cpp.o -c /home/darkstar/Documents/School/Graphics/TDT4230-Project/src/utilities/glutils.cpp
 
 CMakeFiles/glowbox.dir/src/utilities/glutils.cpp.i: cmake_force
@@ -251,7 +275,7 @@ CMakeFiles/glowbox.dir/src/utilities/glutils.cpp.o.provides.build: CMakeFiles/gl
 
 CMakeFiles/glowbox.dir/src/utilities/imageLoader.cpp.o: CMakeFiles/glowbox.dir/flags.make
 CMakeFiles/glowbox.dir/src/utilities/imageLoader.cpp.o: ../src/utilities/imageLoader.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/darkstar/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/glowbox.dir/src/utilities/imageLoader.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/darkstar/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/glowbox.dir/src/utilities/imageLoader.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/glowbox.dir/src/utilities/imageLoader.cpp.o -c /home/darkstar/Documents/School/Graphics/TDT4230-Project/src/utilities/imageLoader.cpp
 
 CMakeFiles/glowbox.dir/src/utilities/imageLoader.cpp.i: cmake_force
@@ -275,7 +299,7 @@ CMakeFiles/glowbox.dir/src/utilities/imageLoader.cpp.o.provides.build: CMakeFile
 
 CMakeFiles/glowbox.dir/src/utilities/lodepng.cpp.o: CMakeFiles/glowbox.dir/flags.make
 CMakeFiles/glowbox.dir/src/utilities/lodepng.cpp.o: ../src/utilities/lodepng.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/darkstar/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/glowbox.dir/src/utilities/lodepng.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/darkstar/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/glowbox.dir/src/utilities/lodepng.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/glowbox.dir/src/utilities/lodepng.cpp.o -c /home/darkstar/Documents/School/Graphics/TDT4230-Project/src/utilities/lodepng.cpp
 
 CMakeFiles/glowbox.dir/src/utilities/lodepng.cpp.i: cmake_force
@@ -299,7 +323,7 @@ CMakeFiles/glowbox.dir/src/utilities/lodepng.cpp.o.provides.build: CMakeFiles/gl
 
 CMakeFiles/glowbox.dir/src/utilities/shapes.cpp.o: CMakeFiles/glowbox.dir/flags.make
 CMakeFiles/glowbox.dir/src/utilities/shapes.cpp.o: ../src/utilities/shapes.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/darkstar/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/glowbox.dir/src/utilities/shapes.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/darkstar/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/glowbox.dir/src/utilities/shapes.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/glowbox.dir/src/utilities/shapes.cpp.o -c /home/darkstar/Documents/School/Graphics/TDT4230-Project/src/utilities/shapes.cpp
 
 CMakeFiles/glowbox.dir/src/utilities/shapes.cpp.i: cmake_force
@@ -323,7 +347,7 @@ CMakeFiles/glowbox.dir/src/utilities/shapes.cpp.o.provides.build: CMakeFiles/glo
 
 CMakeFiles/glowbox.dir/src/utilities/timeutils.cpp.o: CMakeFiles/glowbox.dir/flags.make
 CMakeFiles/glowbox.dir/src/utilities/timeutils.cpp.o: ../src/utilities/timeutils.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/darkstar/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/glowbox.dir/src/utilities/timeutils.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/darkstar/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/glowbox.dir/src/utilities/timeutils.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/glowbox.dir/src/utilities/timeutils.cpp.o -c /home/darkstar/Documents/School/Graphics/TDT4230-Project/src/utilities/timeutils.cpp
 
 CMakeFiles/glowbox.dir/src/utilities/timeutils.cpp.i: cmake_force
@@ -347,7 +371,7 @@ CMakeFiles/glowbox.dir/src/utilities/timeutils.cpp.o.provides.build: CMakeFiles/
 
 CMakeFiles/glowbox.dir/lib/glad/src/glad.c.o: CMakeFiles/glowbox.dir/flags.make
 CMakeFiles/glowbox.dir/lib/glad/src/glad.c.o: ../lib/glad/src/glad.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/darkstar/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/glowbox.dir/lib/glad/src/glad.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/darkstar/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/glowbox.dir/lib/glad/src/glad.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/glowbox.dir/lib/glad/src/glad.c.o   -c /home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/glad/src/glad.c
 
 CMakeFiles/glowbox.dir/lib/glad/src/glad.c.i: cmake_force
@@ -375,6 +399,7 @@ glowbox_OBJECTS = \
 "CMakeFiles/glowbox.dir/src/main.cpp.o" \
 "CMakeFiles/glowbox.dir/src/program.cpp.o" \
 "CMakeFiles/glowbox.dir/src/sceneGraph.cpp.o" \
+"CMakeFiles/glowbox.dir/src/shadows.cpp.o" \
 "CMakeFiles/glowbox.dir/src/textures.cpp.o" \
 "CMakeFiles/glowbox.dir/src/utilities/SimplexNoise.cpp.o" \
 "CMakeFiles/glowbox.dir/src/utilities/glfont.cpp.o" \
@@ -392,6 +417,7 @@ glowbox: CMakeFiles/glowbox.dir/src/gamelogic.cpp.o
 glowbox: CMakeFiles/glowbox.dir/src/main.cpp.o
 glowbox: CMakeFiles/glowbox.dir/src/program.cpp.o
 glowbox: CMakeFiles/glowbox.dir/src/sceneGraph.cpp.o
+glowbox: CMakeFiles/glowbox.dir/src/shadows.cpp.o
 glowbox: CMakeFiles/glowbox.dir/src/textures.cpp.o
 glowbox: CMakeFiles/glowbox.dir/src/utilities/SimplexNoise.cpp.o
 glowbox: CMakeFiles/glowbox.dir/src/utilities/glfont.cpp.o
@@ -403,20 +429,20 @@ glowbox: CMakeFiles/glowbox.dir/src/utilities/timeutils.cpp.o
 glowbox: CMakeFiles/glowbox.dir/lib/glad/src/glad.c.o
 glowbox: CMakeFiles/glowbox.dir/build.make
 glowbox: lib/glfw/src/libglfw3.a
-glowbox: lib/SFML/lib/libsfml-audio.a
-glowbox: lib/fmt/libfmt.a
+glowbox: lib/SFML/lib/libsfml-audio-s-d.a
+glowbox: lib/fmt/libfmtd.a
 glowbox: /usr/lib/x86_64-linux-gnu/librt.so
 glowbox: /usr/lib/x86_64-linux-gnu/libm.so
 glowbox: /usr/lib/x86_64-linux-gnu/libX11.so
 glowbox: /usr/lib/x86_64-linux-gnu/libopenal.so
-glowbox: lib/SFML/lib/libsfml-system.a
+glowbox: lib/SFML/lib/libsfml-system-s-d.a
 glowbox: /usr/lib/x86_64-linux-gnu/libvorbisenc.so
 glowbox: /usr/lib/x86_64-linux-gnu/libvorbisfile.so
 glowbox: /usr/lib/x86_64-linux-gnu/libvorbis.so
 glowbox: /usr/lib/x86_64-linux-gnu/libogg.so
 glowbox: /usr/lib/x86_64-linux-gnu/libFLAC.so
 glowbox: CMakeFiles/glowbox.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/darkstar/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable glowbox"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/darkstar/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable glowbox"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/glowbox.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -428,6 +454,7 @@ CMakeFiles/glowbox.dir/requires: CMakeFiles/glowbox.dir/src/gamelogic.cpp.o.requ
 CMakeFiles/glowbox.dir/requires: CMakeFiles/glowbox.dir/src/main.cpp.o.requires
 CMakeFiles/glowbox.dir/requires: CMakeFiles/glowbox.dir/src/program.cpp.o.requires
 CMakeFiles/glowbox.dir/requires: CMakeFiles/glowbox.dir/src/sceneGraph.cpp.o.requires
+CMakeFiles/glowbox.dir/requires: CMakeFiles/glowbox.dir/src/shadows.cpp.o.requires
 CMakeFiles/glowbox.dir/requires: CMakeFiles/glowbox.dir/src/textures.cpp.o.requires
 CMakeFiles/glowbox.dir/requires: CMakeFiles/glowbox.dir/src/utilities/SimplexNoise.cpp.o.requires
 CMakeFiles/glowbox.dir/requires: CMakeFiles/glowbox.dir/src/utilities/glfont.cpp.o.requires

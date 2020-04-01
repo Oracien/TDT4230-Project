@@ -13,9 +13,11 @@ flat in layout(location = 4) int NormalMapToggle;
 in layout(location = 5) mat3 tangentMatrix;
 in layout(location = 8) vec3 tangent;
 in layout(location = 9) vec3 biTangent;
+in layout(location = 10) vec4 shadowCoord;
 
 layout(binding = 1) uniform sampler2D textureSampler;
 layout(binding = 2) uniform sampler2D normalSampler;
+layout(binding = 3) uniform sampler2D shadowMap;
 
 uniform layout(location = 20) int LightOrb;
 uniform layout(location = 21) vec3 cameraPos;
@@ -30,6 +32,7 @@ vec3 reflected_normal;
 vec3 normal_view_vector;
 vec3 new_normal;
 
+float visibility;
 float attenuation;
 float dist;
 vec3 position;
@@ -54,10 +57,16 @@ void main()
     float atten2 = 0.003;
     float atten3 = 0.001;
 
-    float ambientStrength = 0.05;
-    float diffuseStrength = 1.8;
+    float ambientStrength = 0.02;
+    float diffuseStrength = 12.0;
     float specularStrength = 1.0;
     float specularPower = 32;
+
+    visibility = 1.0f;
+
+    if (texture( shadowMap, shadowCoord.xy).z < shadowCoord.z) {
+        visibility = 0.0f;
+    }
 
     normal_view_vector = normalize(cameraPos - modelPosition.xyz);
     
@@ -67,9 +76,9 @@ void main()
 
         light_vector = (position - modelPosition.xyz);
 
-        if ((dot(normalize(light_vector), normalize(lightSources[i].pointed_normal))) < (3.14/4.0)) {
+        /* if ((dot(normalize(light_vector), normalize(lightSources[i].pointed_normal))) < (3.14/4.0)) {
             continue;
-        }
+        } */
         dist = distance(position, modelPosition.xyz);
         attenuation = 1 / (atten1 + dist * atten2 + dist * dist * atten3); 
 
@@ -84,6 +93,9 @@ void main()
     vec3 ambient =  ambientStrength * colour_in;
     
     vec3 lighting = vec3(ambient + specular + diffuse + dither_result);
+    lighting.x = lighting.x > 1.0 ? 1.0 : lighting.x;
+    lighting.y = lighting.y > 1.0 ? 1.0 : lighting.y;
+    lighting.z = lighting.z > 1.0 ? 1.0 : lighting.z;
 
     if(LightOrb == 1) {
         color = vec4(1.0);

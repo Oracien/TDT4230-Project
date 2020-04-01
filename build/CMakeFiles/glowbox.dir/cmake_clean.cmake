@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/glowbox.dir/src/main.cpp.o"
   "CMakeFiles/glowbox.dir/src/program.cpp.o"
   "CMakeFiles/glowbox.dir/src/sceneGraph.cpp.o"
+  "CMakeFiles/glowbox.dir/src/shadows.cpp.o"
   "CMakeFiles/glowbox.dir/src/textures.cpp.o"
   "CMakeFiles/glowbox.dir/src/utilities/SimplexNoise.cpp.o"
   "CMakeFiles/glowbox.dir/src/utilities/glfont.cpp.o"

@@ -11,6 +11,7 @@ uniform layout(location = 0) mat4 ModelMatrix;
 uniform layout(location = 4) mat4 ViewProjectionMatrix;
 uniform layout(location = 8) mat3 NormalMatrix;
 uniform layout(location = 11) int NormalMapToggle;
+uniform layout(location = 12) mat4 depthBiasMVP;
 
 
 out layout(location = 0) vec3 normal_out;
@@ -21,6 +22,7 @@ flat out layout(location = 4) int NormalMapToggleOut;
 out layout(location = 5) mat3 tangentMatrix;
 out layout(location = 8) vec3 outTangent;
 out layout(location = 9) vec3 outBiTangent;
+out layout(location = 10) vec4 shadowCoord;
 
 void main()
 {
@@ -33,4 +35,5 @@ void main()
     tangentMatrix = (mat3(normalize(tangent), normalize(biTangent), normalize(normal_in)));
     outTangent = tangent;
     outBiTangent = biTangent;
+    shadowCoord = depthBiasMVP * vec4(position, 1.0f);
 }

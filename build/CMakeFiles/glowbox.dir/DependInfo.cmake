@@ -33,6 +33,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/darkstar/Documents/School/Graphics/TDT4230-Project/src/main.cpp" "/home/darkstar/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles/glowbox.dir/src/main.cpp.o"
   "/home/darkstar/Documents/School/Graphics/TDT4230-Project/src/program.cpp" "/home/darkstar/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles/glowbox.dir/src/program.cpp.o"
   "/home/darkstar/Documents/School/Graphics/TDT4230-Project/src/sceneGraph.cpp" "/home/darkstar/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles/glowbox.dir/src/sceneGraph.cpp.o"
+  "/home/darkstar/Documents/School/Graphics/TDT4230-Project/src/shadows.cpp" "/home/darkstar/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles/glowbox.dir/src/shadows.cpp.o"
   "/home/darkstar/Documents/School/Graphics/TDT4230-Project/src/textures.cpp" "/home/darkstar/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles/glowbox.dir/src/textures.cpp.o"
   "/home/darkstar/Documents/School/Graphics/TDT4230-Project/src/utilities/SimplexNoise.cpp" "/home/darkstar/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles/glowbox.dir/src/utilities/SimplexNoise.cpp.o"
   "/home/darkstar/Documents/School/Graphics/TDT4230-Project/src/utilities/glfont.cpp" "/home/darkstar/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles/glowbox.dir/src/utilities/glfont.cpp.o"

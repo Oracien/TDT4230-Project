@@ -21,6 +21,7 @@
 #include "glm/ext.hpp"
 #include "utilities/imageLoader.hpp"
 #include "utilities/glfont.h"
+#include "shadows.hpp"
 
 enum KeyFrameAction {
     BOTTOM, TOP
@@ -28,7 +29,7 @@ enum KeyFrameAction {
 
 #include <timestamps.h>
 
-const int NO_OF_LIGHT_SOURCES = 3;
+const int NO_OF_LIGHT_SOURCES = 1;
 
 unsigned int currentKeyFrame = 0;
 unsigned int previousKeyFrame = 0;
@@ -41,17 +42,16 @@ SceneNode* light2Node;
 SceneNode* light3Node;
 SceneNode* ballNode;
 
-const glm::vec2 floor_span = glm::vec2(2000.0f, 2000.0f);
-const glm::vec3 floor_position = glm::vec3(-1000.0f, -50.0f, 1000.0f);
+const glm::vec2 floor_span = glm::vec2(400.0f, 400.0f);
+const glm::vec3 floor_position = glm::vec3(-200.0f, -50.0f, 200.0f);
 
-const glm::vec3 tower_dimensions = glm::vec3(5.0f, 75.0f, 5.0f);
-const glm::vec3 tower_position = glm::vec3(-25.0f, -100.0f, -50.0f);
+const glm::vec3 tower_dimensions = glm::vec3(5.0f, 45.0f, 5.0f);
+const glm::vec3 tower_position = glm::vec3(-25.0f, -80.0f, -50.0f);
 
-const glm::vec3 ball_position = glm::vec3(0.0f, 77.5f, 0.0f);
+const glm::vec3 ball_position = glm::vec3(0.0f, 47.5f, 0.0f);
 const float ball_radius = 1.0f;
 
-const glm::vec3 light1_position = glm::vec3(0.0f, 77.5f, 0.0f);
-
+const glm::vec3 light1_position = glm::vec3(-25.0f, -32.5f, -50.0f);
 const glm::vec3 light1_pointed_angle = glm::vec3(1.0f, 0.0f, 0.0f);
 
 double pi_value = 0.0;
@@ -59,9 +59,12 @@ double pi_value = 0.0;
 glm::vec4 lightArray[NO_OF_LIGHT_SOURCES];
 
 // These are heap allocated, because they should not be initialised at the start of the program
-sf::SoundBuffer* buffer;
 Gloom::Shader* worldShader;
+Gloom::Shader* shadowShader;
+
+
 sf::Sound* sound;
+sf::SoundBuffer* buffer;
 
 CommandLineOptions options;
 
@@ -76,6 +79,23 @@ bool isPaused = false;
 glm::vec3 cameraPosition = glm::vec3(0.0f, 0.0f, 3.0f);
 glm::vec3 cameraFront = glm::vec3(0.0f, 0.0f, -1.0f);
 glm::vec3 upAlignment = glm::vec3(0.0f, 1.0f, 0.0f);
+
+//Uniforms
+glm::mat4 VP;
+
+//Shadow Configs
+GLuint shadowMap;
+glm::mat4 depthProjectionMatrix; 
+glm::mat4 depthViewMatrix;
+glm::mat4 depthModelMatrix = glm::mat4(1.0);
+glm::mat4 depthMVP;
+glm::mat4 biasMatrix(
+    0.5, 0.0, 0.0, 0.0,
+    0.0, 0.5, 0.0, 0.0,
+    0.0, 0.0, 0.5, 0.0,
+    0.5, 0.5, 0.5, 1.0
+);
+glm::mat4 depthBiasMVP;
 
 // Modify if you want the music to start further on in the track. Measured in seconds.
 const float debug_startTime = 0;
@@ -130,6 +150,7 @@ void mouseCallback(GLFWwindow* window, double x, double y) {
 }
 
 void initGame(GLFWwindow* window, CommandLineOptions gameOptions) {
+    printf("Game init started\n");
 
     options = gameOptions;
 
@@ -137,10 +158,15 @@ void initGame(GLFWwindow* window, CommandLineOptions gameOptions) {
     glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_HIDDEN);
     glfwSetCursorPosCallback(window, mouseCallback);
 
+    printf("Creating shaders\n");
     worldShader = new Gloom::Shader();
     worldShader->makeBasicShader("../res/shaders/simple.vert", "../res/shaders/simple.frag");
     worldShader->activate();
+
+    shadowShader = new Gloom::Shader();
+    shadowShader->makeBasicShader("../res/shaders/shadow.vert", "../res/shaders/shadow.frag");
     
+    printf("Constructing SceneNodes\n");
     // Construct scene
     rootNode = createSceneNode();
     floorNode = createSceneNode();
@@ -191,22 +217,20 @@ void initGame(GLFWwindow* window, CommandLineOptions gameOptions) {
     
     tower1Node->nodeType = NORMAL_MAPPED;
     */
+    shadowMap = setupShadows();
     
     ballNode->vertexArrayObjectID = ballVAO;
     ballNode->VAOIndexCount = ballMesh.indices.size();
     ballNode->position = ball_position;
     ballNode->isLightSource = true;
 
-
-
-
     rootNode->children.push_back(floorNode);
     rootNode->children.push_back(tower1Node);
-    //rootNode->children.push_back(light2Node);
-    //rootNode->children.push_back(light3Node);
+    rootNode->children.push_back(light1Node);
 
-    tower1Node->children.push_back(light1Node);
-    tower1Node->children.push_back(ballNode);
+    //tower1Node->children.push_back(ballNode);
+
+    printf("Node setup complete\n");
     
 
     getTimeDeltaSeconds();
@@ -249,7 +273,6 @@ void updateFrame(GLFWwindow* window) {
     glm::mat4 projection = glm::perspective(glm::radians(80.0f), float(windowWidth) / float(windowHeight), 0.1f, 350.f);
 
 
-    glUniform3fv(21, 1, glm::value_ptr(cameraPosition));
 
     glm::mat4 view = 
                     glm::lookAt(
@@ -258,12 +281,10 @@ void updateFrame(GLFWwindow* window) {
                         upAlignment
                     );
 
-    glm::mat4 VP = projection * view;
+    VP = projection * view;
 
-    pi_value = pi_value >= 1.96 ? 0.0 : pi_value + 0.01;
+    pi_value = pi_value >= 2.00 ? 0.0 : pi_value + 0.001;
 
-
-    glUniformMatrix4fv(4, 1, GL_FALSE, glm::value_ptr(VP));
     updateNodeTransformations(rootNode, glm::mat4(1.0f));
 
 }
@@ -299,7 +320,7 @@ void updateNodeTransformations(SceneNode* node, glm::mat4 transformationThusFar)
             glUniform3fv(lightLocation, 1, glm::value_ptr(light_pos));
             break;  
         case SPOT_LIGHT:
-            node->normal = glm::vec3(cos(pi_value*3.14), 0, sin(pi_value*3.14));
+            node->normal = glm::normalize(glm::vec3(cos(pi_value*3.14), -0.2, sin(pi_value*3.14)));
             light_pos= glm::vec3(node->currentTransformationMatrix * glm::vec4(0.0f, 0.0f, 0.0f, 1.0f) );
             sprintf(lightBuffer, "lightSources[%d].position", node->nodeID - 1);
             lightLocation = worldShader->getUniformFromName(lightBuffer);
@@ -357,12 +378,50 @@ void renderNode(SceneNode* node) {
     }
 }
 
+void renderShadows(SceneNode* node) {
+    glBindVertexArray(node->vertexArrayObjectID);
+    glDrawElements(GL_TRIANGLES, node->VAOIndexCount, GL_UNSIGNED_INT, nullptr);
+
+    for(SceneNode* child : node->children) {
+        renderNode(child);
+    }
+}
+
+void sampleShadows() {
+    //printf("Sampling shades using shadow shader\n");
+    shadowShader->activate();
+    
+    depthProjectionMatrix = glm::perspective(glm::radians(80.0f), float(windowWidth) / float(windowHeight), 0.1f, 350.f);
+    depthViewMatrix = glm::lookAt(light1Node->position, light1Node->normal, glm::vec3(0, 1, 0));
+    depthMVP = depthProjectionMatrix * depthViewMatrix * depthModelMatrix;
+    depthBiasMVP = biasMatrix*depthMVP;
+    
+
+    glUniformMatrix4fv(0, 1, GL_FALSE, &depthMVP[0][0]);
+    renderShadows(rootNode);
+
+}
+
+void renderScene() {
+    //printf("Rendering scene using world shader\n");
+    worldShader->activate();
+    glActiveTexture(GL_TEXTURE3);
+    glBindTexture(GL_TEXTURE_2D, shadowMap);
+
+    glUniformMatrix4fv(4, 1, GL_FALSE, glm::value_ptr(VP));
+    glUniformMatrix4fv(12, 1, GL_FALSE, glm::value_ptr(depthBiasMVP));
+    glUniform3fv(21, 1, glm::value_ptr(cameraPosition));
+
+    renderNode(rootNode);
+}
+
 
 void renderFrame(GLFWwindow* window) {
     int windowWidth, windowHeight;
     glfwGetWindowSize(window, &windowWidth, &windowHeight);
     glViewport(0, 0, windowWidth, windowHeight);
-    renderNode(rootNode);
+    sampleShadows();
+    renderScene();
 }
 
 void handleInput(GLFWwindow* window) {

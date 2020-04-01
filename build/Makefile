@@ -356,6 +356,33 @@ src/sceneGraph.cpp.s:
 	$(MAKE) -f CMakeFiles/glowbox.dir/build.make CMakeFiles/glowbox.dir/src/sceneGraph.cpp.s
 .PHONY : src/sceneGraph.cpp.s
 
+src/shadows.o: src/shadows.cpp.o
+
+.PHONY : src/shadows.o
+
+# target to build an object file
+src/shadows.cpp.o:
+	$(MAKE) -f CMakeFiles/glowbox.dir/build.make CMakeFiles/glowbox.dir/src/shadows.cpp.o
+.PHONY : src/shadows.cpp.o
+
+src/shadows.i: src/shadows.cpp.i
+
+.PHONY : src/shadows.i
+
+# target to preprocess a source file
+src/shadows.cpp.i:
+	$(MAKE) -f CMakeFiles/glowbox.dir/build.make CMakeFiles/glowbox.dir/src/shadows.cpp.i
+.PHONY : src/shadows.cpp.i
+
+src/shadows.s: src/shadows.cpp.s
+
+.PHONY : src/shadows.s
+
+# target to generate assembly for a file
+src/shadows.cpp.s:
+	$(MAKE) -f CMakeFiles/glowbox.dir/build.make CMakeFiles/glowbox.dir/src/shadows.cpp.s
+.PHONY : src/shadows.cpp.s
+
 src/textures.o: src/textures.cpp.o
 
 .PHONY : src/textures.o
@@ -604,6 +631,9 @@ help:
 	@echo "... src/sceneGraph.o"
 	@echo "... src/sceneGraph.i"
 	@echo "... src/sceneGraph.s"
+	@echo "... src/shadows.o"
+	@echo "... src/shadows.i"
+	@echo "... src/shadows.s"
 	@echo "... src/textures.o"
 	@echo "... src/textures.i"
 	@echo "... src/textures.s"

@@ -563,34 +563,34 @@ sfml__audio_OBJECTS = \
 # External object files for target sfml-audio
 sfml__audio_EXTERNAL_OBJECTS =
 
-lib/SFML/lib/libsfml-audio.a: lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/ALCheck.cpp.o
-lib/SFML/lib/libsfml-audio.a: lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/AlResource.cpp.o
-lib/SFML/lib/libsfml-audio.a: lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/AudioDevice.cpp.o
-lib/SFML/lib/libsfml-audio.a: lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Listener.cpp.o
-lib/SFML/lib/libsfml-audio.a: lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Music.cpp.o
-lib/SFML/lib/libsfml-audio.a: lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Sound.cpp.o
-lib/SFML/lib/libsfml-audio.a: lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundBuffer.cpp.o
-lib/SFML/lib/libsfml-audio.a: lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundBufferRecorder.cpp.o
-lib/SFML/lib/libsfml-audio.a: lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/InputSoundFile.cpp.o
-lib/SFML/lib/libsfml-audio.a: lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/OutputSoundFile.cpp.o
-lib/SFML/lib/libsfml-audio.a: lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundRecorder.cpp.o
-lib/SFML/lib/libsfml-audio.a: lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundSource.cpp.o
-lib/SFML/lib/libsfml-audio.a: lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundStream.cpp.o
-lib/SFML/lib/libsfml-audio.a: lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileFactory.cpp.o
-lib/SFML/lib/libsfml-audio.a: lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderFlac.cpp.o
-lib/SFML/lib/libsfml-audio.a: lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderOgg.cpp.o
-lib/SFML/lib/libsfml-audio.a: lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderWav.cpp.o
-lib/SFML/lib/libsfml-audio.a: lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterFlac.cpp.o
-lib/SFML/lib/libsfml-audio.a: lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterOgg.cpp.o
-lib/SFML/lib/libsfml-audio.a: lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterWav.cpp.o
-lib/SFML/lib/libsfml-audio.a: lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/build.make
-lib/SFML/lib/libsfml-audio.a: lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/darkstar/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Linking CXX static library ../../../lib/libsfml-audio.a"
+lib/SFML/lib/libsfml-audio-s-d.a: lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/ALCheck.cpp.o
+lib/SFML/lib/libsfml-audio-s-d.a: lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/AlResource.cpp.o
+lib/SFML/lib/libsfml-audio-s-d.a: lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/AudioDevice.cpp.o
+lib/SFML/lib/libsfml-audio-s-d.a: lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Listener.cpp.o
+lib/SFML/lib/libsfml-audio-s-d.a: lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Music.cpp.o
+lib/SFML/lib/libsfml-audio-s-d.a: lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Sound.cpp.o
+lib/SFML/lib/libsfml-audio-s-d.a: lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundBuffer.cpp.o
+lib/SFML/lib/libsfml-audio-s-d.a: lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundBufferRecorder.cpp.o
+lib/SFML/lib/libsfml-audio-s-d.a: lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/InputSoundFile.cpp.o
+lib/SFML/lib/libsfml-audio-s-d.a: lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/OutputSoundFile.cpp.o
+lib/SFML/lib/libsfml-audio-s-d.a: lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundRecorder.cpp.o
+lib/SFML/lib/libsfml-audio-s-d.a: lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundSource.cpp.o
+lib/SFML/lib/libsfml-audio-s-d.a: lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundStream.cpp.o
+lib/SFML/lib/libsfml-audio-s-d.a: lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileFactory.cpp.o
+lib/SFML/lib/libsfml-audio-s-d.a: lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderFlac.cpp.o
+lib/SFML/lib/libsfml-audio-s-d.a: lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderOgg.cpp.o
+lib/SFML/lib/libsfml-audio-s-d.a: lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderWav.cpp.o
+lib/SFML/lib/libsfml-audio-s-d.a: lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterFlac.cpp.o
+lib/SFML/lib/libsfml-audio-s-d.a: lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterOgg.cpp.o
+lib/SFML/lib/libsfml-audio-s-d.a: lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterWav.cpp.o
+lib/SFML/lib/libsfml-audio-s-d.a: lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/build.make
+lib/SFML/lib/libsfml-audio-s-d.a: lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/darkstar/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Linking CXX static library ../../../lib/libsfml-audio-s-d.a"
 	cd /home/darkstar/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/src/SFML/Audio && $(CMAKE_COMMAND) -P CMakeFiles/sfml-audio.dir/cmake_clean_target.cmake
 	cd /home/darkstar/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/src/SFML/Audio && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/sfml-audio.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/build: lib/SFML/lib/libsfml-audio.a
+lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/build: lib/SFML/lib/libsfml-audio-s-d.a
 
 .PHONY : lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/build
 
