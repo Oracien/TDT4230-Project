@@ -213,6 +213,102 @@ Mesh generateFloor(glm::vec2 scale) {
     int no_horizontal_sections = (int) ((scale.x) / floor_horizontal_section);
     int no_depth_sections = (int) ((scale.y) / floor_depth_section);
 
+    for (int a = 0; a < no_depth_sections; a++) {
+        for (int b = 0; b < no_horizontal_sections; b++) {
+            long int x_position = b*floor_horizontal_section;
+            long int z_position = -1*a*floor_depth_section;
+
+            float noise = simplex.fractal(4, -1*x_position*0.005, z_position*0.005);
+            m.vertices.push_back(glm::vec3(x_position, height_scale*noise, z_position));
+            m.colours.push_back(getColourFromNoise(noise));
+            m.textureCoordinates.push_back({x_position / scale.x, (-1*z_position) / scale.y});
+        }
+    }
+    
+    long int offset = 0;
+    long int center_num;
+    glm::vec3 center;
+    glm::vec3 bottom_left;
+    glm::vec3 bottom_center;
+    glm::vec3 bottom_right;
+    glm::vec3 center_left;
+    glm::vec3 center_right;
+    glm::vec3 top_left;
+    glm::vec3 top_center;
+    glm::vec3 top_right;
+
+    for (int a = 0; a < no_depth_sections; a++) {
+        offset = a*no_horizontal_sections;
+        for (int b = 0; b < no_horizontal_sections; b++) {
+            //8 possible normals for each and every vertex 
+            // 6  7  8
+            // 4  x  5
+            // 1  2  3
+            //Start in bottom left quadrant and move anti-clockwise
+            
+            center_num = offset + b;
+            center = m.vertices[center_num];
+            bottom_left = m.vertices[center_num - no_horizontal_sections - 1];
+            bottom_center = m.vertices[center_num - no_horizontal_sections];
+            bottom_right = m.vertices[center_num - no_horizontal_sections + 1];
+            center_left = m.vertices[center_num - 1];
+            center_right = m.vertices[center_num + 1];
+            top_left = m.vertices[center_num + no_horizontal_sections - 1];
+            top_center = m.vertices[center_num + no_horizontal_sections];
+            top_right = m.vertices[center_num + no_horizontal_sections + 1];
+
+            glm::vec3 normal = glm::vec3(0.0, 0.0, 0.0);
+
+            normal += a < 1 || b < 1 ? glm::vec3(0.0,0.0,0.0) : (glm::normalize(glm::cross(center - bottom_left, center_left - bottom_left)));
+            normal += a < 1 || b < 1 ? glm::vec3(0.0,0.0,0.0) : (glm::normalize(glm::cross(bottom_left - center, bottom_center - center)));
+
+            normal += a < 1 || b == no_horizontal_sections - 1 ? glm::vec3(0.0,0.0,0.0) : (glm::normalize(glm::cross(center_right - bottom_center, center - bottom_center)));
+            normal += a < 1 || b == no_horizontal_sections - 1 ? glm::vec3(0.0,0.0,0.0) : (glm::normalize(glm::cross(bottom_center - center_right, bottom_right - center_right)));
+
+            normal += a == no_depth_sections - 1 || b == no_horizontal_sections - 1 ? glm::vec3(0.0,0.0,0.0) : (glm::normalize(glm::cross(top_right - center, top_center - center)));
+            normal += a == no_depth_sections - 1 || b == no_horizontal_sections - 1 ? glm::vec3(0.0,0.0,0.0) : (glm::normalize(glm::cross(center - top_right, center_right - top_right)));
+            
+            normal += a == no_depth_sections - 1 || b < 1 ? glm::vec3(0.0,0.0,0.0) : (glm::normalize(glm::cross(top_center - center_left, top_left - center_left)));
+            normal += a == no_depth_sections - 1 || b < 1 ? glm::vec3(0.0,0.0,0.0) : (glm::normalize(glm::cross(center_left - top_center, center - top_center)));
+
+            normal = glm::normalize(normal);
+            m.normals.push_back(normal);
+        }
+    }
+
+    for (int a = 0; a < no_depth_sections-1; a++) {
+        offset = a*no_horizontal_sections;
+        for (int b = 0; b < no_horizontal_sections-1; b++) {
+            int bottom_left = offset + b;
+            int top_right = bottom_left + no_horizontal_sections + 1;
+            int top_left = bottom_left + no_horizontal_sections;
+            int bottom_right = bottom_left + 1;
+            
+            m.indices.push_back(bottom_left);
+            m.indices.push_back(top_right);
+            m.indices.push_back(top_left);
+
+            m.indices.push_back(bottom_left);
+            m.indices.push_back(bottom_right);
+            m.indices.push_back(top_right);
+        }
+    }
+
+    printf("Offset: %ld ", offset);
+    printf("Floor finished. Vertices: %ld, Indices: %ld, Texture: %ld, normals: %ld\n", m.vertices.size(), m.indices.size(), m.textureCoordinates.size(), m.normals.size());
+    return m;
+}
+
+Mesh newOldGenerateFloor(glm::vec2 scale) {
+    Mesh m;
+
+    float height_scale = 30.0f;
+
+    SimplexNoise simplex = SimplexNoise();
+
+    int no_horizontal_sections = (int) ((scale.x) / floor_horizontal_section);
+    int no_depth_sections = (int) ((scale.y) / floor_depth_section);
+
     std::vector<glm::vec2> offset_inator = {glm::vec2(0, 0),glm::vec2(1, 1),glm::vec2(-1, 0),glm::vec2(0, -1),glm::vec2(1, 0),glm::vec2(0, 1)};
     std::vector<glm::vec2> texture_coordinates = {glm::vec2(0, 0), glm::vec2(1, 1), glm::vec2(1, 0), glm::vec2(0, 0), glm::vec2(0, 1), glm::vec2(1, 1)};
     int order[6] = {-6, -4, -5, -3, -1, -2};
@@ -253,6 +349,7 @@ Mesh generateFloor(glm::vec2 scale) {
             }
         }
     }
+
     printf("Offset: %ld ", offset);
     printf("Floor finished. Vertices: %ld, Indices: %ld, Texture: %ld, normals: %ld\n", m.vertices.size(), m.indices.size(), m.textureCoordinates.size(), m.normals.size());
 

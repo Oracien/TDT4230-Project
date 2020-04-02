@@ -37,6 +37,7 @@ float attenuation;
 float dist;
 vec3 position;
 vec3 colour;
+float bias = 0.005;
 
 float rand(vec2 co) { return fract(sin(dot(co.xy, vec2(12.9898,78.233))) * 43758.5453); }
 float dither(vec2 uv) { return (rand(uv)*2.0-1.0) / 256.0; }
@@ -58,13 +59,13 @@ void main()
     float atten3 = 0.001;
 
     float ambientStrength = 0.02;
-    float diffuseStrength = 12.0;
+    float diffuseStrength = 1.0;
     float specularStrength = 1.0;
     float specularPower = 32;
 
     visibility = 1.0f;
 
-    if (texture( shadowMap, shadowCoord.xy).z < shadowCoord.z) {
+    if (textureProj( shadowMap, shadowCoord.xyw).z < (shadowCoord.z-bias) /shadowCoord.w) {
         visibility = 0.0f;
     }
 
@@ -104,4 +105,5 @@ void main()
     } else {
         color = vec4(lighting, 1.0);
     }
+    color = texture(shadowMap, shadowCoord.xy);
 }

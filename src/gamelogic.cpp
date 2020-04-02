@@ -46,12 +46,12 @@ const glm::vec2 floor_span = glm::vec2(400.0f, 400.0f);
 const glm::vec3 floor_position = glm::vec3(-200.0f, -50.0f, 200.0f);
 
 const glm::vec3 tower_dimensions = glm::vec3(5.0f, 45.0f, 5.0f);
-const glm::vec3 tower_position = glm::vec3(-25.0f, -80.0f, -50.0f);
+const glm::vec3 tower_position = glm::vec3(0.0f, -80.0f, -70.0f);
 
 const glm::vec3 ball_position = glm::vec3(0.0f, 47.5f, 0.0f);
 const float ball_radius = 1.0f;
 
-const glm::vec3 light1_position = glm::vec3(-25.0f, -32.5f, -50.0f);
+const glm::vec3 light1_position = glm::vec3(0.0f, -32.5f, -70.0f);
 const glm::vec3 light1_pointed_angle = glm::vec3(1.0f, 0.0f, 0.0f);
 
 double pi_value = 0.0;
@@ -283,7 +283,7 @@ void updateFrame(GLFWwindow* window) {
 
     VP = projection * view;
 
-    pi_value = pi_value >= 2.00 ? 0.0 : pi_value + 0.001;
+    pi_value = pi_value >= 2.00 ? 0.0 : pi_value + 0.01;
 
     updateNodeTransformations(rootNode, glm::mat4(1.0f));
 
