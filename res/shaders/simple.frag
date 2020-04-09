@@ -42,6 +42,23 @@ float bias = 0.005;
 float rand(vec2 co) { return fract(sin(dot(co.xy, vec2(12.9898,78.233))) * 43758.5453); }
 float dither(vec2 uv) { return (rand(uv)*2.0-1.0) / 256.0; }
 
+
+float ShadowCalculation(vec4 fragPosLightSpace)
+{
+    // perform perspective divide
+    vec3 projCoords = fragPosLightSpace.xyz / fragPosLightSpace.w;
+    // transform to [0,1] range
+    projCoords = projCoords * 0.5 + 0.5;
+    // get closest depth value from light's perspective (using [0,1] range fragPosLight as coords)
+    float closestDepth = texture(shadowMap, projCoords.xy).r; 
+    // get depth of current fragment from light's perspective
+    float currentDepth = projCoords.z;
+    // check whether current frag pos is in shadow
+    float shadow = currentDepth > closestDepth  ? 1.0 : 0.0;
+
+    return shadow;
+}
+
 void main()
 {
     if(NormalMapToggle == 1) {
@@ -58,7 +75,7 @@ void main()
     float atten2 = 0.003;
     float atten3 = 0.001;
 
-    float ambientStrength = 0.02;
+    float ambientStrength = 0.1;
     float diffuseStrength = 1.0;
     float specularStrength = 1.0;
     float specularPower = 32;
@@ -92,8 +109,10 @@ void main()
     float dither_result = dither(textureCoordinates) / 1;
 
     vec3 ambient =  ambientStrength * colour_in;
+
+    float shadow = ShadowCalculation(shadowCoord);    
     
-    vec3 lighting = vec3(ambient + specular + diffuse + dither_result);
+    vec3 lighting = vec3(ambient + (1.0 - shadow) * (specular + diffuse + dither_result));
     lighting.x = lighting.x > 1.0 ? 1.0 : lighting.x;
     lighting.y = lighting.y > 1.0 ? 1.0 : lighting.y;
     lighting.z = lighting.z > 1.0 ? 1.0 : lighting.z;
@@ -105,5 +124,4 @@ void main()
     } else {
         color = vec4(lighting, 1.0);
     }
-    color = texture(shadowMap, shadowCoord.xy);
 }

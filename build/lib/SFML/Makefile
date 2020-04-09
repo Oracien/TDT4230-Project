@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/darkstar/Documents/School/Graphics/TDT4230-Project
+CMAKE_SOURCE_DIR = /home/amundbk/Documents/School/Graphics/TDT4230-Project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/darkstar/Documents/School/Graphics/TDT4230-Project/build
+CMAKE_BINARY_DIR = /home/amundbk/Documents/School/Graphics/TDT4230-Project/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -126,14 +126,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/darkstar/Documents/School/Graphics/TDT4230-Project/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/darkstar/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles /home/darkstar/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/CMakeFiles/progress.marks
-	cd /home/darkstar/Documents/School/Graphics/TDT4230-Project/build && $(MAKE) -f CMakeFiles/Makefile2 lib/SFML/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/darkstar/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles 0
+	cd /home/amundbk/Documents/School/Graphics/TDT4230-Project/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/amundbk/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles /home/amundbk/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/CMakeFiles/progress.marks
+	cd /home/amundbk/Documents/School/Graphics/TDT4230-Project/build && $(MAKE) -f CMakeFiles/Makefile2 lib/SFML/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/amundbk/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/darkstar/Documents/School/Graphics/TDT4230-Project/build && $(MAKE) -f CMakeFiles/Makefile2 lib/SFML/clean
+	cd /home/amundbk/Documents/School/Graphics/TDT4230-Project/build && $(MAKE) -f CMakeFiles/Makefile2 lib/SFML/clean
 .PHONY : clean
 
 # The main clean target
@@ -143,17 +143,17 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/darkstar/Documents/School/Graphics/TDT4230-Project/build && $(MAKE) -f CMakeFiles/Makefile2 lib/SFML/preinstall
+	cd /home/amundbk/Documents/School/Graphics/TDT4230-Project/build && $(MAKE) -f CMakeFiles/Makefile2 lib/SFML/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/darkstar/Documents/School/Graphics/TDT4230-Project/build && $(MAKE) -f CMakeFiles/Makefile2 lib/SFML/preinstall
+	cd /home/amundbk/Documents/School/Graphics/TDT4230-Project/build && $(MAKE) -f CMakeFiles/Makefile2 lib/SFML/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/darkstar/Documents/School/Graphics/TDT4230-Project/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/amundbk/Documents/School/Graphics/TDT4230-Project/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Help Target
@@ -179,6 +179,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/darkstar/Documents/School/Graphics/TDT4230-Project/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/amundbk/Documents/School/Graphics/TDT4230-Project/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

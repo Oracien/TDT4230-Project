@@ -300,7 +300,7 @@ fstream
 string
 -
 
-/home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/Audio/ALCheck.cpp
+/home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/Audio/ALCheck.cpp
 SFML/Audio/ALCheck.hpp
 -
 SFML/System/Err.hpp
@@ -308,7 +308,7 @@ SFML/System/Err.hpp
 string
 -
 
-/home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/Audio/AlResource.cpp
+/home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/Audio/AlResource.cpp
 SFML/Audio/AlResource.hpp
 -
 SFML/Audio/AudioDevice.hpp
@@ -318,7 +318,7 @@ SFML/System/Mutex.hpp
 SFML/System/Lock.hpp
 -
 
-/home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/Audio/AudioDevice.cpp
+/home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/Audio/AudioDevice.cpp
 SFML/Audio/AudioDevice.hpp
 -
 SFML/Audio/ALCheck.hpp
@@ -330,7 +330,7 @@ SFML/System/Err.hpp
 memory
 -
 
-/home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/Audio/InputSoundFile.cpp
+/home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/Audio/InputSoundFile.cpp
 SFML/Audio/InputSoundFile.hpp
 -
 SFML/Audio/SoundFileReader.hpp
@@ -346,13 +346,13 @@ SFML/System/MemoryInputStream.hpp
 SFML/System/Err.hpp
 -
 
-/home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/Audio/Listener.cpp
+/home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/Audio/Listener.cpp
 SFML/Audio/Listener.hpp
 -
 SFML/Audio/AudioDevice.hpp
 -
 
-/home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/Audio/Music.cpp
+/home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/Audio/Music.cpp
 SFML/Audio/Music.hpp
 -
 SFML/Audio/ALCheck.hpp
@@ -364,7 +364,7 @@ SFML/System/Err.hpp
 fstream
 -
 
-/home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/Audio/OutputSoundFile.cpp
+/home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/Audio/OutputSoundFile.cpp
 SFML/Audio/OutputSoundFile.hpp
 -
 SFML/Audio/SoundFileWriter.hpp
@@ -372,7 +372,7 @@ SFML/Audio/SoundFileWriter.hpp
 SFML/Audio/SoundFileFactory.hpp
 -
 
-/home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/Audio/Sound.cpp
+/home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/Audio/Sound.cpp
 SFML/Audio/Sound.hpp
 -
 SFML/Audio/SoundBuffer.hpp
@@ -380,7 +380,7 @@ SFML/Audio/SoundBuffer.hpp
 SFML/Audio/ALCheck.hpp
 -
 
-/home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/Audio/SoundBuffer.cpp
+/home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/Audio/SoundBuffer.cpp
 SFML/Audio/SoundBuffer.hpp
 -
 SFML/Audio/InputSoundFile.hpp
@@ -398,7 +398,7 @@ SFML/System/Err.hpp
 memory
 -
 
-/home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/Audio/SoundBufferRecorder.cpp
+/home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/Audio/SoundBufferRecorder.cpp
 SFML/Audio/SoundBufferRecorder.hpp
 -
 algorithm
@@ -406,7 +406,7 @@ algorithm
 iterator
 -
 
-/home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/Audio/SoundFileFactory.cpp
+/home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/Audio/SoundFileFactory.cpp
 SFML/Audio/SoundFileFactory.hpp
 -
 SFML/Audio/SoundFileReaderFlac.hpp
@@ -428,7 +428,7 @@ SFML/System/MemoryInputStream.hpp
 SFML/System/Err.hpp
 -
 
-/home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/Audio/SoundFileReaderFlac.cpp
+/home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/Audio/SoundFileReaderFlac.cpp
 SFML/Audio/SoundFileReaderFlac.hpp
 -
 SFML/System/InputStream.hpp
@@ -438,7 +438,7 @@ SFML/System/Err.hpp
 cassert
 -
 
-/home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/Audio/SoundFileReaderOgg.cpp
+/home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/Audio/SoundFileReaderOgg.cpp
 SFML/Audio/SoundFileReaderOgg.hpp
 -
 SFML/System/MemoryInputStream.hpp
@@ -452,7 +452,7 @@ cctype
 cassert
 -
 
-/home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/Audio/SoundFileReaderWav.cpp
+/home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/Audio/SoundFileReaderWav.cpp
 SFML/Audio/SoundFileReaderWav.hpp
 -
 SFML/System/InputStream.hpp
@@ -468,7 +468,7 @@ cassert
 cstring
 -
 
-/home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/Audio/SoundFileWriterFlac.cpp
+/home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/Audio/SoundFileWriterFlac.cpp
 SFML/Audio/SoundFileWriterFlac.hpp
 -
 SFML/System/Err.hpp
@@ -480,7 +480,7 @@ cctype
 cassert
 -
 
-/home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/Audio/SoundFileWriterOgg.cpp
+/home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/Audio/SoundFileWriterOgg.cpp
 SFML/Audio/SoundFileWriterOgg.hpp
 -
 SFML/System/Err.hpp
@@ -494,7 +494,7 @@ cstdlib
 cassert
 -
 
-/home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/Audio/SoundFileWriterWav.cpp
+/home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/Audio/SoundFileWriterWav.cpp
 SFML/Audio/SoundFileWriterWav.hpp
 -
 SFML/System/Err.hpp
@@ -506,7 +506,7 @@ cctype
 cassert
 -
 
-/home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/Audio/SoundRecorder.cpp
+/home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/Audio/SoundRecorder.cpp
 SFML/Audio/SoundRecorder.hpp
 -
 SFML/Audio/AudioDevice.hpp
@@ -522,13 +522,13 @@ cstring
 cassert
 -
 
-/home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/Audio/SoundSource.cpp
+/home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/Audio/SoundSource.cpp
 SFML/Audio/SoundSource.hpp
 -
 SFML/Audio/ALCheck.hpp
 -
 
-/home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/Audio/SoundStream.cpp
+/home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/Audio/SoundStream.cpp
 SFML/Audio/SoundStream.hpp
 -
 SFML/Audio/AudioDevice.hpp

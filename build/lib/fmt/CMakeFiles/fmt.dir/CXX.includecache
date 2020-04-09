@@ -92,13 +92,13 @@ winapifamily.h
 fcntl.h
 -
 
-/home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/fmt/src/format.cc
+/home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/fmt/src/format.cc
 fmt/format-inl.h
-/home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/fmt/src/fmt/format-inl.h
+/home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/fmt/src/fmt/format-inl.h
 
-/home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/fmt/src/os.cc
+/home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/fmt/src/os.cc
 fmt/os.h
-/home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/fmt/src/fmt/os.h
+/home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/fmt/src/fmt/os.h
 climits
 -
 sys/stat.h

@@ -54,10 +54,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/darkstar/Documents/School/Graphics/TDT4230-Project
+CMAKE_SOURCE_DIR = /home/amundbk/Documents/School/Graphics/TDT4230-Project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/darkstar/Documents/School/Graphics/TDT4230-Project/build
+CMAKE_BINARY_DIR = /home/amundbk/Documents/School/Graphics/TDT4230-Project/build
 
 #=============================================================================
 # Target rules for target CMakeFiles/glowbox.dir
@@ -69,7 +69,7 @@ CMakeFiles/glowbox.dir/all: lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/al
 CMakeFiles/glowbox.dir/all: lib/fmt/CMakeFiles/fmt.dir/all
 	$(MAKE) -f CMakeFiles/glowbox.dir/build.make CMakeFiles/glowbox.dir/depend
 	$(MAKE) -f CMakeFiles/glowbox.dir/build.make CMakeFiles/glowbox.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/darkstar/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles --progress-num=21,22,23,24,25,26,27,28,29,30,31,32,33,34,35 "Built target glowbox"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/amundbk/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles --progress-num=21,22,23,24,25,26,27,28,29,30,31,32,33,34 "Built target glowbox"
 .PHONY : CMakeFiles/glowbox.dir/all
 
 # Include target in all.
@@ -79,9 +79,9 @@ all: CMakeFiles/glowbox.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/glowbox.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/darkstar/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles 73
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/amundbk/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles 72
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/glowbox.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/darkstar/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/amundbk/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles 0
 .PHONY : CMakeFiles/glowbox.dir/rule
 
 # Convenience name for target.
@@ -142,7 +142,7 @@ lib/glfw/src/preinstall:
 lib/glfw/src/CMakeFiles/glfw.dir/all:
 	$(MAKE) -f lib/glfw/src/CMakeFiles/glfw.dir/build.make lib/glfw/src/CMakeFiles/glfw.dir/depend
 	$(MAKE) -f lib/glfw/src/CMakeFiles/glfw.dir/build.make lib/glfw/src/CMakeFiles/glfw.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/darkstar/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles --progress-num=4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 "Built target glfw"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/amundbk/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles --progress-num=4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 "Built target glfw"
 .PHONY : lib/glfw/src/CMakeFiles/glfw.dir/all
 
 # Include target in all.
@@ -152,9 +152,9 @@ all: lib/glfw/src/CMakeFiles/glfw.dir/all
 
 # Build rule for subdir invocation for target.
 lib/glfw/src/CMakeFiles/glfw.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/darkstar/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles 17
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/amundbk/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles 17
 	$(MAKE) -f CMakeFiles/Makefile2 lib/glfw/src/CMakeFiles/glfw.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/darkstar/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/amundbk/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles 0
 .PHONY : lib/glfw/src/CMakeFiles/glfw.dir/rule
 
 # Convenience name for target.
@@ -236,7 +236,7 @@ lib/SFML/src/SFML/System/preinstall:
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/all:
 	$(MAKE) -f lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/build.make lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/depend
 	$(MAKE) -f lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/build.make lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/darkstar/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles --progress-num=57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73 "Built target sfml-system"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/amundbk/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles --progress-num=56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72 "Built target sfml-system"
 .PHONY : lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/all
 
 # Include target in all.
@@ -246,9 +246,9 @@ all: lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/all
 
 # Build rule for subdir invocation for target.
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/darkstar/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles 17
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/amundbk/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles 17
 	$(MAKE) -f CMakeFiles/Makefile2 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/darkstar/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/amundbk/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles 0
 .PHONY : lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/rule
 
 # Convenience name for target.
@@ -291,7 +291,7 @@ lib/SFML/src/SFML/Audio/preinstall:
 lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/all: lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/all
 	$(MAKE) -f lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/build.make lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/depend
 	$(MAKE) -f lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/build.make lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/darkstar/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles --progress-num=36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56 "Built target sfml-audio"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/amundbk/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles --progress-num=35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55 "Built target sfml-audio"
 .PHONY : lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/all
 
 # Include target in all.
@@ -301,9 +301,9 @@ all: lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/all
 
 # Build rule for subdir invocation for target.
 lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/darkstar/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles 38
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/amundbk/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles 38
 	$(MAKE) -f CMakeFiles/Makefile2 lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/darkstar/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/amundbk/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles 0
 .PHONY : lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/rule
 
 # Convenience name for target.
@@ -346,7 +346,7 @@ lib/fmt/preinstall:
 lib/fmt/CMakeFiles/fmt.dir/all:
 	$(MAKE) -f lib/fmt/CMakeFiles/fmt.dir/build.make lib/fmt/CMakeFiles/fmt.dir/depend
 	$(MAKE) -f lib/fmt/CMakeFiles/fmt.dir/build.make lib/fmt/CMakeFiles/fmt.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/darkstar/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles --progress-num=1,2,3 "Built target fmt"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/amundbk/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles --progress-num=1,2,3 "Built target fmt"
 .PHONY : lib/fmt/CMakeFiles/fmt.dir/all
 
 # Include target in all.
@@ -356,9 +356,9 @@ all: lib/fmt/CMakeFiles/fmt.dir/all
 
 # Build rule for subdir invocation for target.
 lib/fmt/CMakeFiles/fmt.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/darkstar/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/amundbk/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 lib/fmt/CMakeFiles/fmt.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/darkstar/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/amundbk/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles 0
 .PHONY : lib/fmt/CMakeFiles/fmt.dir/rule
 
 # Convenience name for target.

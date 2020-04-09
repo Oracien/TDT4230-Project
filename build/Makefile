@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/darkstar/Documents/School/Graphics/TDT4230-Project
+CMAKE_SOURCE_DIR = /home/amundbk/Documents/School/Graphics/TDT4230-Project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/darkstar/Documents/School/Graphics/TDT4230-Project/build
+CMAKE_BINARY_DIR = /home/amundbk/Documents/School/Graphics/TDT4230-Project/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -126,9 +126,9 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/darkstar/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles /home/darkstar/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/amundbk/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles /home/amundbk/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/darkstar/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/amundbk/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -355,33 +355,6 @@ src/sceneGraph.s: src/sceneGraph.cpp.s
 src/sceneGraph.cpp.s:
 	$(MAKE) -f CMakeFiles/glowbox.dir/build.make CMakeFiles/glowbox.dir/src/sceneGraph.cpp.s
 .PHONY : src/sceneGraph.cpp.s
-
-src/shadows.o: src/shadows.cpp.o
-
-.PHONY : src/shadows.o
-
-# target to build an object file
-src/shadows.cpp.o:
-	$(MAKE) -f CMakeFiles/glowbox.dir/build.make CMakeFiles/glowbox.dir/src/shadows.cpp.o
-.PHONY : src/shadows.cpp.o
-
-src/shadows.i: src/shadows.cpp.i
-
-.PHONY : src/shadows.i
-
-# target to preprocess a source file
-src/shadows.cpp.i:
-	$(MAKE) -f CMakeFiles/glowbox.dir/build.make CMakeFiles/glowbox.dir/src/shadows.cpp.i
-.PHONY : src/shadows.cpp.i
-
-src/shadows.s: src/shadows.cpp.s
-
-.PHONY : src/shadows.s
-
-# target to generate assembly for a file
-src/shadows.cpp.s:
-	$(MAKE) -f CMakeFiles/glowbox.dir/build.make CMakeFiles/glowbox.dir/src/shadows.cpp.s
-.PHONY : src/shadows.cpp.s
 
 src/textures.o: src/textures.cpp.o
 
@@ -631,9 +604,6 @@ help:
 	@echo "... src/sceneGraph.o"
 	@echo "... src/sceneGraph.i"
 	@echo "... src/sceneGraph.s"
-	@echo "... src/shadows.o"
-	@echo "... src/shadows.i"
-	@echo "... src/shadows.s"
 	@echo "... src/textures.o"
 	@echo "... src/textures.i"
 	@echo "... src/textures.s"

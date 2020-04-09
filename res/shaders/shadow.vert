@@ -1,11 +1,10 @@
 #version 430 core
+layout (location = 0) in vec3 aPos;
 
-// Input vertex data, different for all executions of this shader.
-layout(location = 0) in vec3 vertexPosition_modelspace;
+uniform layout(location = 0) mat4 model;
+uniform layout(location = 4) mat4 lightSpaceMatrix;
 
-// Values that stay constant for the whole mesh.
-uniform layout(location = 0) mat4 depthMVP;
-
-void main(){
-    gl_Position =  depthMVP * vec4(vertexPosition_modelspace,1);
+void main()
+{
+    gl_Position = lightSpaceMatrix * vec4(aPos, 1.0);
 }

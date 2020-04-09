@@ -21,7 +21,6 @@
 #include "glm/ext.hpp"
 #include "utilities/imageLoader.hpp"
 #include "utilities/glfont.h"
-#include "shadows.hpp"
 
 enum KeyFrameAction {
     BOTTOM, TOP
@@ -84,18 +83,10 @@ glm::vec3 upAlignment = glm::vec3(0.0f, 1.0f, 0.0f);
 glm::mat4 VP;
 
 //Shadow Configs
+const unsigned int SHADOW_WIDTH = 1024, SHADOW_HEIGHT = 1024;
 GLuint shadowMap;
-glm::mat4 depthProjectionMatrix; 
-glm::mat4 depthViewMatrix;
-glm::mat4 depthModelMatrix = glm::mat4(1.0);
-glm::mat4 depthMVP;
-glm::mat4 biasMatrix(
-    0.5, 0.0, 0.0, 0.0,
-    0.0, 0.5, 0.0, 0.0,
-    0.0, 0.0, 0.5, 0.0,
-    0.5, 0.5, 0.5, 1.0
-);
-glm::mat4 depthBiasMVP;
+unsigned int depthMapFBO;
+glm::mat4 lightSpaceMatrix;
 
 // Modify if you want the music to start further on in the track. Measured in seconds.
 const float debug_startTime = 0;
@@ -165,6 +156,8 @@ void initGame(GLFWwindow* window, CommandLineOptions gameOptions) {
 
     shadowShader = new Gloom::Shader();
     shadowShader->makeBasicShader("../res/shaders/shadow.vert", "../res/shaders/shadow.frag");
+
+    setUpShadows();
     
     printf("Constructing SceneNodes\n");
     // Construct scene
@@ -217,7 +210,6 @@ void initGame(GLFWwindow* window, CommandLineOptions gameOptions) {
     
     tower1Node->nodeType = NORMAL_MAPPED;
     */
-    shadowMap = setupShadows();
     
     ballNode->vertexArrayObjectID = ballVAO;
     ballNode->VAOIndexCount = ballMesh.indices.size();
@@ -283,7 +275,7 @@ void updateFrame(GLFWwindow* window) {
 
     VP = projection * view;
 
-    pi_value = pi_value >= 2.00 ? 0.0 : pi_value + 0.01;
+    pi_value = pi_value >= 2.00 ? 0.0 : pi_value + 0.5*timeDelta;
 
     updateNodeTransformations(rootNode, glm::mat4(1.0f));
 
@@ -387,29 +379,68 @@ void renderShadows(SceneNode* node) {
     }
 }
 
-void sampleShadows() {
-    //printf("Sampling shades using shadow shader\n");
-    shadowShader->activate();
-    
-    depthProjectionMatrix = glm::perspective(glm::radians(80.0f), float(windowWidth) / float(windowHeight), 0.1f, 350.f);
-    depthViewMatrix = glm::lookAt(light1Node->position, light1Node->normal, glm::vec3(0, 1, 0));
-    depthMVP = depthProjectionMatrix * depthViewMatrix * depthModelMatrix;
-    depthBiasMVP = biasMatrix*depthMVP;
-    
+void setUpShadows() {
+    glGenFramebuffers(1, &depthMapFBO);
+    // create depth texture
+    unsigned int depthMap;
+    glGenTextures(1, &depthMap);
+    glBindTexture(GL_TEXTURE_2D, depthMap);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_DEPTH_COMPONENT, SHADOW_WIDTH, SHADOW_HEIGHT, 0, GL_DEPTH_COMPONENT, GL_FLOAT, NULL);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+    // attach depth texture as FBO's depth buffer
+    glBindFramebuffer(GL_FRAMEBUFFER, depthMapFBO);
+    glFramebufferTexture2D(GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_TEXTURE_2D, depthMap, 0);
+    glDrawBuffer(GL_NONE);
+    glReadBuffer(GL_NONE);
+    glBindFramebuffer(GL_FRAMEBUFFER, 0);
+    shadowMap = depthMap;
+}
 
-    glUniformMatrix4fv(0, 1, GL_FALSE, &depthMVP[0][0]);
-    renderShadows(rootNode);
+void sampleShadows(GLFWwindow* window) {
+    int windowWidth, windowHeight;
+    glfwGetWindowSize(window, &windowWidth, &windowHeight);
+    //printf("Sampling shades using shadow shader\n");
+    glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+    // 1. render depth of scene to texture (from light's perspective)
+    // --------------------------------------------------------------
+    glm::mat4 projection, lightView;
+    projection = glm::perspective(glm::radians(80.0f), float(windowWidth) / float(windowHeight), 0.1f, 350.f);
+    lightView = glm::lookAt(light1Node->position, glm::vec3(0.0f), glm::vec3(0.0, 1.0, 0.0));
+    lightSpaceMatrix = projection * lightView;
+    // render scene from light's point of view
+    shadowShader->activate();
+    glUniformMatrix4fv(4, 1, GL_FALSE, glm::value_ptr(lightSpaceMatrix));
+
+    glViewport(0, 0, SHADOW_WIDTH, SHADOW_HEIGHT);
+    glBindFramebuffer(GL_FRAMEBUFFER, depthMapFBO);
+    glClear(GL_DEPTH_BUFFER_BIT);
+    renderNode(rootNode);
+    glBindFramebuffer(GL_FRAMEBUFFER, 0);
+
+    // reset viewport
+    glViewport(0, 0, windowWidth, windowHeight);
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
 
 }
 
-void renderScene() {
+void renderScene(GLFWwindow* window) {
     //printf("Rendering scene using world shader\n");
+    int windowWidth, windowHeight;
+    glfwGetWindowSize(window, &windowWidth, &windowHeight);
+    glViewport(0, 0, windowWidth, windowHeight);
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     worldShader->activate();
     glActiveTexture(GL_TEXTURE3);
     glBindTexture(GL_TEXTURE_2D, shadowMap);
 
     glUniformMatrix4fv(4, 1, GL_FALSE, glm::value_ptr(VP));
-    glUniformMatrix4fv(12, 1, GL_FALSE, glm::value_ptr(depthBiasMVP));
+    glUniformMatrix4fv(12, 1, GL_FALSE, glm::value_ptr(lightSpaceMatrix));
     glUniform3fv(21, 1, glm::value_ptr(cameraPosition));
 
     renderNode(rootNode);
@@ -420,8 +451,8 @@ void renderFrame(GLFWwindow* window) {
     int windowWidth, windowHeight;
     glfwGetWindowSize(window, &windowWidth, &windowHeight);
     glViewport(0, 0, windowWidth, windowHeight);
-    sampleShadows();
-    renderScene();
+    sampleShadows(window);
+    renderScene(window);
 }
 
 void handleInput(GLFWwindow* window) {

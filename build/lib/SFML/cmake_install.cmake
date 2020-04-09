@@ -1,4 +1,4 @@
-# Install script for directory: /home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/SFML
+# Install script for directory: /home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/SFML
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "Debug")
+    set(CMAKE_INSTALL_CONFIG_NAME "")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -46,7 +46,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/usr/local/lib/pkgconfig" TYPE FILE FILES "/home/darkstar/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/tools/pkg-config/sfml-all.pc")
+file(INSTALL DESTINATION "/usr/local/lib/pkgconfig" TYPE FILE FILES "/home/amundbk/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/tools/pkg-config/sfml-all.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -58,7 +58,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/usr/local/lib/pkgconfig" TYPE FILE FILES "/home/darkstar/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/tools/pkg-config/sfml-system.pc")
+file(INSTALL DESTINATION "/usr/local/lib/pkgconfig" TYPE FILE FILES "/home/amundbk/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/tools/pkg-config/sfml-system.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -70,7 +70,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/usr/local/lib/pkgconfig" TYPE FILE FILES "/home/darkstar/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/tools/pkg-config/sfml-window.pc")
+file(INSTALL DESTINATION "/usr/local/lib/pkgconfig" TYPE FILE FILES "/home/amundbk/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/tools/pkg-config/sfml-window.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -82,7 +82,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/usr/local/lib/pkgconfig" TYPE FILE FILES "/home/darkstar/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/tools/pkg-config/sfml-graphics.pc")
+file(INSTALL DESTINATION "/usr/local/lib/pkgconfig" TYPE FILE FILES "/home/amundbk/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/tools/pkg-config/sfml-graphics.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -94,7 +94,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/usr/local/lib/pkgconfig" TYPE FILE FILES "/home/darkstar/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/tools/pkg-config/sfml-audio.pc")
+file(INSTALL DESTINATION "/usr/local/lib/pkgconfig" TYPE FILE FILES "/home/amundbk/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/tools/pkg-config/sfml-audio.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -106,26 +106,26 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/usr/local/lib/pkgconfig" TYPE FILE FILES "/home/darkstar/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/tools/pkg-config/sfml-network.pc")
+file(INSTALL DESTINATION "/usr/local/lib/pkgconfig" TYPE FILE FILES "/home/amundbk/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/tools/pkg-config/sfml-network.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xdevelx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/." TYPE DIRECTORY FILES "/home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/SFML/include" FILES_MATCHING REGEX "/[^/]*\\.hpp$" REGEX "/[^/]*\\.inl$")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/." TYPE DIRECTORY FILES "/home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/SFML/include" FILES_MATCHING REGEX "/[^/]*\\.hpp$" REGEX "/[^/]*\\.inl$")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/SFML" TYPE FILE FILES "/home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/SFML/license.md")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/SFML" TYPE FILE FILES "/home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/SFML/license.md")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/SFML" TYPE FILE FILES "/home/darkstar/Documents/School/Graphics/TDT4230-Project/lib/SFML/readme.md")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/SFML" TYPE FILE FILES "/home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/SFML/readme.md")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/SFML/SFMLStaticTargets.cmake")
     file(DIFFERENT EXPORT_FILE_CHANGED FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/SFML/SFMLStaticTargets.cmake"
-         "/home/darkstar/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/CMakeFiles/Export/lib/cmake/SFML/SFMLStaticTargets.cmake")
+         "/home/amundbk/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/CMakeFiles/Export/lib/cmake/SFML/SFMLStaticTargets.cmake")
     if(EXPORT_FILE_CHANGED)
       file(GLOB OLD_CONFIG_FILES "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/SFML/SFMLStaticTargets-*.cmake")
       if(OLD_CONFIG_FILES)
@@ -134,23 +134,23 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
       endif()
     endif()
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/SFML" TYPE FILE FILES "/home/darkstar/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/CMakeFiles/Export/lib/cmake/SFML/SFMLStaticTargets.cmake")
-  if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Dd][Ee][Bb][Uu][Gg])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/SFML" TYPE FILE FILES "/home/darkstar/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/CMakeFiles/Export/lib/cmake/SFML/SFMLStaticTargets-debug.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/SFML" TYPE FILE FILES "/home/amundbk/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/CMakeFiles/Export/lib/cmake/SFML/SFMLStaticTargets.cmake")
+  if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^()$")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/SFML" TYPE FILE FILES "/home/amundbk/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/CMakeFiles/Export/lib/cmake/SFML/SFMLStaticTargets-noconfig.cmake")
   endif()
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xdevelx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/SFML" TYPE FILE FILES
-    "/home/darkstar/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/SFMLConfig.cmake"
-    "/home/darkstar/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/SFMLConfigDependencies.cmake"
-    "/home/darkstar/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/SFMLConfigVersion.cmake"
+    "/home/amundbk/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/SFMLConfig.cmake"
+    "/home/amundbk/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/SFMLConfigDependencies.cmake"
+    "/home/amundbk/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/SFMLConfigVersion.cmake"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/darkstar/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/src/SFML/cmake_install.cmake")
+  include("/home/amundbk/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/src/SFML/cmake_install.cmake")
 
 endif()
 

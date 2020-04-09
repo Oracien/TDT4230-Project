@@ -19,8 +19,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/sfml-audio.dir/SoundFileWriterFlac.cpp.o"
   "CMakeFiles/sfml-audio.dir/SoundFileWriterOgg.cpp.o"
   "CMakeFiles/sfml-audio.dir/SoundFileWriterWav.cpp.o"
-  "../../../lib/libsfml-audio-s-d.pdb"
-  "../../../lib/libsfml-audio-s-d.a"
+  "../../../lib/libsfml-audio.pdb"
+  "../../../lib/libsfml-audio.a"
 )
 
 # Per-language clean rules from dependency scanning.
