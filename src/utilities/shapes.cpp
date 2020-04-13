@@ -31,7 +31,7 @@ const std::vector<glm::vec3> colors = {
 };
 
 Mesh cube_with_offset(glm::vec3 scale, glm::vec3 offset) {
-    Mesh qube = cube(scale, glm::vec2(1.0), true, false, glm::vec3(1.0, 1.0, 1.0));
+    Mesh qube = cube(scale, glm::vec2(1.0), false, false, glm::vec3(1.0, 1.0, 1.0));
 
     for (int i = 0; i < qube.vertices.size(); i++) {
         qube.vertices.at(i) = qube.vertices[i] + offset;

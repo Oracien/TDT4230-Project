@@ -35,5 +35,5 @@ void main()
     tangentMatrix = (mat3(normalize(tangent), normalize(biTangent), normalize(normal_in)));
     outTangent = tangent;
     outBiTangent = biTangent;
-    shadowCoord = lightSpaceMatrix * vec4(position, 1.0f);
+    shadowCoord = lightSpaceMatrix * ModelMatrix * vec4(position, 1.0f);
 }

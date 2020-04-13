@@ -340,9 +340,13 @@ void renderNode(SceneNode* node) {
     //std::cout<<glm::to_string(mat)<<std::endl;
 
     glUniform1i(11, 0);
+    glUniform1i(23, 0);
 
     switch(node->nodeType) {
         case GEOMETRY:  
+            if(node->nodeID == 12) {
+                glUniform1i(23, 1);
+            }
             if(node->vertexArrayObjectID != -1) {
                 glBindVertexArray(node->vertexArrayObjectID);
                 glDrawElements(GL_TRIANGLES, node->VAOIndexCount, GL_UNSIGNED_INT, nullptr);

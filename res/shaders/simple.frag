@@ -22,6 +22,7 @@ layout(binding = 3) uniform sampler2D shadowMap;
 uniform layout(location = 20) int LightOrb;
 uniform layout(location = 21) vec3 cameraPos;
 uniform layout(location = 22) vec3 colourBuffer;
+uniform layout(location = 23) int isTower;
 
 uniform LightSource lightSources[3];
 
@@ -32,16 +33,22 @@ vec3 reflected_normal;
 vec3 normal_view_vector;
 vec3 new_normal;
 
-float visibility;
 float attenuation;
 float dist;
 vec3 position;
 vec3 colour;
 float bias = 0.005;
+float near_plane = 1.0f;
+float far_plane = 200.0f;
 
 float rand(vec2 co) { return fract(sin(dot(co.xy, vec2(12.9898,78.233))) * 43758.5453); }
 float dither(vec2 uv) { return (rand(uv)*2.0-1.0) / 256.0; }
 
+float LinearizeDepth(float depth)
+{
+    float z = depth * 2.0 - 1.0;
+    return (2.0 * near_plane * far_plane) / (far_plane + near_plane - z * (far_plane - near_plane));
+}
 
 float ShadowCalculation(vec4 fragPosLightSpace)
 {
@@ -80,12 +87,6 @@ void main()
     float specularStrength = 1.0;
     float specularPower = 32;
 
-    visibility = 1.0f;
-
-    if (textureProj( shadowMap, shadowCoord.xyw).z < (shadowCoord.z-bias) /shadowCoord.w) {
-        visibility = 0.0f;
-    }
-
     normal_view_vector = normalize(cameraPos - modelPosition.xyz);
     
     for (int i = 0; i < 1; i++) {
@@ -123,5 +124,11 @@ void main()
         color = vec4(texture(textureSampler, textureCoordinates).xyz * lighting, 1.0f);
     } else {
         color = vec4(lighting, 1.0);
+    }
+
+    if(isTower == 1) {
+        float depthValue = texture(shadowMap, textureCoordinates).r;
+        color = vec4(vec3(LinearizeDepth(depthValue) / far_plane), 1.0);
+        //color = vec4(vec3(texture(shadowMap, textureCoordinates).x), 1.0);
     }
 }
