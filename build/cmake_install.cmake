@@ -1,4 +1,4 @@
-# Install script for directory: /home/amundbk/Documents/School/Graphics/TDT4230-Project
+# Install script for directory: /home/amundbk/Documents/School/Graphics/Project
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,9 +39,9 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/amundbk/Documents/School/Graphics/TDT4230-Project/build/lib/glfw/cmake_install.cmake")
-  include("/home/amundbk/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/cmake_install.cmake")
-  include("/home/amundbk/Documents/School/Graphics/TDT4230-Project/build/lib/fmt/cmake_install.cmake")
+  include("/home/amundbk/Documents/School/Graphics/Project/build/lib/glfw/cmake_install.cmake")
+  include("/home/amundbk/Documents/School/Graphics/Project/build/lib/SFML/cmake_install.cmake")
+  include("/home/amundbk/Documents/School/Graphics/Project/build/lib/fmt/cmake_install.cmake")
 
 endif()
 
@@ -53,5 +53,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/amundbk/Documents/School/Graphics/TDT4230-Project/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/amundbk/Documents/School/Graphics/Project/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

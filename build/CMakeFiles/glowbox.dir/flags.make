@@ -5,13 +5,13 @@
 # compile CXX with /usr/bin/c++
 C_FLAGS =  
 
-C_DEFINES = -DGLFW_INCLUDE_NONE -DPROJECT_SOURCE_DIR=\"/home/amundbk/Documents/School/Graphics/TDT4230-Project\" -DSFML_STATIC
+C_DEFINES = -DGLFW_INCLUDE_NONE -DPROJECT_SOURCE_DIR=\"/home/amundbk/Documents/School/Graphics/Project\" -DSFML_STATIC
 
-C_INCLUDES = -I/home/amundbk/Documents/School/Graphics/TDT4230-Project/src -I/home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/glad/include -I/home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/glfw/include -I/home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/lodepng -I/home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/glm -I/home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/stb -I/home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/arrrgh -I/home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/SFML/include -I/home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/fmt/include 
+C_INCLUDES = -I/home/amundbk/Documents/School/Graphics/Project/src -I/home/amundbk/Documents/School/Graphics/Project/lib/glad/include -I/home/amundbk/Documents/School/Graphics/Project/lib/glfw/include -I/home/amundbk/Documents/School/Graphics/Project/lib/lodepng -I/home/amundbk/Documents/School/Graphics/Project/lib/glm -I/home/amundbk/Documents/School/Graphics/Project/lib/stb -I/home/amundbk/Documents/School/Graphics/Project/lib/arrrgh -I/home/amundbk/Documents/School/Graphics/Project/lib/SFML/include -I/home/amundbk/Documents/School/Graphics/Project/lib/fmt/include 
 
 CXX_FLAGS =  -Wall -Wextra -Wpedantic   -std=gnu++14
 
-CXX_DEFINES = -DGLFW_INCLUDE_NONE -DPROJECT_SOURCE_DIR=\"/home/amundbk/Documents/School/Graphics/TDT4230-Project\" -DSFML_STATIC
+CXX_DEFINES = -DGLFW_INCLUDE_NONE -DPROJECT_SOURCE_DIR=\"/home/amundbk/Documents/School/Graphics/Project\" -DSFML_STATIC
 
-CXX_INCLUDES = -I/home/amundbk/Documents/School/Graphics/TDT4230-Project/src -I/home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/glad/include -I/home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/glfw/include -I/home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/lodepng -I/home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/glm -I/home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/stb -I/home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/arrrgh -I/home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/SFML/include -I/home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/fmt/include 
+CXX_INCLUDES = -I/home/amundbk/Documents/School/Graphics/Project/src -I/home/amundbk/Documents/School/Graphics/Project/lib/glad/include -I/home/amundbk/Documents/School/Graphics/Project/lib/glfw/include -I/home/amundbk/Documents/School/Graphics/Project/lib/lodepng -I/home/amundbk/Documents/School/Graphics/Project/lib/glm -I/home/amundbk/Documents/School/Graphics/Project/lib/stb -I/home/amundbk/Documents/School/Graphics/Project/lib/arrrgh -I/home/amundbk/Documents/School/Graphics/Project/lib/SFML/include -I/home/amundbk/Documents/School/Graphics/Project/lib/fmt/include 
 

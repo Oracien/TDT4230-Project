@@ -1,4 +1,4 @@
-# Install script for directory: /home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/glfw/src
+# Install script for directory: /home/amundbk/Documents/School/Graphics/Project/lib/glfw/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -4,7 +4,7 @@
 CMakeFiles/glowbox.dir/lib/glad/src/glad.c.o
  ../lib/glad/include/KHR/khrplatform.h
  ../lib/glad/include/glad/glad.h
- /home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/glad/src/glad.c
+ /home/amundbk/Documents/School/Graphics/Project/lib/glad/src/glad.c
 CMakeFiles/glowbox.dir/src/gamelogic.cpp.o
  ../lib/SFML/include/SFML/Audio/AlResource.hpp
  ../lib/SFML/include/SFML/Audio/Export.hpp
@@ -397,21 +397,21 @@ CMakeFiles/glowbox.dir/src/gamelogic.cpp.o
  ../src/utilities/shapes.h
  ../src/utilities/timeutils.h
  ../src/utilities/window.hpp
- /home/amundbk/Documents/School/Graphics/TDT4230-Project/src/gamelogic.cpp
- /home/amundbk/Documents/School/Graphics/TDT4230-Project/src/gamelogic.h
- /home/amundbk/Documents/School/Graphics/TDT4230-Project/src/sceneGraph.hpp
- /home/amundbk/Documents/School/Graphics/TDT4230-Project/src/textures.hpp
- /home/amundbk/Documents/School/Graphics/TDT4230-Project/src/utilities/glfont.h
- /home/amundbk/Documents/School/Graphics/TDT4230-Project/src/utilities/imageLoader.hpp
- /home/amundbk/Documents/School/Graphics/TDT4230-Project/src/utilities/lodepng.h
+ /home/amundbk/Documents/School/Graphics/Project/src/gamelogic.cpp
+ /home/amundbk/Documents/School/Graphics/Project/src/gamelogic.h
+ /home/amundbk/Documents/School/Graphics/Project/src/sceneGraph.hpp
+ /home/amundbk/Documents/School/Graphics/Project/src/textures.hpp
+ /home/amundbk/Documents/School/Graphics/Project/src/utilities/glfont.h
+ /home/amundbk/Documents/School/Graphics/Project/src/utilities/imageLoader.hpp
+ /home/amundbk/Documents/School/Graphics/Project/src/utilities/lodepng.h
 CMakeFiles/glowbox.dir/src/main.cpp.o
  ../lib/arrrgh/arrrgh.hpp
  ../lib/glad/include/KHR/khrplatform.h
  ../lib/glad/include/glad/glad.h
  ../lib/glfw/include/GLFW/glfw3.h
- /home/amundbk/Documents/School/Graphics/TDT4230-Project/src/main.cpp
- /home/amundbk/Documents/School/Graphics/TDT4230-Project/src/program.hpp
- /home/amundbk/Documents/School/Graphics/TDT4230-Project/src/utilities/window.hpp
+ /home/amundbk/Documents/School/Graphics/Project/src/main.cpp
+ /home/amundbk/Documents/School/Graphics/Project/src/program.hpp
+ /home/amundbk/Documents/School/Graphics/Project/src/utilities/window.hpp
 CMakeFiles/glowbox.dir/src/program.cpp.o
  ../lib/SFML/include/SFML/Audio.hpp
  ../lib/SFML/include/SFML/Audio/AlResource.hpp
@@ -665,11 +665,11 @@ CMakeFiles/glowbox.dir/src/program.cpp.o
  ../src/utilities/shader.hpp
  ../src/utilities/shapes.h
  ../src/utilities/timeutils.h
- /home/amundbk/Documents/School/Graphics/TDT4230-Project/src/gamelogic.h
- /home/amundbk/Documents/School/Graphics/TDT4230-Project/src/program.cpp
- /home/amundbk/Documents/School/Graphics/TDT4230-Project/src/program.hpp
- /home/amundbk/Documents/School/Graphics/TDT4230-Project/src/sceneGraph.hpp
- /home/amundbk/Documents/School/Graphics/TDT4230-Project/src/utilities/window.hpp
+ /home/amundbk/Documents/School/Graphics/Project/src/gamelogic.h
+ /home/amundbk/Documents/School/Graphics/Project/src/program.cpp
+ /home/amundbk/Documents/School/Graphics/Project/src/program.hpp
+ /home/amundbk/Documents/School/Graphics/Project/src/sceneGraph.hpp
+ /home/amundbk/Documents/School/Graphics/Project/src/utilities/window.hpp
 CMakeFiles/glowbox.dir/src/sceneGraph.cpp.o
  ../lib/glm/glm/./detail/setup.hpp
  ../lib/glm/glm/./detail/type_mat2x2.hpp
@@ -874,8 +874,8 @@ CMakeFiles/glowbox.dir/src/sceneGraph.cpp.o
  ../lib/glm/glm/vec3.hpp
  ../lib/glm/glm/vec4.hpp
  ../lib/glm/glm/vector_relational.hpp
- /home/amundbk/Documents/School/Graphics/TDT4230-Project/src/sceneGraph.cpp
- /home/amundbk/Documents/School/Graphics/TDT4230-Project/src/sceneGraph.hpp
+ /home/amundbk/Documents/School/Graphics/Project/src/sceneGraph.cpp
+ /home/amundbk/Documents/School/Graphics/Project/src/sceneGraph.hpp
 CMakeFiles/glowbox.dir/src/textures.cpp.o
  ../lib/SFML/include/SFML/Audio/AlResource.hpp
  ../lib/SFML/include/SFML/Audio/Export.hpp
@@ -1104,16 +1104,16 @@ CMakeFiles/glowbox.dir/src/textures.cpp.o
  ../src/utilities/shapes.h
  ../src/utilities/timeutils.h
  ../src/utilities/window.hpp
- /home/amundbk/Documents/School/Graphics/TDT4230-Project/src/gamelogic.h
- /home/amundbk/Documents/School/Graphics/TDT4230-Project/src/sceneGraph.hpp
- /home/amundbk/Documents/School/Graphics/TDT4230-Project/src/textures.cpp
- /home/amundbk/Documents/School/Graphics/TDT4230-Project/src/textures.hpp
- /home/amundbk/Documents/School/Graphics/TDT4230-Project/src/utilities/glfont.h
- /home/amundbk/Documents/School/Graphics/TDT4230-Project/src/utilities/imageLoader.hpp
- /home/amundbk/Documents/School/Graphics/TDT4230-Project/src/utilities/lodepng.h
+ /home/amundbk/Documents/School/Graphics/Project/src/gamelogic.h
+ /home/amundbk/Documents/School/Graphics/Project/src/sceneGraph.hpp
+ /home/amundbk/Documents/School/Graphics/Project/src/textures.cpp
+ /home/amundbk/Documents/School/Graphics/Project/src/textures.hpp
+ /home/amundbk/Documents/School/Graphics/Project/src/utilities/glfont.h
+ /home/amundbk/Documents/School/Graphics/Project/src/utilities/imageLoader.hpp
+ /home/amundbk/Documents/School/Graphics/Project/src/utilities/lodepng.h
 CMakeFiles/glowbox.dir/src/utilities/SimplexNoise.cpp.o
- /home/amundbk/Documents/School/Graphics/TDT4230-Project/src/utilities/SimplexNoise.cpp
- /home/amundbk/Documents/School/Graphics/TDT4230-Project/src/utilities/SimplexNoise.h
+ /home/amundbk/Documents/School/Graphics/Project/src/utilities/SimplexNoise.cpp
+ /home/amundbk/Documents/School/Graphics/Project/src/utilities/SimplexNoise.h
 CMakeFiles/glowbox.dir/src/utilities/glfont.cpp.o
  ../lib/glm/glm/./detail/setup.hpp
  ../lib/glm/glm/./detail/type_mat2x2.hpp
@@ -1270,9 +1270,9 @@ CMakeFiles/glowbox.dir/src/utilities/glfont.cpp.o
  ../lib/glm/glm/vec3.hpp
  ../lib/glm/glm/vec4.hpp
  ../lib/glm/glm/vector_relational.hpp
- /home/amundbk/Documents/School/Graphics/TDT4230-Project/src/utilities/glfont.cpp
- /home/amundbk/Documents/School/Graphics/TDT4230-Project/src/utilities/glfont.h
- /home/amundbk/Documents/School/Graphics/TDT4230-Project/src/utilities/mesh.h
+ /home/amundbk/Documents/School/Graphics/Project/src/utilities/glfont.cpp
+ /home/amundbk/Documents/School/Graphics/Project/src/utilities/glfont.h
+ /home/amundbk/Documents/School/Graphics/Project/src/utilities/mesh.h
 CMakeFiles/glowbox.dir/src/utilities/glutils.cpp.o
  ../lib/glad/include/KHR/khrplatform.h
  ../lib/glad/include/glad/glad.h
@@ -1434,16 +1434,16 @@ CMakeFiles/glowbox.dir/src/utilities/glutils.cpp.o
  ../lib/glm/glm/vector_relational.hpp
  ../src/program.hpp
  ../src/utilities/window.hpp
- /home/amundbk/Documents/School/Graphics/TDT4230-Project/src/utilities/glutils.cpp
- /home/amundbk/Documents/School/Graphics/TDT4230-Project/src/utilities/glutils.h
- /home/amundbk/Documents/School/Graphics/TDT4230-Project/src/utilities/mesh.h
+ /home/amundbk/Documents/School/Graphics/Project/src/utilities/glutils.cpp
+ /home/amundbk/Documents/School/Graphics/Project/src/utilities/glutils.h
+ /home/amundbk/Documents/School/Graphics/Project/src/utilities/mesh.h
 CMakeFiles/glowbox.dir/src/utilities/imageLoader.cpp.o
- /home/amundbk/Documents/School/Graphics/TDT4230-Project/src/utilities/imageLoader.cpp
- /home/amundbk/Documents/School/Graphics/TDT4230-Project/src/utilities/imageLoader.hpp
- /home/amundbk/Documents/School/Graphics/TDT4230-Project/src/utilities/lodepng.h
+ /home/amundbk/Documents/School/Graphics/Project/src/utilities/imageLoader.cpp
+ /home/amundbk/Documents/School/Graphics/Project/src/utilities/imageLoader.hpp
+ /home/amundbk/Documents/School/Graphics/Project/src/utilities/lodepng.h
 CMakeFiles/glowbox.dir/src/utilities/lodepng.cpp.o
- /home/amundbk/Documents/School/Graphics/TDT4230-Project/src/utilities/lodepng.cpp
- /home/amundbk/Documents/School/Graphics/TDT4230-Project/src/utilities/lodepng.h
+ /home/amundbk/Documents/School/Graphics/Project/src/utilities/lodepng.cpp
+ /home/amundbk/Documents/School/Graphics/Project/src/utilities/lodepng.h
 CMakeFiles/glowbox.dir/src/utilities/shapes.cpp.o
  ../lib/glm/glm/./detail/setup.hpp
  ../lib/glm/glm/./detail/type_mat2x2.hpp
@@ -1600,10 +1600,10 @@ CMakeFiles/glowbox.dir/src/utilities/shapes.cpp.o
  ../lib/glm/glm/vec3.hpp
  ../lib/glm/glm/vec4.hpp
  ../lib/glm/glm/vector_relational.hpp
- /home/amundbk/Documents/School/Graphics/TDT4230-Project/src/utilities/SimplexNoise.h
- /home/amundbk/Documents/School/Graphics/TDT4230-Project/src/utilities/mesh.h
- /home/amundbk/Documents/School/Graphics/TDT4230-Project/src/utilities/shapes.cpp
- /home/amundbk/Documents/School/Graphics/TDT4230-Project/src/utilities/shapes.h
+ /home/amundbk/Documents/School/Graphics/Project/src/utilities/SimplexNoise.h
+ /home/amundbk/Documents/School/Graphics/Project/src/utilities/mesh.h
+ /home/amundbk/Documents/School/Graphics/Project/src/utilities/shapes.cpp
+ /home/amundbk/Documents/School/Graphics/Project/src/utilities/shapes.h
 CMakeFiles/glowbox.dir/src/utilities/timeutils.cpp.o
- /home/amundbk/Documents/School/Graphics/TDT4230-Project/src/utilities/timeutils.cpp
- /home/amundbk/Documents/School/Graphics/TDT4230-Project/src/utilities/timeutils.h
+ /home/amundbk/Documents/School/Graphics/Project/src/utilities/timeutils.cpp
+ /home/amundbk/Documents/School/Graphics/Project/src/utilities/timeutils.h

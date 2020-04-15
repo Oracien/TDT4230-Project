@@ -178,9 +178,9 @@ void initGame(GLFWwindow* window, CommandLineOptions gameOptions) {
     Mesh towerMesh = generateTower(tower_dimensions);
     Mesh ballMesh = generateSphere(ball_radius, 1024, 1024);
 
-    unsigned int floorVAO = generateBuffer(floorMesh);
-    unsigned int towerVAO = generateBuffer(towerMesh);
-    unsigned int ballVAO = generateBuffer(ballMesh);
+    unsigned int floorVAO = generateBuffer(floorMesh, false);
+    unsigned int towerVAO = generateBuffer(towerMesh, true);
+    unsigned int ballVAO = generateBuffer(ballMesh, false);
 
     floorNode->vertexArrayObjectID = floorVAO;
     floorNode->VAOIndexCount = floorMesh.indices.size();

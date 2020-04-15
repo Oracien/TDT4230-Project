@@ -6,5 +6,5 @@ CXX_FLAGS =  -Wall -Wextra -Wpedantic   -std=gnu++14
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/fmt/include 
+CXX_INCLUDES = -I/home/amundbk/Documents/School/Graphics/Project/lib/fmt/include 
 

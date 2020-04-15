@@ -61,7 +61,7 @@ void computeTangentBasis(
 }
 
 
-unsigned int generateBuffer(Mesh &mesh) {
+unsigned int generateBuffer(Mesh &mesh, bool normalMapped) {
     unsigned int vaoID;
     glGenVertexArrays(1, &vaoID);
     glBindVertexArray(vaoID);
@@ -71,14 +71,19 @@ unsigned int generateBuffer(Mesh &mesh) {
     if (mesh.textureCoordinates.size() > 0) {
         generateAttribute(2, 2, mesh.textureCoordinates, false);
     }
-    std::vector<glm::vec3> tangents; 
-    std::vector<glm::vec3> biTangents;
-    computeTangentBasis(mesh.vertices, mesh.textureCoordinates, mesh.normals, tangents, biTangents);
-    if(tangents.size() > 0) {
-        generateAttribute(3, 3, tangents, true);
-    }
-    if(biTangents.size() > 0) {
-        generateAttribute(4, 3, biTangents, true);
+    if(normalMapped) {
+        std::vector<glm::vec3> tangents; 
+        std::vector<glm::vec3> biTangents;
+        computeTangentBasis(mesh.vertices, mesh.textureCoordinates, mesh.normals, tangents, biTangents);
+        if(tangents.size() > 0) {
+            generateAttribute(3, 3, tangents, true);
+        }
+        if(biTangents.size() > 0) {
+            generateAttribute(4, 3, biTangents, true);
+        }
+    } else {
+        generateAttribute(3, 0, std::vector<glm::vec3>(), false);
+        generateAttribute(4, 0, std::vector<glm::vec3>(), false);
     }
     if(mesh.colours.size() > 0) {
         generateAttribute(5, 3, mesh.colours, false);

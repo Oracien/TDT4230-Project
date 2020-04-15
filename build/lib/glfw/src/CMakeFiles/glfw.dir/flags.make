@@ -6,7 +6,7 @@ C_FLAGS = -fPIC   -Wall
 
 C_DEFINES = -D_GLFW_USE_CONFIG_H
 
-C_INCLUDES = -I/home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/glfw/include -I/home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/glfw/src -I/home/amundbk/Documents/School/Graphics/TDT4230-Project/build/lib/glfw/src 
+C_INCLUDES = -I/home/amundbk/Documents/School/Graphics/Project/lib/glfw/include -I/home/amundbk/Documents/School/Graphics/Project/lib/glfw/src -I/home/amundbk/Documents/School/Graphics/Project/build/lib/glfw/src 
 
 # Custom flags: lib/glfw/src/CMakeFiles/glfw.dir/context.c.o_FLAGS = -Wdeclaration-after-statement
 

@@ -248,14 +248,14 @@ Mesh generateFloor(glm::vec2 scale) {
             
             center_num = offset + b;
             center = m.vertices[center_num];
-            bottom_left = m.vertices[center_num - no_horizontal_sections - 1];
-            bottom_center = m.vertices[center_num - no_horizontal_sections];
-            bottom_right = m.vertices[center_num - no_horizontal_sections + 1];
-            center_left = m.vertices[center_num - 1];
-            center_right = m.vertices[center_num + 1];
-            top_left = m.vertices[center_num + no_horizontal_sections - 1];
-            top_center = m.vertices[center_num + no_horizontal_sections];
-            top_right = m.vertices[center_num + no_horizontal_sections + 1];
+            bottom_left = m.vertices[std::max(center_num - no_horizontal_sections - 1, (long int) 0)];
+            bottom_center = m.vertices[std::max(center_num - no_horizontal_sections, (long int) 0)];
+            bottom_right = m.vertices[std::max(center_num - no_horizontal_sections + 1, (long int) 0)];
+            center_left = m.vertices[std::max(center_num - 1, (long int) 0)];
+            center_right = m.vertices[std::max(center_num + 1, (long int) 0)];
+            top_left = m.vertices[std::max(center_num + no_horizontal_sections - 1, (long int) 0)];
+            top_center = m.vertices[std::max(center_num + no_horizontal_sections, (long int) 0)];
+            top_right = m.vertices[std::max(center_num + no_horizontal_sections + 1, (long int) 0)];
 
             glm::vec3 normal = glm::vec3(0.0, 0.0, 0.0);
 

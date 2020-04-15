@@ -6,5 +6,5 @@ CXX_FLAGS =  -Wall -Wextra -Wpedantic   -fvisibility=hidden -std=gnu++14
 
 CXX_DEFINES = -DSFML_STATIC
 
-CXX_INCLUDES = -I/home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/SFML/include -I/home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/SFML/src 
+CXX_INCLUDES = -I/home/amundbk/Documents/School/Graphics/Project/lib/SFML/include -I/home/amundbk/Documents/School/Graphics/Project/lib/SFML/src 
 

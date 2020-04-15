@@ -1,4 +1,4 @@
-# Install script for directory: /home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML
+# Install script for directory: /home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,8 +39,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/amundbk/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/src/SFML/System/cmake_install.cmake")
-  include("/home/amundbk/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/src/SFML/Audio/cmake_install.cmake")
+  include("/home/amundbk/Documents/School/Graphics/Project/build/lib/SFML/src/SFML/System/cmake_install.cmake")
+  include("/home/amundbk/Documents/School/Graphics/Project/build/lib/SFML/src/SFML/Audio/cmake_install.cmake")
 
 endif()
 

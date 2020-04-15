@@ -1,4 +1,4 @@
-# Install script for directory: /home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/Audio
+# Install script for directory: /home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/Audio
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,6 +38,6 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xdevelx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/amundbk/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/lib/libsfml-audio.a")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/amundbk/Documents/School/Graphics/Project/build/lib/SFML/lib/libsfml-audio.a")
 endif()
 
