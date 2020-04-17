@@ -5,10 +5,10 @@ lib/fmt/CMakeFiles/fmt.dir/src/format.cc.o
  ../lib/fmt/include/fmt/core.h
  ../lib/fmt/include/fmt/format-inl.h
  ../lib/fmt/include/fmt/format.h
- /home/amundbk/Documents/School/Graphics/Project/lib/fmt/src/format.cc
+ /home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/fmt/src/format.cc
 lib/fmt/CMakeFiles/fmt.dir/src/os.cc.o
  ../lib/fmt/include/fmt/core.h
  ../lib/fmt/include/fmt/format-inl.h
  ../lib/fmt/include/fmt/format.h
  ../lib/fmt/include/fmt/os.h
- /home/amundbk/Documents/School/Graphics/Project/lib/fmt/src/os.cc
+ /home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/fmt/src/os.cc

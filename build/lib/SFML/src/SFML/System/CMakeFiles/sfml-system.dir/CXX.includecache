@@ -206,7 +206,7 @@ SFML/System/NonCopyable.hpp
 windows.h
 -
 
-/home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/Clock.cpp
+/home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/Clock.cpp
 SFML/System/Clock.hpp
 -
 SFML/System/Win32/ClockImpl.hpp
@@ -214,7 +214,7 @@ SFML/System/Win32/ClockImpl.hpp
 SFML/System/Unix/ClockImpl.hpp
 -
 
-/home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/Err.cpp
+/home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/Err.cpp
 SFML/System/Err.hpp
 -
 streambuf
@@ -222,25 +222,25 @@ streambuf
 cstdio
 -
 
-/home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/FileInputStream.cpp
+/home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/FileInputStream.cpp
 SFML/System/FileInputStream.hpp
 -
 SFML/System/Android/ResourceStream.hpp
 -
 
-/home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/Lock.cpp
+/home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/Lock.cpp
 SFML/System/Lock.hpp
 -
 SFML/System/Mutex.hpp
 -
 
-/home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/MemoryInputStream.cpp
+/home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/MemoryInputStream.cpp
 SFML/System/MemoryInputStream.hpp
 -
 cstring
 -
 
-/home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/Mutex.cpp
+/home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/Mutex.cpp
 SFML/System/Mutex.hpp
 -
 SFML/System/Win32/MutexImpl.hpp
@@ -248,7 +248,7 @@ SFML/System/Win32/MutexImpl.hpp
 SFML/System/Unix/MutexImpl.hpp
 -
 
-/home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/Sleep.cpp
+/home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/Sleep.cpp
 SFML/System/Sleep.hpp
 -
 SFML/System/Win32/SleepImpl.hpp
@@ -256,7 +256,7 @@ SFML/System/Win32/SleepImpl.hpp
 SFML/System/Unix/SleepImpl.hpp
 -
 
-/home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/String.cpp
+/home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/String.cpp
 SFML/System/String.hpp
 -
 SFML/System/Utf.hpp
@@ -266,7 +266,7 @@ iterator
 cstring
 -
 
-/home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/Thread.cpp
+/home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/Thread.cpp
 SFML/System/Thread.hpp
 -
 SFML/System/Win32/ThreadImpl.hpp
@@ -274,7 +274,7 @@ SFML/System/Win32/ThreadImpl.hpp
 SFML/System/Unix/ThreadImpl.hpp
 -
 
-/home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/ThreadLocal.cpp
+/home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/ThreadLocal.cpp
 SFML/System/ThreadLocal.hpp
 -
 SFML/System/Win32/ThreadLocalImpl.hpp
@@ -282,11 +282,11 @@ SFML/System/Win32/ThreadLocalImpl.hpp
 SFML/System/Unix/ThreadLocalImpl.hpp
 -
 
-/home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/Time.cpp
+/home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/Time.cpp
 SFML/System/Time.hpp
 -
 
-/home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/Unix/ClockImpl.cpp
+/home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/Unix/ClockImpl.cpp
 SFML/System/Unix/ClockImpl.hpp
 -
 mach/mach_time.h
@@ -294,11 +294,11 @@ mach/mach_time.h
 time.h
 -
 
-/home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/Unix/MutexImpl.cpp
+/home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/Unix/MutexImpl.cpp
 SFML/System/Unix/MutexImpl.hpp
 -
 
-/home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/Unix/SleepImpl.cpp
+/home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/Unix/SleepImpl.cpp
 SFML/System/Unix/SleepImpl.hpp
 -
 errno.h
@@ -306,7 +306,7 @@ errno.h
 time.h
 -
 
-/home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/Unix/ThreadImpl.cpp
+/home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/Unix/ThreadImpl.cpp
 SFML/System/Unix/ThreadImpl.hpp
 -
 SFML/System/Thread.hpp
@@ -316,7 +316,7 @@ iostream
 cassert
 -
 
-/home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/Unix/ThreadLocalImpl.cpp
+/home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/Unix/ThreadLocalImpl.cpp
 SFML/System/Unix/ThreadLocalImpl.hpp
 -
 

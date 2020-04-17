@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/amundbk/Documents/School/Graphics/Project
+CMAKE_SOURCE_DIR = /home/amundbk/Documents/School/Graphics/TDT4230-Project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/amundbk/Documents/School/Graphics/Project/build
+CMAKE_BINARY_DIR = /home/amundbk/Documents/School/Graphics/TDT4230-Project/build
 
 # Include any dependencies generated for this target.
 include lib/fmt/CMakeFiles/fmt.dir/depend.make
@@ -59,16 +59,16 @@ include lib/fmt/CMakeFiles/fmt.dir/flags.make
 
 lib/fmt/CMakeFiles/fmt.dir/src/format.cc.o: lib/fmt/CMakeFiles/fmt.dir/flags.make
 lib/fmt/CMakeFiles/fmt.dir/src/format.cc.o: ../lib/fmt/src/format.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object lib/fmt/CMakeFiles/fmt.dir/src/format.cc.o"
-	cd /home/amundbk/Documents/School/Graphics/Project/build/lib/fmt && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fmt.dir/src/format.cc.o -c /home/amundbk/Documents/School/Graphics/Project/lib/fmt/src/format.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amundbk/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object lib/fmt/CMakeFiles/fmt.dir/src/format.cc.o"
+	cd /home/amundbk/Documents/School/Graphics/TDT4230-Project/build/lib/fmt && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fmt.dir/src/format.cc.o -c /home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/fmt/src/format.cc
 
 lib/fmt/CMakeFiles/fmt.dir/src/format.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fmt.dir/src/format.cc.i"
-	cd /home/amundbk/Documents/School/Graphics/Project/build/lib/fmt && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/amundbk/Documents/School/Graphics/Project/lib/fmt/src/format.cc > CMakeFiles/fmt.dir/src/format.cc.i
+	cd /home/amundbk/Documents/School/Graphics/TDT4230-Project/build/lib/fmt && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/fmt/src/format.cc > CMakeFiles/fmt.dir/src/format.cc.i
 
 lib/fmt/CMakeFiles/fmt.dir/src/format.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fmt.dir/src/format.cc.s"
-	cd /home/amundbk/Documents/School/Graphics/Project/build/lib/fmt && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/amundbk/Documents/School/Graphics/Project/lib/fmt/src/format.cc -o CMakeFiles/fmt.dir/src/format.cc.s
+	cd /home/amundbk/Documents/School/Graphics/TDT4230-Project/build/lib/fmt && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/fmt/src/format.cc -o CMakeFiles/fmt.dir/src/format.cc.s
 
 lib/fmt/CMakeFiles/fmt.dir/src/format.cc.o.requires:
 
@@ -83,16 +83,16 @@ lib/fmt/CMakeFiles/fmt.dir/src/format.cc.o.provides.build: lib/fmt/CMakeFiles/fm
 
 lib/fmt/CMakeFiles/fmt.dir/src/os.cc.o: lib/fmt/CMakeFiles/fmt.dir/flags.make
 lib/fmt/CMakeFiles/fmt.dir/src/os.cc.o: ../lib/fmt/src/os.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object lib/fmt/CMakeFiles/fmt.dir/src/os.cc.o"
-	cd /home/amundbk/Documents/School/Graphics/Project/build/lib/fmt && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fmt.dir/src/os.cc.o -c /home/amundbk/Documents/School/Graphics/Project/lib/fmt/src/os.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amundbk/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object lib/fmt/CMakeFiles/fmt.dir/src/os.cc.o"
+	cd /home/amundbk/Documents/School/Graphics/TDT4230-Project/build/lib/fmt && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fmt.dir/src/os.cc.o -c /home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/fmt/src/os.cc
 
 lib/fmt/CMakeFiles/fmt.dir/src/os.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fmt.dir/src/os.cc.i"
-	cd /home/amundbk/Documents/School/Graphics/Project/build/lib/fmt && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/amundbk/Documents/School/Graphics/Project/lib/fmt/src/os.cc > CMakeFiles/fmt.dir/src/os.cc.i
+	cd /home/amundbk/Documents/School/Graphics/TDT4230-Project/build/lib/fmt && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/fmt/src/os.cc > CMakeFiles/fmt.dir/src/os.cc.i
 
 lib/fmt/CMakeFiles/fmt.dir/src/os.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fmt.dir/src/os.cc.s"
-	cd /home/amundbk/Documents/School/Graphics/Project/build/lib/fmt && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/amundbk/Documents/School/Graphics/Project/lib/fmt/src/os.cc -o CMakeFiles/fmt.dir/src/os.cc.s
+	cd /home/amundbk/Documents/School/Graphics/TDT4230-Project/build/lib/fmt && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/fmt/src/os.cc -o CMakeFiles/fmt.dir/src/os.cc.s
 
 lib/fmt/CMakeFiles/fmt.dir/src/os.cc.o.requires:
 
@@ -113,16 +113,16 @@ fmt_OBJECTS = \
 # External object files for target fmt
 fmt_EXTERNAL_OBJECTS =
 
-lib/fmt/libfmt.a: lib/fmt/CMakeFiles/fmt.dir/src/format.cc.o
-lib/fmt/libfmt.a: lib/fmt/CMakeFiles/fmt.dir/src/os.cc.o
-lib/fmt/libfmt.a: lib/fmt/CMakeFiles/fmt.dir/build.make
-lib/fmt/libfmt.a: lib/fmt/CMakeFiles/fmt.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libfmt.a"
-	cd /home/amundbk/Documents/School/Graphics/Project/build/lib/fmt && $(CMAKE_COMMAND) -P CMakeFiles/fmt.dir/cmake_clean_target.cmake
-	cd /home/amundbk/Documents/School/Graphics/Project/build/lib/fmt && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/fmt.dir/link.txt --verbose=$(VERBOSE)
+lib/fmt/libfmtd.a: lib/fmt/CMakeFiles/fmt.dir/src/format.cc.o
+lib/fmt/libfmtd.a: lib/fmt/CMakeFiles/fmt.dir/src/os.cc.o
+lib/fmt/libfmtd.a: lib/fmt/CMakeFiles/fmt.dir/build.make
+lib/fmt/libfmtd.a: lib/fmt/CMakeFiles/fmt.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/amundbk/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libfmtd.a"
+	cd /home/amundbk/Documents/School/Graphics/TDT4230-Project/build/lib/fmt && $(CMAKE_COMMAND) -P CMakeFiles/fmt.dir/cmake_clean_target.cmake
+	cd /home/amundbk/Documents/School/Graphics/TDT4230-Project/build/lib/fmt && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/fmt.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-lib/fmt/CMakeFiles/fmt.dir/build: lib/fmt/libfmt.a
+lib/fmt/CMakeFiles/fmt.dir/build: lib/fmt/libfmtd.a
 
 .PHONY : lib/fmt/CMakeFiles/fmt.dir/build
 
@@ -132,10 +132,10 @@ lib/fmt/CMakeFiles/fmt.dir/requires: lib/fmt/CMakeFiles/fmt.dir/src/os.cc.o.requ
 .PHONY : lib/fmt/CMakeFiles/fmt.dir/requires
 
 lib/fmt/CMakeFiles/fmt.dir/clean:
-	cd /home/amundbk/Documents/School/Graphics/Project/build/lib/fmt && $(CMAKE_COMMAND) -P CMakeFiles/fmt.dir/cmake_clean.cmake
+	cd /home/amundbk/Documents/School/Graphics/TDT4230-Project/build/lib/fmt && $(CMAKE_COMMAND) -P CMakeFiles/fmt.dir/cmake_clean.cmake
 .PHONY : lib/fmt/CMakeFiles/fmt.dir/clean
 
 lib/fmt/CMakeFiles/fmt.dir/depend:
-	cd /home/amundbk/Documents/School/Graphics/Project/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/amundbk/Documents/School/Graphics/Project /home/amundbk/Documents/School/Graphics/Project/lib/fmt /home/amundbk/Documents/School/Graphics/Project/build /home/amundbk/Documents/School/Graphics/Project/build/lib/fmt /home/amundbk/Documents/School/Graphics/Project/build/lib/fmt/CMakeFiles/fmt.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/amundbk/Documents/School/Graphics/TDT4230-Project/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/amundbk/Documents/School/Graphics/TDT4230-Project /home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/fmt /home/amundbk/Documents/School/Graphics/TDT4230-Project/build /home/amundbk/Documents/School/Graphics/TDT4230-Project/build/lib/fmt /home/amundbk/Documents/School/Graphics/TDT4230-Project/build/lib/fmt/CMakeFiles/fmt.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : lib/fmt/CMakeFiles/fmt.dir/depend
 

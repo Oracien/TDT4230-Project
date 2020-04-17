@@ -8,12 +8,12 @@ lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Clock.cpp.o
  ../lib/SFML/include/SFML/System/Time.hpp
  ../lib/SFML/src/SFML/System/Unix/ClockImpl.hpp
  ../lib/SFML/src/SFML/System/Win32/ClockImpl.hpp
- /home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/Clock.cpp
+ /home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/Clock.cpp
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Err.cpp.o
  ../lib/SFML/include/SFML/Config.hpp
  ../lib/SFML/include/SFML/System/Err.hpp
  ../lib/SFML/include/SFML/System/Export.hpp
- /home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/Err.cpp
+ /home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/Err.cpp
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/FileInputStream.cpp.o
  ../lib/SFML/include/SFML/Config.hpp
  ../lib/SFML/include/SFML/System/Export.hpp
@@ -21,20 +21,20 @@ lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/FileInputStream.cpp.o
  ../lib/SFML/include/SFML/System/InputStream.hpp
  ../lib/SFML/include/SFML/System/NonCopyable.hpp
  ../lib/SFML/src/SFML/System/Android/ResourceStream.hpp
- /home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/FileInputStream.cpp
+ /home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/FileInputStream.cpp
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Lock.cpp.o
  ../lib/SFML/include/SFML/Config.hpp
  ../lib/SFML/include/SFML/System/Export.hpp
  ../lib/SFML/include/SFML/System/Lock.hpp
  ../lib/SFML/include/SFML/System/Mutex.hpp
  ../lib/SFML/include/SFML/System/NonCopyable.hpp
- /home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/Lock.cpp
+ /home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/Lock.cpp
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/MemoryInputStream.cpp.o
  ../lib/SFML/include/SFML/Config.hpp
  ../lib/SFML/include/SFML/System/Export.hpp
  ../lib/SFML/include/SFML/System/InputStream.hpp
  ../lib/SFML/include/SFML/System/MemoryInputStream.hpp
- /home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/MemoryInputStream.cpp
+ /home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/MemoryInputStream.cpp
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Mutex.cpp.o
  ../lib/SFML/include/SFML/Config.hpp
  ../lib/SFML/include/SFML/System/Export.hpp
@@ -42,7 +42,7 @@ lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Mutex.cpp.o
  ../lib/SFML/include/SFML/System/NonCopyable.hpp
  ../lib/SFML/src/SFML/System/Unix/MutexImpl.hpp
  ../lib/SFML/src/SFML/System/Win32/MutexImpl.hpp
- /home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/Mutex.cpp
+ /home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/Mutex.cpp
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Sleep.cpp.o
  ../lib/SFML/include/SFML/Config.hpp
  ../lib/SFML/include/SFML/System/Export.hpp
@@ -50,7 +50,7 @@ lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Sleep.cpp.o
  ../lib/SFML/include/SFML/System/Time.hpp
  ../lib/SFML/src/SFML/System/Unix/SleepImpl.hpp
  ../lib/SFML/src/SFML/System/Win32/SleepImpl.hpp
- /home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/Sleep.cpp
+ /home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/Sleep.cpp
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/String.cpp.o
  ../lib/SFML/include/SFML/Config.hpp
  ../lib/SFML/include/SFML/System/Export.hpp
@@ -58,7 +58,7 @@ lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/String.cpp.o
  ../lib/SFML/include/SFML/System/String.inl
  ../lib/SFML/include/SFML/System/Utf.hpp
  ../lib/SFML/include/SFML/System/Utf.inl
- /home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/String.cpp
+ /home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/String.cpp
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Thread.cpp.o
  ../lib/SFML/include/SFML/Config.hpp
  ../lib/SFML/include/SFML/System/Export.hpp
@@ -67,7 +67,7 @@ lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Thread.cpp.o
  ../lib/SFML/include/SFML/System/Thread.inl
  ../lib/SFML/src/SFML/System/Unix/ThreadImpl.hpp
  ../lib/SFML/src/SFML/System/Win32/ThreadImpl.hpp
- /home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/Thread.cpp
+ /home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/Thread.cpp
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/ThreadLocal.cpp.o
  ../lib/SFML/include/SFML/Config.hpp
  ../lib/SFML/include/SFML/System/Export.hpp
@@ -75,30 +75,30 @@ lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/ThreadLocal.cpp.o
  ../lib/SFML/include/SFML/System/ThreadLocal.hpp
  ../lib/SFML/src/SFML/System/Unix/ThreadLocalImpl.hpp
  ../lib/SFML/src/SFML/System/Win32/ThreadLocalImpl.hpp
- /home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/ThreadLocal.cpp
+ /home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/ThreadLocal.cpp
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Time.cpp.o
  ../lib/SFML/include/SFML/Config.hpp
  ../lib/SFML/include/SFML/System/Export.hpp
  ../lib/SFML/include/SFML/System/Time.hpp
- /home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/Time.cpp
+ /home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/Time.cpp
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/ClockImpl.cpp.o
  ../lib/SFML/include/SFML/Config.hpp
  ../lib/SFML/include/SFML/System/Export.hpp
  ../lib/SFML/include/SFML/System/Time.hpp
  ../lib/SFML/src/SFML/System/Unix/ClockImpl.hpp
- /home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/Unix/ClockImpl.cpp
+ /home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/Unix/ClockImpl.cpp
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/MutexImpl.cpp.o
  ../lib/SFML/include/SFML/Config.hpp
  ../lib/SFML/include/SFML/System/Export.hpp
  ../lib/SFML/include/SFML/System/NonCopyable.hpp
  ../lib/SFML/src/SFML/System/Unix/MutexImpl.hpp
- /home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/Unix/MutexImpl.cpp
+ /home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/Unix/MutexImpl.cpp
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/SleepImpl.cpp.o
  ../lib/SFML/include/SFML/Config.hpp
  ../lib/SFML/include/SFML/System/Export.hpp
  ../lib/SFML/include/SFML/System/Time.hpp
  ../lib/SFML/src/SFML/System/Unix/SleepImpl.hpp
- /home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/Unix/SleepImpl.cpp
+ /home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/Unix/SleepImpl.cpp
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/ThreadImpl.cpp.o
  ../lib/SFML/include/SFML/Config.hpp
  ../lib/SFML/include/SFML/System/Export.hpp
@@ -106,10 +106,10 @@ lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/ThreadImpl.cpp.o
  ../lib/SFML/include/SFML/System/Thread.hpp
  ../lib/SFML/include/SFML/System/Thread.inl
  ../lib/SFML/src/SFML/System/Unix/ThreadImpl.hpp
- /home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/Unix/ThreadImpl.cpp
+ /home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/Unix/ThreadImpl.cpp
 lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/ThreadLocalImpl.cpp.o
  ../lib/SFML/include/SFML/Config.hpp
  ../lib/SFML/include/SFML/System/Export.hpp
  ../lib/SFML/include/SFML/System/NonCopyable.hpp
  ../lib/SFML/src/SFML/System/Unix/ThreadLocalImpl.hpp
- /home/amundbk/Documents/School/Graphics/Project/lib/SFML/src/SFML/System/Unix/ThreadLocalImpl.cpp
+ /home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/SFML/src/SFML/System/Unix/ThreadLocalImpl.cpp

@@ -5,14 +5,14 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/amundbk/Documents/School/Graphics/Project/lib/glad/src/glad.c" "/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/glowbox.dir/lib/glad/src/glad.c.o"
+  "/home/amundbk/Documents/School/Graphics/TDT4230-Project/lib/glad/src/glad.c" "/home/amundbk/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles/glowbox.dir/lib/glad/src/glad.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_C
   "GLFW_INCLUDE_NONE"
-  "PROJECT_SOURCE_DIR=\"/home/amundbk/Documents/School/Graphics/Project\""
+  "PROJECT_SOURCE_DIR=\"/home/amundbk/Documents/School/Graphics/TDT4230-Project\""
   "SFML_STATIC"
   )
 
@@ -29,25 +29,25 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
   "../lib/fmt/include"
   )
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/amundbk/Documents/School/Graphics/Project/src/gamelogic.cpp" "/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/glowbox.dir/src/gamelogic.cpp.o"
-  "/home/amundbk/Documents/School/Graphics/Project/src/main.cpp" "/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/glowbox.dir/src/main.cpp.o"
-  "/home/amundbk/Documents/School/Graphics/Project/src/program.cpp" "/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/glowbox.dir/src/program.cpp.o"
-  "/home/amundbk/Documents/School/Graphics/Project/src/sceneGraph.cpp" "/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/glowbox.dir/src/sceneGraph.cpp.o"
-  "/home/amundbk/Documents/School/Graphics/Project/src/textures.cpp" "/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/glowbox.dir/src/textures.cpp.o"
-  "/home/amundbk/Documents/School/Graphics/Project/src/utilities/SimplexNoise.cpp" "/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/glowbox.dir/src/utilities/SimplexNoise.cpp.o"
-  "/home/amundbk/Documents/School/Graphics/Project/src/utilities/glfont.cpp" "/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/glowbox.dir/src/utilities/glfont.cpp.o"
-  "/home/amundbk/Documents/School/Graphics/Project/src/utilities/glutils.cpp" "/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/glowbox.dir/src/utilities/glutils.cpp.o"
-  "/home/amundbk/Documents/School/Graphics/Project/src/utilities/imageLoader.cpp" "/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/glowbox.dir/src/utilities/imageLoader.cpp.o"
-  "/home/amundbk/Documents/School/Graphics/Project/src/utilities/lodepng.cpp" "/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/glowbox.dir/src/utilities/lodepng.cpp.o"
-  "/home/amundbk/Documents/School/Graphics/Project/src/utilities/shapes.cpp" "/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/glowbox.dir/src/utilities/shapes.cpp.o"
-  "/home/amundbk/Documents/School/Graphics/Project/src/utilities/timeutils.cpp" "/home/amundbk/Documents/School/Graphics/Project/build/CMakeFiles/glowbox.dir/src/utilities/timeutils.cpp.o"
+  "/home/amundbk/Documents/School/Graphics/TDT4230-Project/src/gamelogic.cpp" "/home/amundbk/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles/glowbox.dir/src/gamelogic.cpp.o"
+  "/home/amundbk/Documents/School/Graphics/TDT4230-Project/src/main.cpp" "/home/amundbk/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles/glowbox.dir/src/main.cpp.o"
+  "/home/amundbk/Documents/School/Graphics/TDT4230-Project/src/program.cpp" "/home/amundbk/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles/glowbox.dir/src/program.cpp.o"
+  "/home/amundbk/Documents/School/Graphics/TDT4230-Project/src/sceneGraph.cpp" "/home/amundbk/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles/glowbox.dir/src/sceneGraph.cpp.o"
+  "/home/amundbk/Documents/School/Graphics/TDT4230-Project/src/textures.cpp" "/home/amundbk/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles/glowbox.dir/src/textures.cpp.o"
+  "/home/amundbk/Documents/School/Graphics/TDT4230-Project/src/utilities/SimplexNoise.cpp" "/home/amundbk/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles/glowbox.dir/src/utilities/SimplexNoise.cpp.o"
+  "/home/amundbk/Documents/School/Graphics/TDT4230-Project/src/utilities/glfont.cpp" "/home/amundbk/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles/glowbox.dir/src/utilities/glfont.cpp.o"
+  "/home/amundbk/Documents/School/Graphics/TDT4230-Project/src/utilities/glutils.cpp" "/home/amundbk/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles/glowbox.dir/src/utilities/glutils.cpp.o"
+  "/home/amundbk/Documents/School/Graphics/TDT4230-Project/src/utilities/imageLoader.cpp" "/home/amundbk/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles/glowbox.dir/src/utilities/imageLoader.cpp.o"
+  "/home/amundbk/Documents/School/Graphics/TDT4230-Project/src/utilities/lodepng.cpp" "/home/amundbk/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles/glowbox.dir/src/utilities/lodepng.cpp.o"
+  "/home/amundbk/Documents/School/Graphics/TDT4230-Project/src/utilities/shapes.cpp" "/home/amundbk/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles/glowbox.dir/src/utilities/shapes.cpp.o"
+  "/home/amundbk/Documents/School/Graphics/TDT4230-Project/src/utilities/timeutils.cpp" "/home/amundbk/Documents/School/Graphics/TDT4230-Project/build/CMakeFiles/glowbox.dir/src/utilities/timeutils.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_CXX
   "GLFW_INCLUDE_NONE"
-  "PROJECT_SOURCE_DIR=\"/home/amundbk/Documents/School/Graphics/Project\""
+  "PROJECT_SOURCE_DIR=\"/home/amundbk/Documents/School/Graphics/TDT4230-Project\""
   "SFML_STATIC"
   )
 
@@ -66,10 +66,10 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/amundbk/Documents/School/Graphics/Project/build/lib/glfw/src/CMakeFiles/glfw.dir/DependInfo.cmake"
-  "/home/amundbk/Documents/School/Graphics/Project/build/lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/DependInfo.cmake"
-  "/home/amundbk/Documents/School/Graphics/Project/build/lib/fmt/CMakeFiles/fmt.dir/DependInfo.cmake"
-  "/home/amundbk/Documents/School/Graphics/Project/build/lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/DependInfo.cmake"
+  "/home/amundbk/Documents/School/Graphics/TDT4230-Project/build/lib/glfw/src/CMakeFiles/glfw.dir/DependInfo.cmake"
+  "/home/amundbk/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/DependInfo.cmake"
+  "/home/amundbk/Documents/School/Graphics/TDT4230-Project/build/lib/fmt/CMakeFiles/fmt.dir/DependInfo.cmake"
+  "/home/amundbk/Documents/School/Graphics/TDT4230-Project/build/lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.
