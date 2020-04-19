@@ -30,8 +30,8 @@ const std::vector<glm::vec3> colors = {
     glm::vec3(1.0, 1.0, 1.0) //snow white
 };
 
-Mesh cube_with_offset(glm::vec3 scale, glm::vec3 offset) {
-    Mesh qube = cube(scale, glm::vec2(1.0), false, false, glm::vec3(1.0, 1.0, 1.0));
+Mesh cube_with_offset(glm::vec3 scale, glm::vec3 offset, glm::vec3 textureScale) {
+    Mesh qube = cube(scale, glm::vec2(1.0), true, false, textureScale);
 
     for (int i = 0; i < qube.vertices.size(); i++) {
         qube.vertices.at(i) = qube.vertices[i] + offset;
@@ -181,12 +181,14 @@ Mesh generateTower(glm::vec3 dimensions) {
 
     glm::vec3 centering = glm::vec3(-dimensions.x / 2.0, 0, -dimensions.z /2.0);
 
-    meshes.push_back(cube_with_offset(dimensions, centering));
-    meshes.push_back(cube_with_offset(glm::vec3(1.0f, 5.0f, 1.0f), centering + glm::vec3(0, dimensions.y, 0)));
-    meshes.push_back(cube_with_offset(glm::vec3(1.0f, 5.0f, 1.0f), centering + glm::vec3(dimensions.x - 1, dimensions.y, 0)));
-    meshes.push_back(cube_with_offset(glm::vec3(1.0f, 5.0f, 1.0f), centering + glm::vec3(0, dimensions.y, dimensions.z - 1)));
-    meshes.push_back(cube_with_offset(glm::vec3(1.0f, 5.0f, 1.0f), centering + glm::vec3(dimensions.x - 1, dimensions.y, dimensions.z - 1)));
-    meshes.push_back(cube_with_offset(glm::vec3(dimensions.x, 2, dimensions.z), centering + glm::vec3(0, dimensions.y + 5, 0)));
+    glm::vec3 pillar_scale = glm::vec3(1.0, 1.0, 1.0);
+
+    meshes.push_back(cube_with_offset(dimensions, centering, glm::vec3(1.0, 1.0, 1.0)));
+    meshes.push_back(cube_with_offset(glm::vec3(1.0f, 5.0f, 1.0f), centering + glm::vec3(0, dimensions.y, 0), pillar_scale));
+    meshes.push_back(cube_with_offset(glm::vec3(1.0f, 5.0f, 1.0f), centering + glm::vec3(dimensions.x - 1, dimensions.y, 0), pillar_scale));
+    meshes.push_back(cube_with_offset(glm::vec3(1.0f, 5.0f, 1.0f), centering + glm::vec3(0, dimensions.y, dimensions.z - 1), pillar_scale));
+    meshes.push_back(cube_with_offset(glm::vec3(1.0f, 5.0f, 1.0f), centering + glm::vec3(dimensions.x - 1, dimensions.y, dimensions.z - 1), pillar_scale));
+    meshes.push_back(cube_with_offset(glm::vec3(dimensions.x, 2, dimensions.z), centering + glm::vec3(0, dimensions.y + 5, 0), pillar_scale));
     Mesh final_mesh = combineMeshes(meshes);
 
     return final_mesh;
@@ -299,138 +301,6 @@ Mesh generateFloor(glm::vec2 scale) {
     return m;
 }
 
-Mesh newOldGenerateFloor(glm::vec2 scale) {
-    Mesh m;
-
-    float height_scale = 30.0f;
-
-    SimplexNoise simplex = SimplexNoise();
-
-    int no_horizontal_sections = (int) ((scale.x) / floor_horizontal_section);
-    int no_depth_sections = (int) ((scale.y) / floor_depth_section);
-
-    std::vector<glm::vec2> offset_inator = {glm::vec2(0, 0),glm::vec2(1, 1),glm::vec2(-1, 0),glm::vec2(0, -1),glm::vec2(1, 0),glm::vec2(0, 1)};
-    std::vector<glm::vec2> texture_coordinates = {glm::vec2(0, 0), glm::vec2(1, 1), glm::vec2(1, 0), glm::vec2(0, 0), glm::vec2(0, 1), glm::vec2(1, 1)};
-    int order[6] = {-6, -4, -5, -3, -1, -2};
-
-    //One Vertex per normal you dunce
-
-    long int offset = 0;
-    for (int a = 0; a < no_depth_sections; a++) {
-        for (int b = 0; b < no_horizontal_sections; b++) {
-            glm::vec2 positions = glm::vec2(a, b);
-            for (int i = 0; i<6; i++) {
-                positions += offset_inator[i];
-                float noise = simplex.fractal(4, -1*positions.x*0.005, positions.y*0.005);
-                m.vertices.push_back(glm::vec3(positions.y*floor_horizontal_section, height_scale*noise, -1*positions.x*floor_depth_section));
-                glm::vec3 color = getColourFromNoise(noise);
-                
-                m.colours.push_back(color);
-                m.textureCoordinates.push_back(texture_coordinates[i]);
-                offset++;
-            }
-            for (int i = 0; i < 6; i++) {
-                m.indices.push_back(offset + order[i]);
-            }
-
-            glm::vec3 first_normal = glm::normalize(glm::cross
-            ((m.vertices[offset-4] - m.vertices[offset-6]),
-            (m.vertices[offset-5] - m.vertices[offset-6])));
-
-            glm::vec3 second_normal = glm::normalize(glm::cross
-            ((m.vertices[offset-2] - m.vertices[offset-1]),
-            (m.vertices[offset-3] - m.vertices[offset-1])));
-
-            for (int i = 0; i < 3; i++) {
-                m.normals.push_back(first_normal);
-            }
-            for (int i = 0; i < 3; i++) {
-                m.normals.push_back(second_normal);
-            }
-        }
-    }
-
-    printf("Offset: %ld ", offset);
-    printf("Floor finished. Vertices: %ld, Indices: %ld, Texture: %ld, normals: %ld\n", m.vertices.size(), m.indices.size(), m.textureCoordinates.size(), m.normals.size());
-
-
-    return m;
-}
-
-Mesh oldGenerateFloor( glm::vec2 scale) {
-    Mesh m;
-
-    float height_scale = 30.0f;
-
-    SimplexNoise simplex = SimplexNoise();
-
-    int no_horizontal_sections = (int) ((scale.x) / floor_horizontal_section);
-    int no_depth_sections = (int) ((scale.y) / floor_depth_section);
-    printf("Horizontal sets: %d, Depth sets: %d\n", no_horizontal_sections, no_depth_sections);
-
-    for(int a = 0; a < no_depth_sections; a++) {
-        for(int b = 0; b < no_horizontal_sections; b++) {
-            float noise = simplex.fractal(4, -1*a*0.005, b*0.005);
-            m.vertices.push_back(glm::vec3(b*floor_horizontal_section, noise*height_scale, -1*a*floor_depth_section));
-            glm::vec3 color = getColourFromNoise(noise);
-            m.colours.push_back(color);
-        }
-    }
-    printf("max: %d\n", (no_depth_sections - 2)*no_depth_sections + no_horizontal_sections + no_horizontal_sections);
-    for (int a = 0; a < no_depth_sections-1; a++) {
-        int offset = a*no_horizontal_sections;
-        for (int b = 0; b < no_horizontal_sections-1; b++) {
-            int bottom_left =   offset + b;
-            int top_right =     offset + no_horizontal_sections + b + 1;
-            int top_left =      offset + no_horizontal_sections + b;
-            int bottom_right =  offset + b + 1;
-            //Bottom Left
-            m.indices.push_back(bottom_left);
-            //Top Right
-            m.indices.push_back(top_right);
-            //Top Left
-            m.indices.push_back(top_left);
-            //Bottom Left
-            m.indices.push_back(bottom_left);
-            //Bottom RightS
-            m.indices.push_back(bottom_right);
-            //Top Right
-            m.indices.push_back(top_right);
-
-            
-            m.textureCoordinates.push_back({0, 0});
-            m.textureCoordinates.push_back({1, 1});
-            m.textureCoordinates.push_back({1, 0});
-            m.textureCoordinates.push_back({0, 0});
-            m.textureCoordinates.push_back({0, 1});
-            m.textureCoordinates.push_back({1, 1});
-
-            glm::vec3 first_normal = glm::normalize(glm::cross
-            ((m.vertices[top_right] - m.vertices[bottom_left]),
-            (m.vertices[top_left] - m.vertices[bottom_left])));
-
-            glm::vec3 second_normal = glm::normalize(glm::cross
-            ((m.vertices[bottom_left] - m.vertices[top_right]),
-            (m.vertices[bottom_right] - m.vertices[top_right])));
-
-            /* glm::vec3 second_normal = glm::normalize(glm::cross
-            ((m.vertices[top_right] - m.vertices[bottom_right]),
-            (m.vertices[bottom_left] - m.vertices[bottom_right]))); */
-
-            //printf("Normals:\n first : %f %f %f\n 2nd: %f %f %f\n", first_normal.x, first_normal.y, first_normal.z, second_normal.x, second_normal.y, second_normal.z);
-
-            m.normals.push_back(first_normal);
-            m.normals.push_back(first_normal);
-            m.normals.push_back(first_normal);
-            m.normals.push_back(second_normal);
-            m.normals.push_back(second_normal);
-            m.normals.push_back(second_normal);
-        }
-    }
-    printf("Floor finished. Vertices: %ld, Indices: %ld, Texture: %ld, normals: %ld\n", m.vertices.size(), m.indices.size(), m.textureCoordinates.size(), m.normals.size());
-    
-    return m;
-}
 
 Mesh generateSphere(float sphereRadius, int slices, int layers) {
     const unsigned int triangleCount = slices * layers * 2;

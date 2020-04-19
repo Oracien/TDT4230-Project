@@ -37,7 +37,7 @@ float attenuation;
 float dist;
 vec3 position;
 vec3 colour;
-float bias = 0.005;
+float bias = 0.001;
 float near_plane = 1.0f;
 float far_plane = 200.0f;
 
@@ -51,7 +51,7 @@ float LinearizeDepth(float depth)
 }
 
 float ShadowCalculation(vec4 fragPosLightSpace)
-{
+{ 
     // perform perspective divide
     vec3 projCoords = fragPosLightSpace.xyz / fragPosLightSpace.w;
     // transform to [0,1] range
@@ -61,7 +61,9 @@ float ShadowCalculation(vec4 fragPosLightSpace)
     // get depth of current fragment from light's perspective
     float currentDepth = projCoords.z;
     // check whether current frag pos is in shadow
-    float shadow = currentDepth > closestDepth  ? 1.0 : 0.0;
+    float shadow = currentDepth - bias > closestDepth  ? 1.0 : 0.0;
+
+    if (projCoords.z > 1.0) shadow = 1.0;
 
     return shadow;
 }
@@ -73,19 +75,23 @@ void main()
     } else {
         new_normal = normalize(normal);
     }
+
     vec3 light_vector;
 
     vec3 diffuse = vec3(0.0);
     vec3 specular = vec3(0.0);
 
-    float atten1 = 0.005;
-    float atten2 = 0.003;
-    float atten3 = 0.001;
+    float atten1 = 0.0005;
+    float atten2 = 0.0003;
+    float atten3 = 0.0001;
 
     float ambientStrength = 0.1;
     float diffuseStrength = 1.0;
     float specularStrength = 1.0;
     float specularPower = 32;
+    float angle = 0.0;
+
+    bool within_view = true;
 
     normal_view_vector = normalize(cameraPos - modelPosition.xyz);
     
@@ -93,11 +99,6 @@ void main()
         position = lightSources[i].position;
         colour = colour_in;
 
-        light_vector = (position - modelPosition.xyz);
-
-        /* if ((dot(normalize(light_vector), normalize(lightSources[i].pointed_normal))) < (3.14/4.0)) {
-            continue;
-        } */
         dist = distance(position, modelPosition.xyz);
         attenuation = 1 / (atten1 + dist * atten2 + dist * dist * atten3); 
 
@@ -106,14 +107,22 @@ void main()
 
         reflected_normal = reflect(-normal_light_vector, new_normal);
         specular += colour * specularStrength * attenuation * pow(max(dot(normal_view_vector, reflected_normal), 0.0), specularPower);
+        
+        angle = acos(dot(-normal_light_vector, lightSources[i].pointed_normal));
+        within_view =  angle < radians(30);
+        within_view = true;
+        diffuse = within_view ? diffuse : vec3(0.0);
+        specular = within_view ? specular : vec3(0.0);
     }
     float dither_result = dither(textureCoordinates) / 1;
 
     vec3 ambient =  ambientStrength * colour_in;
 
-    float shadow = ShadowCalculation(shadowCoord);    
+
+    float shadow = ShadowCalculation(shadowCoord);   
+    shadow = 0.0; 
     
-    vec3 lighting = vec3(ambient + (1.0 - shadow) * (specular + diffuse + dither_result));
+    vec3 lighting = ambient * colour + (1.0 - shadow) * (specular + diffuse + dither_result);
     lighting.x = lighting.x > 1.0 ? 1.0 : lighting.x;
     lighting.y = lighting.y > 1.0 ? 1.0 : lighting.y;
     lighting.z = lighting.z > 1.0 ? 1.0 : lighting.z;
@@ -129,6 +138,5 @@ void main()
     if(isTower == 1) {
         float depthValue = texture(shadowMap, textureCoordinates).r;
         color = vec4(vec3(LinearizeDepth(depthValue) / far_plane), 1.0);
-        //color = vec4(vec3(texture(shadowMap, textureCoordinates).x), 1.0);
     }
 }

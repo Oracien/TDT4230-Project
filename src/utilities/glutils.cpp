@@ -81,9 +81,6 @@ unsigned int generateBuffer(Mesh &mesh, bool normalMapped) {
         if(biTangents.size() > 0) {
             generateAttribute(4, 3, biTangents, true);
         }
-    } else {
-        generateAttribute(3, 0, std::vector<glm::vec3>(), false);
-        generateAttribute(4, 0, std::vector<glm::vec3>(), false);
     }
     if(mesh.colours.size() > 0) {
         generateAttribute(5, 3, mesh.colours, false);

@@ -41,19 +41,29 @@ SceneNode* light2Node;
 SceneNode* light3Node;
 SceneNode* ballNode;
 
+SceneNode* floor1Node;
+SceneNode* floor2Node;
+SceneNode* floor3Node;
+SceneNode* floor4Node;
+
 const glm::vec2 floor_span = glm::vec2(400.0f, 400.0f);
 const glm::vec3 floor_position = glm::vec3(-200.0f, -50.0f, 200.0f);
 
-const glm::vec3 tower_dimensions = glm::vec3(5.0f, 45.0f, 5.0f);
-const glm::vec3 tower_position = glm::vec3(0.0f, -80.0f, -70.0f);
+const glm::vec3 cube1_position = glm::vec3(0.0f, -45.0f, 40.0f);
+const glm::vec3 cube2_position = glm::vec3(40.0f, -45.0f, 0.0f);
+const glm::vec3 cube3_position = glm::vec3(-40.0f, -45.0f, 0.0f);
+const glm::vec3 cube4_position = glm::vec3(0.0f, -45.0f, -40.0f);
 
-const glm::vec3 ball_position = glm::vec3(0.0f, 47.5f, 0.0f);
+const glm::vec3 tower_dimensions = glm::vec3(5.0f, 60.0f, 5.0f);
+const glm::vec3 tower_position = glm::vec3(0.0f, -80.0f, 0.0f);
+
+const glm::vec3 ball_position = glm::vec3(0.0f, 62.5f, 0.0f);
 const float ball_radius = 1.0f;
 
-const glm::vec3 light1_position = glm::vec3(0.0f, -32.5f, -70.0f);
+const glm::vec3 light1_position = glm::vec3(0.0f, 62.5f, 0.0f);
 const glm::vec3 light1_pointed_angle = glm::vec3(1.0f, 0.0f, 0.0f);
 
-double pi_value = 0.0;
+double pi_value = 0.3;
 
 glm::vec4 lightArray[NO_OF_LIGHT_SOURCES];
 
@@ -137,7 +147,6 @@ void mouseCallback(GLFWwindow* window, double x, double y) {
     direction.y = -sin(glm::radians(pitch));
     direction.z = sin(glm::radians(yaw)) * cos(glm::radians(pitch));
     cameraFront = glm::normalize(direction);
-    //glfwSetCursorPos(window, windowWidth / 2, windowHeight / 2);
 }
 
 void initGame(GLFWwindow* window, CommandLineOptions gameOptions) {
@@ -167,6 +176,11 @@ void initGame(GLFWwindow* window, CommandLineOptions gameOptions) {
     ballNode = createSceneNode();
     light1Node = createSceneNode();
 
+    floor1Node = createSceneNode();
+    floor2Node = createSceneNode();
+    floor3Node = createSceneNode();
+    floor4Node = createSceneNode();
+
     light1Node->nodeID = 1;
     light1Node->nodeType = SPOT_LIGHT;
     light1Node->position = light1_position;
@@ -178,20 +192,43 @@ void initGame(GLFWwindow* window, CommandLineOptions gameOptions) {
     Mesh towerMesh = generateTower(tower_dimensions);
     Mesh ballMesh = generateSphere(ball_radius, 1024, 1024);
 
+    Mesh cube1 = cube(glm::vec3(5.0f));
+    Mesh cube2 = cube(glm::vec3(10.0f));
+    Mesh cube3 = cube(glm::vec3(15.0f));
+    Mesh cube4 = cube(glm::vec3(20.0f));
+
     unsigned int floorVAO = generateBuffer(floorMesh, false);
     unsigned int towerVAO = generateBuffer(towerMesh, true);
     unsigned int ballVAO = generateBuffer(ballMesh, false);
 
-    floorNode->vertexArrayObjectID = floorVAO;
+    unsigned int testCube1VAO = generateBuffer(cube1, false);
+    unsigned int testCube2VAO = generateBuffer(cube2, false);
+    unsigned int testCube3VAO = generateBuffer(cube3, false);
+    unsigned int testCube4VAO = generateBuffer(cube4, false);
+
+     floorNode->vertexArrayObjectID = floorVAO;
     floorNode->VAOIndexCount = floorMesh.indices.size();
-    floorNode->position = floor_position;
+    floorNode->position = floor_position; 
 
     tower1Node->vertexArrayObjectID = towerVAO;
     tower1Node->VAOIndexCount = towerMesh.indices.size();
     tower1Node->position = tower_position;
     tower1Node->nodeID = 12;
 
-    /* //construct normal mapped
+    floor1Node->vertexArrayObjectID = testCube1VAO;
+    floor1Node->VAOIndexCount = cube1.indices.size();
+    floor1Node->position = cube1_position;
+    floor2Node->vertexArrayObjectID = testCube2VAO;
+    floor2Node->VAOIndexCount = cube2.indices.size();
+    floor2Node->position = cube2_position;
+    floor3Node->vertexArrayObjectID = testCube3VAO;
+    floor3Node->VAOIndexCount = cube3.indices.size();
+    floor3Node->position = cube3_position;
+    floor4Node->vertexArrayObjectID = testCube4VAO;
+    floor4Node->VAOIndexCount = cube4.indices.size();
+    floor4Node->position = cube4_position;
+
+     //construct normal mapped
     PNGImage brickImage = loadPNGFile("../res/textures/Brick03_col.png");
     if(brickImage.width == 0) {
         return ;
@@ -209,7 +246,6 @@ void initGame(GLFWwindow* window, CommandLineOptions gameOptions) {
     tower1Node->normalID = brickNormalID;
     
     tower1Node->nodeType = NORMAL_MAPPED;
-    */
     
     ballNode->vertexArrayObjectID = ballVAO;
     ballNode->VAOIndexCount = ballMesh.indices.size();
@@ -217,10 +253,15 @@ void initGame(GLFWwindow* window, CommandLineOptions gameOptions) {
     ballNode->isLightSource = true;
 
     rootNode->children.push_back(floorNode);
-    rootNode->children.push_back(tower1Node);
-    rootNode->children.push_back(light1Node);
+    rootNode->children.push_back(floor1Node);
+    rootNode->children.push_back(floor2Node);
+    rootNode->children.push_back(floor3Node);
+    rootNode->children.push_back(floor4Node);
 
-    //tower1Node->children.push_back(ballNode);
+    rootNode->children.push_back(tower1Node);
+    
+    tower1Node->children.push_back(light1Node);
+    tower1Node->children.push_back(ballNode);
 
     printf("Node setup complete\n");
     
@@ -275,7 +316,7 @@ void updateFrame(GLFWwindow* window) {
 
     VP = projection * view;
 
-    pi_value = pi_value >= 2.00 ? 0.0 : pi_value + 0.5*timeDelta;
+    pi_value = pi_value >= 2.00 ? 0.0 : pi_value + 0.25*timeDelta;
 
     updateNodeTransformations(rootNode, glm::mat4(1.0f));
 
@@ -312,7 +353,7 @@ void updateNodeTransformations(SceneNode* node, glm::mat4 transformationThusFar)
             glUniform3fv(lightLocation, 1, glm::value_ptr(light_pos));
             break;  
         case SPOT_LIGHT:
-            node->normal = glm::normalize(glm::vec3(cos(pi_value*3.14), -0.2, sin(pi_value*3.14)));
+            node->normal = glm::normalize(glm::vec3(cos(pi_value*3.14), 0.0, sin(pi_value*3.14)));
             light_pos= glm::vec3(node->currentTransformationMatrix * glm::vec4(0.0f, 0.0f, 0.0f, 1.0f) );
             sprintf(lightBuffer, "lightSources[%d].position", node->nodeID - 1);
             lightLocation = worldShader->getUniformFromName(lightBuffer);
@@ -392,8 +433,11 @@ void setUpShadows() {
     glTexImage2D(GL_TEXTURE_2D, 0, GL_DEPTH_COMPONENT, SHADOW_WIDTH, SHADOW_HEIGHT, 0, GL_DEPTH_COMPONENT, GL_FLOAT, NULL);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_BORDER);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_BORDER);
+    float borderColor[] = { 1.0f, 1.0f, 1.0f, 1.0f };
+    glTexParameterfv(GL_TEXTURE_2D, GL_TEXTURE_BORDER_COLOR, borderColor);  
+
     // attach depth texture as FBO's depth buffer
     glBindFramebuffer(GL_FRAMEBUFFER, depthMapFBO);
     glFramebufferTexture2D(GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_TEXTURE_2D, depthMap, 0);
@@ -404,6 +448,7 @@ void setUpShadows() {
 }
 
 void sampleShadows(GLFWwindow* window) {
+    shadowShader->activate();
     int windowWidth, windowHeight;
     glfwGetWindowSize(window, &windowWidth, &windowHeight);
     //printf("Sampling shades using shadow shader\n");
@@ -414,32 +459,30 @@ void sampleShadows(GLFWwindow* window) {
     // --------------------------------------------------------------
     glm::mat4 projection, lightView;
     projection = glm::perspective(glm::radians(80.0f), float(windowWidth) / float(windowHeight), 0.1f, 350.f);
-    lightView = glm::lookAt(light1Node->position, glm::vec3(0.0f), glm::vec3(0.0, 1.0, 0.0));
+    glm::vec3 light_position = light1Node->currentTransformationMatrix * glm::vec4(0.0f, 0.0f, 0.0f, 1.0f);
+    lightView = glm::lookAt(light_position, light_position + light1Node->normal, glm::vec3(0.0, 1.0, 0.0));
     lightSpaceMatrix = projection * lightView;
     // render scene from light's point of view
-    shadowShader->activate();
     glUniformMatrix4fv(4, 1, GL_FALSE, glm::value_ptr(lightSpaceMatrix));
 
     glViewport(0, 0, SHADOW_WIDTH, SHADOW_HEIGHT);
     glBindFramebuffer(GL_FRAMEBUFFER, depthMapFBO);
     glClear(GL_DEPTH_BUFFER_BIT);
-    renderNode(rootNode);
-    glBindFramebuffer(GL_FRAMEBUFFER, 0);
 
-    // reset viewport
-    glViewport(0, 0, windowWidth, windowHeight);
-    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    renderNode(rootNode);
+    
+    glBindFramebuffer(GL_FRAMEBUFFER, 0);
 
 
 }
 
 void renderScene(GLFWwindow* window) {
+    worldShader->activate();
     //printf("Rendering scene using world shader\n");
     int windowWidth, windowHeight;
     glfwGetWindowSize(window, &windowWidth, &windowHeight);
     glViewport(0, 0, windowWidth, windowHeight);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-    worldShader->activate();
     glActiveTexture(GL_TEXTURE3);
     glBindTexture(GL_TEXTURE_2D, shadowMap);
 
